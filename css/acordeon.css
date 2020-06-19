@@ -1,0 +1,42 @@
+.contenedor-acordeon {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .individual {
+    margin-top: 5px;
+  }
+  
+  .individual .titulo {
+    background-color:#7ab21f;
+    color: #fff;
+    cursor: pointer;
+
+  }
+  
+ 
+  .individual .titulo .nombre {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 20px;
+  }
+  
+  .individual .contenido {
+    padding: 15px;
+ 
+    border-width: 0 1px 1px;
+    display: none;
+    height: 200px;
+  }
+  
+  
+  .titulo p:before {
+  
+    display: block;
+  }
+  
+  .tab-active p:before {
+    
+    display: block;
+  }
