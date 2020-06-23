@@ -10,7 +10,7 @@
         '</button>' +
         '<div class="logo">' +
         '<div class="logo-image">' +
-        '<a href="index.html" class="a-calling">' +
+        '<a href="index.php" class="a-calling">' +
         '<img src="images/other/conaltura.png" />' +
         '</a>' +
         '</div>' +
@@ -30,16 +30,16 @@
         '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation">' +
         '<ul class="nav navbar-nav options" id="items_en_uso">' +
         '<li class="dropdown" id="items1">' +
-        '<a href="index.html">Inicio&nbsp;<span class="caret"></span></a>  ' +
+        '<a href="index.php">Inicio&nbsp;<span class="caret"></span></a>  ' +
         '</li>' +
         '<li class="dropdown" id="items2">' +
-        '<a href="quienes-somos.html">Quienes Somos&nbsp;<span class="caret"></span></a>    ' +
+        '<a href="quienes-somos.php">Quienes Somos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '<li class="dropdown" id="items3">' +
         '<a href="inmuebles.php">Inmuebles&nbsp;<span class="caret"></span></a>' +
         '</li>' +
         '<li class="dropdown">' +
-        '<a href="clientes.html">Clientes&nbsp;<span class="caret"></span></a> ' +
+        '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown">' +
         '<a href="noticias.php">Blog&nbsp;<span class="caret"></span></a> ' +
@@ -218,7 +218,7 @@ setTimeout(function () {
                         }
                         res += '</div>' +
                             '<div class="featured-decs">' +
-                            '<span class="featured-status"><a href="index.html#"></a></span>' +
+                            '<span class="featured-status"><a href="index.php#"></a></span>' +
                             '<h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '" >' + data[i].Barrio + ' , ' + data[i].Ciudad + '</a></h4>' +
                             '</div>' +
                             '</li>';

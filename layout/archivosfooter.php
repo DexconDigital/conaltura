@@ -10,6 +10,7 @@
 <!-- <script type="text/javascript" src="js/style.selector.js"></script> -->
 <!-- <script type="text/javascript" src="js/property-slider.js"></script> -->
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/btn_subir.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 <!-- <script type="text/javascript" src="js/index.js"></script> -->
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>

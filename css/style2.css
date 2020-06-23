@@ -243,3 +243,26 @@ div#preloader {
     background: #005f68;
     border: 10px solid #7ab21f;
 }
+.subir {
+    display: none;
+    padding: 13px 15px;
+    background-color: rgba(0,0,0,.15);
+    color: #005f68;
+    font-size: 12px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 47px;
+    border-radius: 50%;
+    right: 20px;
+    z-index: 38; 
+}
+.subir:hover{
+    background-color: white;
+    color: black;
+}
+.options{
+    vertical-align: top;
+    display: inline !important; 
+    font-size: 1.2em;
+    padding: 0.5em;
+}
