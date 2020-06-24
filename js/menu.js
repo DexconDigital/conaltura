@@ -45,7 +45,7 @@
         '<a href="noticias.php">Blog&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown">' +
-        '<a href="contactanos.html">Contáctanos&nbsp;<span class="caret"></span></a>    ' +
+        '<a href="contactanos.php">Contáctanos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '</ul>' +
         '</nav>' +

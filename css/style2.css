@@ -266,3 +266,6 @@ div#preloader {
     font-size: 1.2em;
     padding: 0.5em;
 }
+.lista_detalle{
+    column-count:2;
+}
