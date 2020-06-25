@@ -16,6 +16,11 @@
     <link rel="shortcut icon" href="images/icon/favicon.jpg.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <?php include 'layout/archivosheader.php'; ?>
+    <link rel="stylesheet" href="./css/carousel.tamanos.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+
 </head>
 
 <body>
@@ -49,7 +54,38 @@
                                         </ul>
                                         <div class="clearfix"></div>
                                         <div class="text-center">
-                                            <img src="images/no_image.png" alt="">
+                                            <!-- main slider carousel items -->
+                                            <section class="mt-3" id="slide-detalle">
+                                                <?php
+                                                if (isset($r['fotos'])) {
+                                                    for ($i = 0; $i < count($r['fotos']); $i++) {
+                                                        echo '<div class="contenedor-img">
+                                                      <img src="' . $r['fotos'][$i]['foto'] . '" alt="">
+                                                              </div>';
+                                                    }
+                                                } else {
+                                                    echo  '<div class="contenedor-img">
+                                                             <img src="images/no_image.png" alt="">
+                                                            </div>';
+                                                }
+                                                ?>
+                                            </section>
+                                            <section class="vertical-center-4 slider" id="miniaturas">
+                                                <?php
+                                                if (isset($r['fotos'])) {
+                                                    for ($i = 0; $i < count($r['fotos']); $i++) {
+                                                        echo '<div class="contenedor-img">
+                                        <img src="' . $r['fotos'][$i]['foto'] . '" alt="">
+                                    </div>';
+                                                    }
+                                                } else {
+                                                    echo  '<div class="contenedor-img">
+                                                                <img src="images/no_image.png" alt="">
+                                                           </div>
+                                                           ';
+                                                }
+                                                ?>
+                                            </section>
                                         </div>
                                         <!-- <div class="carousel slide" id="myCarousel" data-ride="carousel">
                                             <div class="carousel-inner"></div>
@@ -232,6 +268,7 @@
     <?php include 'layout/footer.php'; ?>
 </body>
 <?php include 'layout/archivosfooter.php'; ?>
+<script src="js/slick.min.js"></script>
 <script>
     $(".btn-atras").click(function() {
         window.history.back();
@@ -239,6 +276,47 @@
 
     });
 </script>
-
+<script>
+    $('#slide-detalle').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '#miniaturas'
+    });
+    $('#miniaturas').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '#slide-detalle',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }
+        ]
+    });
+</script>
 
 </html>

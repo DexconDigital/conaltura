@@ -1,0 +1,33 @@
+#carousel_inicio .carousel-item {
+  -webkit-animation-name: zoom;
+  animation-name: zoom;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
+
+#carousel_inicio .overlay {
+  background-color: rgba(165, 161, 161, 0.096);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px; }
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); } }
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); } }

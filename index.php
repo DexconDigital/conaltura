@@ -1,3 +1,8 @@
+<?php
+$pagina = 'inicio';
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,184 +22,139 @@
     <?php include 'layout/buscador.php'; ?>
 
     <!-- inmuebles en arreindo -->
-    <section id="arriendo" class="espacio_destacadas">
+    <section class="recent-properties pt-0">
         <div class="container">
-            <h3 class="titulos">Propiedades Destacadas en Arriendo</h3>
-            <div class="col-12">
-                <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
+            <div class="recent-properties-inner">
+                <div class="section-title">
+                    <h3 class="titulos">Propiedades Destacadas en Arriendo</h3>
+                </div>
+                <div class="recent-properties-content">
+                    <div style="position:relative;">
+                        <div class="owl-carousel owl-theme primero" id="carouselA">
+                            <div class="container">
+                                <article class="hentry arriendo">
+                                    <div class="property-featured">
+                                        <a class="content-thumb" href="">
+                                            <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                            <span class="property-label"> Código: 1</span>
+                                            <span class="property-category-2"> Apartamento</span>
+                                    </div>
+                                    <div class="property-wrap">
+                                        <h2 class="property-title"><a href="">Poblado</a></h2>
+                                        <div class=" property-summary">
+                                            <div class="property-detail">
+                                                <div class="size"><span>66 m<sup>2 </span>
+                                                </div>
+                                                <div class="bathrooms"><span> 2</span>
+                                                </div>
+                                                <div class="bedrooms"><span> 2 </span>
+                                                </div>
+                                            </div>
+                                            <div class="property-info">
+                                                <div class="property-price">
+                                                    <span><span class="amount"> $ 1.000.000</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </article>
                             </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
-                                        </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
-                                        </div>
+                            <div class="container">
+                                <article class="hentry arriendo">
+                                    <div class="property-featured">
+                                        <a class="content-thumb" href="">
+                                            <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                            <span class="property-label"> Código: 2</span>
+                                            <span class="property-category-2"> Apartamento</span>
                                     </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
+                                    <div class="property-wrap">
+                                        <h2 class="property-title"><a href="">Poblado</a></h2>
+                                        <div class=" property-summary">
+                                            <div class="property-detail">
+                                                <div class="size"><span>66 m<sup>2 </span>
+                                                </div>
+                                                <div class="bathrooms"><span> 2</span>
+                                                </div>
+                                                <div class="bedrooms"><span> 2 </span>
+                                                </div>
+                                            </div>
+                                            <div class="property-info">
+                                                <div class="property-price">
+                                                    <span><span class="amount"> $ 1.000.000</span></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
+                                </article>
                             </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
-                                        </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
-                            </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
-                                        </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Inmuebles en venta -->
-    <section id="arriendo" class="espacio_destacadas">
+    <section class="pt-0">
         <div class="container">
-            <h3 class="espacio_destacadas titulos">PROPIEDADES DESTACADAS EN VENTA</h3>
-            <div class="col-12">
-                <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
-                            </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
-                                        </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
+            <div class="recent-properties-inner">
+                <div class="section-title">
+                    <h3 class="espacio_destacadas titulos">PROPIEDADES DESTACADAS EN VENTA</h3>
+                </div>
+                <div class="recent-properties-content">
+                    <div class="owl-carousel owl-theme" id="owl-propiedades-venta">
+                        <div class="container">
+                            <article class="hentry arriendo">
+                                <div class="property-featured">
+                                    <a class="content-thumb" href="">
+                                        <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                        <span class="property-label"> Código: 1</span>
+                                        <span class="property-category-2"> Apartamento</span>
                                 </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
-                            </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
+                                <div class="property-wrap">
+                                    <h2 class="property-title"><a href="">Poblado</a></h2>
+                                    <div class=" property-summary">
+                                        <div class="property-detail">
+                                            <div class="size"><span>66 m<sup>2 </span>
+                                            </div>
+                                            <div class="bathrooms"><span> 2</span>
+                                            </div>
+                                            <div class="bedrooms"><span> 2 </span>
+                                            </div>
                                         </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
+                                        <div class="property-info">
+                                            <div class="property-price">
+                                                <span><span class="amount"> $ 1.000.000</span></span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
+                            </article>
+                        </div>
+                        <div class="container">
+                            <article class="hentry arriendo">
+                                <div class="property-featured">
+                                    <a class="content-thumb" href="">
+                                        <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                        <span class="property-label"> Código: 2</span>
+                                        <span class="property-category-2"> Apartamento</span>
                                 </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-category-2"> Apartamento</span>
-                            </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
+                                <div class="property-wrap">
+                                    <h2 class="property-title"><a href="">Poblado</a></h2>
+                                    <div class=" property-summary">
+                                        <div class="property-detail">
+                                            <div class="size"><span>66 m<sup>2 </span>
+                                            </div>
+                                            <div class="bathrooms"><span> 2</span>
+                                            </div>
+                                            <div class="bedrooms"><span> 2 </span>
+                                            </div>
                                         </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
+                                        <div class="property-info">
+                                            <div class="property-price">
+                                                <span><span class="amount"> $ 1.000.000</span></span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,7 +245,7 @@
                 <div class="section-title">
                     <h3>Nuestros Asesores</h3>
                 </div>
-                <div class="owl-carousel owl-carousel1  owl-theme ">
+                <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
 
 
                     <div class="item">
@@ -427,7 +387,7 @@
                 <div class="section-title">
                     <h3 class="text-center">Nuestras Alianzas y Afiliaciones</h3>
                 </div>
-                <div class="owl-carousel owl-carousel2 owl-theme">
+                <div class="owl-carousel owl-carousel1 owl-theme" id="aliados_slide">
 
                     <div class="item">
                         <img class="item-image" src="images/aliados/Logo_Lonja-Afiliado.png" alt="">
