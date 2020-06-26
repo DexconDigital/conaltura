@@ -28,17 +28,12 @@
 </head>
 
 <body class="page-right-sidebar">
-    <div id="preloader">
-
-    </div>
-
     <div class="site">
 
         <!-- Menu  Inicial-->
         <?php include 'layout/menu.php'; ?>
 
-
-        <!-- Descripcion empresa -->
+    <!-- Descripcion empresa -->
         <div class="noo-wrapper">
             <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
                 <div class="property-slider">

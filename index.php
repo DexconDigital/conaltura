@@ -34,13 +34,13 @@ $pagina = 'inicio';
                             <div class="container">
                                 <article class="hentry arriendo">
                                     <div class="property-featured">
-                                        <a class="content-thumb" href="">
+                                        <a class="content-thumb" href="detalle_inmueble.php">
                                             <img src="images/no_image.png" style="object-fit: cover;" alt="">
                                             <span class="property-label"> Código: 1</span>
                                             <span class="property-category-2"> Apartamento</span>
                                     </div>
                                     <div class="property-wrap">
-                                        <h2 class="property-title"><a href="">Poblado</a></h2>
+                                        <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
                                         <div class=" property-summary">
                                             <div class="property-detail">
                                                 <div class="size"><span>66 m<sup>2 </span>
@@ -61,13 +61,13 @@ $pagina = 'inicio';
                             <div class="container">
                                 <article class="hentry arriendo">
                                     <div class="property-featured">
-                                        <a class="content-thumb" href="">
+                                        <a class="content-thumb" href="detalle_inmueble.php">
                                             <img src="images/no_image.png" style="object-fit: cover;" alt="">
                                             <span class="property-label"> Código: 2</span>
                                             <span class="property-category-2"> Apartamento</span>
                                     </div>
                                     <div class="property-wrap">
-                                        <h2 class="property-title"><a href="">Poblado</a></h2>
+                                        <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
                                         <div class=" property-summary">
                                             <div class="property-detail">
                                                 <div class="size"><span>66 m<sup>2 </span>
@@ -104,13 +104,13 @@ $pagina = 'inicio';
                         <div class="container">
                             <article class="hentry arriendo">
                                 <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                    <a class="content-thumb" href="detalle_inmueble.php">
+                                        <img src="images/no_image.png" class="cont_img" alt="">
                                         <span class="property-label"> Código: 1</span>
                                         <span class="property-category-2"> Apartamento</span>
                                 </div>
                                 <div class="property-wrap">
-                                    <h2 class="property-title"><a href="">Poblado</a></h2>
+                                    <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
                                     <div class=" property-summary">
                                         <div class="property-detail">
                                             <div class="size"><span>66 m<sup>2 </span>
@@ -131,13 +131,13 @@ $pagina = 'inicio';
                         <div class="container">
                             <article class="hentry arriendo">
                                 <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" style="object-fit: cover;" alt="">
+                                    <a class="content-thumb" href="detalle_inmueble.php">
+                                        <img src="images/no_image.png" class="cont_img" alt="">
                                         <span class="property-label"> Código: 2</span>
                                         <span class="property-category-2"> Apartamento</span>
                                 </div>
                                 <div class="property-wrap">
-                                    <h2 class="property-title"><a href="">Poblado</a></h2>
+                                    <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
                                     <div class=" property-summary">
                                         <div class="property-detail">
                                             <div class="size"><span>66 m<sup>2 </span>
@@ -175,7 +175,7 @@ $pagina = 'inicio';
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb" alt="" style="width: 100%;height: 245px; " />
+                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
                                     </a>
                                 </div>
                                 <div class="agent-wrap">
@@ -194,17 +194,16 @@ $pagina = 'inicio';
                         <div class="col-xs-12 col-sm-4 col-md-4 ">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb" alt="" style="width: 100%;height: 245px; " />
+                                    <a class="content-thumb" href="detalle_inmueble.php">
+                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
                                     </a>
                                 </div>
                                 <div class="agent-wrap">
                                     <div class="agent-summary">
                                         <div class="agent-info">
-
                                             <hr>
                                             <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
+                                            <div class="buttton ver-mas"><a href="detalle_inmueble.php" style="color: #fff; font-size: 15px; ">Ver más</a></div>
                                             <div><i class="fa fa-calendar-alt"></i> Fecha</div>
                                         </div>
                                     </div>
