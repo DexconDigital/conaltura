@@ -13,6 +13,7 @@ $pagina = 'inicio';
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
+    <?php require 'controllers/indexController.php'; ?>
 </head>
 
 <body>
@@ -32,7 +33,14 @@ $pagina = 'inicio';
                 <div class="recent-properties-content">
                     <div style="position:relative;">
                         <div class="owl-carousel owl-theme primero" id="carouselA">
-                            <div class="container">
+                            <?php
+                            if (is_array($api)) {
+                                inmuebles_destacados($api);
+                            } else {
+                                echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
+                            }
+                            ?>
+                            <!-- <div class="container">
                                 <article class="hentry arriendo">
                                     <div class="property-featured">
                                         <a class="content-thumb" href="detalle_inmueble.php">
@@ -85,7 +93,7 @@ $pagina = 'inicio';
                                             </div>
                                         </div>
                                 </article>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -102,7 +110,14 @@ $pagina = 'inicio';
                 </div>
                 <div class="recent-properties-content">
                     <div class="owl-carousel owl-theme" id="owl-propiedades-venta">
-                        <div class="container">
+                        <?php
+                        if (is_array($api)) {
+                            inmuebles_destacados2($api);
+                        } else {
+                            echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
+                        }
+                        ?>
+                        <!-- <div class="container">
                             <article class="hentry arriendo">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="detalle_inmueble.php">
@@ -154,8 +169,8 @@ $pagina = 'inicio';
                                             </div>
                                         </div>
                                     </div>
-                            </article>
-                        </div>
+                            </article> 
+                        </div>-->
                     </div>
                 </div>
             </div>
