@@ -1808,6 +1808,93 @@ div#preloader {
   -o-object-fit: cover;
   object-fit: cover; }
 
+.tamaño {
+  font-size: 82%; }
+
+.codigo {
+  padding: 0 15px;
+  margin-bottom: 20px;
+  float: left; }
+  @media (max-width: 1140px) {
+    .codigo {
+      width: 10%; } }
+  @media (max-width: 1024px) {
+    .codigo {
+      width: 10%; } }
+  @media (max-width: 768px) {
+    .codigo {
+      width: 18%; } }
+  @media (max-width: 425px) {
+    .codigo {
+      width: 100%; } }
+  @media (max-width: 375px) {
+    .codigo {
+      width: 100%; } }
+  @media (max-width: 250px) {
+    .codigo {
+      width: 100%; } }
+
+@media (max-width: 1140px) {
+  .copy {
+    text-align: inherit; } }
+
+@media (max-width: 1024px) {
+  .copy {
+    text-align: inherit; } }
+
+@media (max-width: 768px) {
+  .copy {
+    text-align: inherit; } }
+
+@media (max-width: 425px) {
+  .copy {
+    text-align: center; } }
+
+@media (max-width: 375px) {
+  .copy {
+    text-align: center; } }
+
+@media (max-width: 250px) {
+  .copy {
+    text-align: center; } }
+
+@media (max-width: 425px) {
+  .calling-info {
+    display: block;
+    float: none;
+    height: 70px;
+    border-left: none; } }
+
+@media (max-width: 375px) {
+  .calling-info {
+    display: block;
+    float: none;
+    height: 70px;
+    border-left: none; } }
+
+.texto_descrip {
+  text-align: justify; }
+
+@media (max-width: 1140px) {
+  .mapa_detalle {
+    display: none; } }
+
+@media (max-width: 1024px) {
+  .mapa_detalle {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .mapa_detalle {
+    display: inherit; } }
+
+@media (max-width: 425px) {
+  .mapa_detalle {
+    display: inherit; } }
+
+@media (max-width: 375px) {
+  .mapa_detalle {
+    display: inherit; } }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -4314,7 +4401,8 @@ input[type="button"].btn-block {
     opacity: 0; }
 
 .collapse:not(.show) {
-  display: none; }
+  /* display: none;  */
+}
 
 .collapsing {
   position: relative;

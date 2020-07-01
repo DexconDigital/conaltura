@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <?php include 'layout/archivosheader.php'; ?>
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -38,7 +39,7 @@
                                 </div>
                                 <div class="contact-form">
                                     <div class="col-12">
-                                        <div class="col-sm-6 col-md-4 p-0">
+                                        <div class="col-sm-12 col-md-12 p-0 col-lg-4 text-justify mb-4">
                                             <div class="contact-info">
                                                 <div class="text-block">
                                                     <h4>Información de Contacto</h4>
@@ -60,7 +61,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-sm-12 col-md-8">
+                                        <div class="col-sm-12 col-md-12 col-lg-8">
 
                                             <div class="contact-desc">
                                                 <div class="text-block">

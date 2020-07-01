@@ -5,7 +5,7 @@
     <div class="footer-nav">
         <div class="container contenedor_footer">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
                     <div class="ft-about-us">
                         <h4 class="ft-col-title">Conaltura Inmobiliaria</h4>
                         <div class="text-block">
@@ -19,7 +19,7 @@
                     <a href="" title="contadores para web">
                         <img src="https://counter5.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=x21rex5ewkubbf5pcf2ztncgnq4llm1p" border="0" title="contadores para web" alt="contadores para web"></a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
                     <div class="ft-featured-properties">
                         <h4 class="ft-col-title">Propiedades Destacadas en Venta</h4>
                         <div class="featured-property">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
                     <div class="ft-useful-links">
                         <h4 class="ft-col-title">Formularios Aseguradoras</h4>
                         <nav class="useful-links-menu" role="navigation">
@@ -89,7 +89,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
                     <div class="ft-contact-info">
                         <h4 class="ft-col-title">Contáctanos</h4>
                         <ul class="detail-contact-info">
@@ -124,7 +124,7 @@
                         <a href="index.html"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 logo-block">
+                <div class="col-xs-12 col-sm-6 logo-block copy">
                     Copyright
                     &copy; 2018
                     <a href="https://www.dexcondigital.com/" target="_blank">Dexcon Digital.</a> Todos los derechos reservados.

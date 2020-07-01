@@ -294,4 +294,85 @@ div#preloader {
 .cont_img{
     object-fit:cover;
 }
+.tamaño{
+    font-size: 82%;
+}
+.codigo{
+    padding: 0 15px;
+    margin-bottom: 20px;
+    float: left;
+    @media (max-width: 1140px){
+        width:10%;
+    }
+    @media (max-width: 1024px){
+        width:10%;
+    }
+    @media (max-width: 768px){
+        width:18%;
+    }
+    @media (max-width: 425px){
+        width:100%;
+    }
+    @media (max-width: 375px){
+        width:100%;
+    }
+    @media (max-width: 250px){
+        width:100%;
+    }
+}
+.copy{
+    @media (max-width: 1140px){
+        text-align: inherit;
+    }
+    @media (max-width: 1024px){
+        text-align: inherit;
+    }
+    @media (max-width: 768px){
+        text-align: inherit;
+    }
+    @media (max-width: 425px){
+        text-align: center;
+    }
+    @media (max-width: 375px){
+        text-align: center;
+    }
+    @media (max-width: 250px){
+        text-align: center;
+    }
+}
+
+.calling-info{
+    @media (max-width: 425px){
+     display: block;
+     float: none;
+     height: 70px;
+     border-left: none;
+    }
+    @media (max-width: 375px){
+    display: block;
+     float: none;
+     height: 70px;
+     border-left: none;
+    }
+}
+.texto_descrip{
+text-align: justify;
+}
+.mapa_detalle{
+    @media (max-width: 1140px){
+        display: none;
+    }
+    @media (max-width: 1024px){
+        display: none;
+    }
+    @media (max-width: 768px){
+        display: inherit;
+    }
+    @media (max-width: 425px){
+        display: inherit;
+       }
+    @media (max-width: 375px){
+        display: inherit;
+    }
+}
 

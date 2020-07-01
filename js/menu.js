@@ -27,7 +27,7 @@
         '<a href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank"><img src="images/other/logo-pse.png" style="margin-top: 10px;"/></a>' +
         '</div>' +
         '<div class="main-navigation">' +
-        '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation">' +
+        '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation" style="background-color: white;">' +
         '<ul class="nav navbar-nav options" id="items_en_uso">' +
         '<li class="dropdown" id="items1">' +
         '<a href="index.php">Inicio&nbsp;<span class="caret"></span></a>  ' +

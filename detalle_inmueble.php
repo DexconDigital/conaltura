@@ -20,8 +20,28 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
-
+    <link rel="stylesheet" href="css/responsive.css">
+    
 </head>
+
+<style>
+    @media screen and (min-width:320px) and (max-width:768px)
+    {.mapa_detalle1{
+        display: none;
+     }}
+    @media screen and (min-width:1024px) and (max-width:1140px)
+    {.mapa_detalle1{
+        display: inherit;
+     }}
+     @media screen and (min-width:320px) and (max-width:768px)
+    {.mapa_detalle2{
+        display: inherit;
+     }}
+    @media screen and (min-width:1024px) and (max-width:2560px)
+    {.mapa_detalle2{
+        display: none;
+     }}
+</style>
 
 <body>
     <!-- Menu  Inicial-->
@@ -39,7 +59,7 @@
                         <div class="noo-mainbody-inner">
                             <div class="row clearfix">
 
-                                <div class="noo-content col-xs-12 col-md-8">
+                                <div class="noo-content col-lg-8 col-md-12 col-12 p-0">
 
                                     <article class="property">
                                         <h1 class="property-title"> Detalle del Inmueble 472-704<small id="">Cumbres, Envigado</small>
@@ -106,22 +126,22 @@
                                                         <div class="property-detail-content">
                                                             <div class="detail-field row">
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-home"></i> Tipo de Inmueble </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="tipo"> </a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="tipo"> Apartamento</a></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Barrio </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="barrio"> </a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="barrio">Santa Librada </a></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Ciudad </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="ciudad"> </a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="ciudad"> Medellin</a></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-dollar"></i> Precio </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value">
-                                                                    <span class="amount" id="precio"> </span> </span>
+                                                                    <span class="amount" id="precio"> $2.200.000</span> </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-compress"></i> Area </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="area"> </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="area"> 79.00 mts<s>2</s> </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label" style="font-size: 13px;"><i class="fa fa-bed"></i> Alcobas </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"> </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"> 2</span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bath"></i> Baños </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="banios"> </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="banios"> 2</span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bullseye"></i> Gestión </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="gestion"> </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="gestion">Arriendo </span>
 
                                                             </div>
                                                         </div>
@@ -130,7 +150,7 @@
                                                 <div class="col-md-12">
                                                     <div class="property-desc">
                                                         <h4 class="property-detail-title">Descripción</h4>
-                                                        <p id="descripcion">
+                                                        <p id="descripcion" class="texto_descrip">
                                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quis vel quo doloribus vero tenetur quas ipsa eaque? Voluptate, non at. Nihil rem, sit iure laboriosam deleniti quis adipisci numquam.
                                                         </p>
                                                     </div>
@@ -138,7 +158,7 @@
                                             </div>
                                         </div>
                                         <!-- caracteristicas -->
-                                        <div class="property-summary">
+                                        <div class="">
                                             <div class="row">
                                                 <!-- Externas -->
                                                 <div class="col-md-12">
@@ -170,12 +190,27 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <section class="property-summary mapa_detalle2">
+                                            <div class="property-map mt-5">
+                                                <div class="container">
+                                                    <h4 class="property-map-title">Ubicación</h4>
+                                                </div>
+                                                <div class="property-map-content p-0">
+                                                    <div class="map-position">
+                                                        <div id="map" style="height:300px">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.442682422836!2d-75.57216528568385!3d6.205189828504449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281a2c06633%3A0xd2912572b12fe1d4!2sCl.%205A%20%2339%2095%20Oficina%20306%2C%20Edificio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1592934457478!5m2!1ses-419!2sco" width="600%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
                                     </article>
                                 </div>
 
 
-                                <div class="noo-sidebar noo-sidebar-right col-xs-12 col-md-4">
-                                    <div class="noo-sidebar-inner">
+                                <div class="noo-sidebar noo-sidebar-right col-lg-4 col-xs-12 col-md-12 col-12">
+                                    <div class="noo-sidebar-inner mb-4">
                                         <div class="block-sidebar recent-property">
                                             <h3 class="title-block-sidebar">Propiedades Similares</h3>
                                             <div class="featured-property">
@@ -242,27 +277,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="property-map">
-                        <div class="container">
-                            <h4 class="property-map-title">Ubicación</h4>
-                        </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="">
+        <div class="property-map mapa_detalle1">
+            <div class="container">
+                <h4 class="property-map-title">Ubicación</h4>
+            </div>
+            <div class="property-map-content p-0">
+                <div class="map-position">
+                    <div id="map" style="height:300px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.442682422836!2d-75.57216528568385!3d6.205189828504449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281a2c06633%3A0xd2912572b12fe1d4!2sCl.%205A%20%2339%2095%20Oficina%20306%2C%20Edificio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1592934457478!5m2!1ses-419!2sco" width="600%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="property-map-content p-0">
-            <div class="map-position">
-                <div id="map" style="height:300px">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.442682422836!2d-75.57216528568385!3d6.205189828504449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281a2c06633%3A0xd2912572b12fe1d4!2sCl.%205A%20%2339%2095%20Oficina%20306%2C%20Edificio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1592934457478!5m2!1ses-419!2sco" width="600%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- footer -->
     <?php include 'layout/footer.php'; ?>

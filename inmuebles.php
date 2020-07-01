@@ -7,6 +7,7 @@
     <title>Inmuebles</title>
     <meta name="description" content="">
     <?php include 'layout/archivosheader.php'; ?>
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -24,8 +25,10 @@
     <!-- inmuebles -->
     <section id="" class="espacio_destacadas">
         <div class="container p-0">
-            <h4 class="">Se han encontrado 0 inmuebles</h4>
             <div class="col-12 p-0">
+                <div class="col-12">
+                    <h4 class="">Se han encontrado 0 inmuebles</h4>
+                </div>
                 <div class="d-flex flex-wrap align-items-center justify-content-center ">
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         <article class="hentry arriendo">

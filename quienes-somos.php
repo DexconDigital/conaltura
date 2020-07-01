@@ -39,7 +39,7 @@
                 <div class="property-slider">
                     <div id="noo-slider-1" class="noo-slider noo-property-slide-wrap">
 
-                        <img src="images/reduccida_prueba.jpg" class="attachment-property-slider img-banner" alt="" />
+                        <img src="images/reduccida_prueba.jpg" class="attachment-property-slider" alt="" />
                         <div class="clearfix"></div>
 
                     </div>
@@ -52,25 +52,27 @@
 
                         <div class="noo-content">
                             <div class="page-content">
+                                <!-- Texto de descripcion quienes somos -->
                                 <div class="contact-map">
                                     <div class="text-block">
                                         <h4>Quienes Somos</h4>
-                                        <p>CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el propósito de ofrecer
+                                        <p class="texto_justify">CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el propósito de ofrecer
                                             los servicios de administración, arrendamientos y venta de propiedad raíz destinada
                                             ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.</p>
 
-                                        <p>Nuestro objetivo es ofrecer a nuestros clientes un servicio cercano y confiable,
+                                        <p class="texto_justify">Nuestro objetivo es ofrecer a nuestros clientes un servicio cercano y confiable,
                                             proporcionándoles el inmueble deseado, al mejor precio, de forma transparente
                                             y segura, enfocados en construir relaciones a largo plazo que se fundamenten
                                             en una mutua confianza.</p>
 
-                                        <p>Nuestro servicio se apoya en herramientas tecnológicas que permiten el manejo
+                                        <p class="texto_justify">Nuestro servicio se apoya en herramientas tecnológicas que permiten el manejo
                                             eficiente de la información y en el desarrollo constante del talento humano,
                                             con el propósito de estar a la vanguardia en el mercado inmobiliario.
                                         </p>
                                     </div>
 
                                 </div>
+                                <!-- Fin de Texto de descripcion quienes somos -->
                                 <div id="noo-accordion-1" data-active-tab="0" class="noo-vc-accordion panel-group  icon-dark_circle">
                                     <div class="panel panel-default">
                                         <div class="panel-heading active">
@@ -128,14 +130,14 @@
                                                                 <p class="nombre">Actitud de Servicio</p>
                                                             </div>
                                                             <div class="contenido">
-                                                                <div class="col-md-6">
+                                                                <div class="col-lg-6 col-md-12 col-12">
                                                                     <p>Satisfacemos las expectativas de nuestros clientes
                                                                         internos y externos, dando respuesta a sus necesidades
                                                                         con un acompañamiento cercano, oportuno, amable y
                                                                         efectivo.
                                                                     </p>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
                                                                     <img src="images/servicios/ACTITUD_DE_SERVICIO.png" alt="" class="noo-image" style="height: 150px;" />
                                                                 </div>
                                                             </div>
@@ -147,13 +149,13 @@
                                                             <p class="nombre">Compromiso</p>
                                                         </div>
                                                         <div class="contenido">
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12">
                                                                 <p>Es el valor que nos permite lograr los objetivos, incluye
                                                                     el interés por tener metas retadoras, entregando lo mejor
                                                                     de sí cada día.</p>
                                                             </div>
 
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
                                                                 <img src="images/servicios/COMPROMISO.png" alt="" class="noo-image" style="height: 150px;" />
                                                             </div>
                                                         </div>
@@ -163,12 +165,12 @@
                                                             <p class="nombre">Calidad</p>
                                                         </div>
                                                         <div class="contenido">
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12">
                                                                 <p>Hacemos el trabajo bien desde la primera vez, a su debido
                                                                     tiempo y mejorando continuamente, para entregarle a nuestros
                                                                     clientes, productos y servicios excelentes.</p>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
                                                                 <img src="images/servicios/CALIDAD.png" alt="" class="noo-image" style="height: 150px;" />
                                                             </div>
                                                         </div>
@@ -178,7 +180,7 @@
                                                             <p class="nombre">Pasión</p>
                                                         </div>
                                                         <div class="contenido">
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12">
                                                                 <p>Es nuestra fuerza que moviliza la gestión del día a día
                                                                     hacia la excelencia. De ella surge una intensidad extraordinaria,
                                                                     la creatividad, la habilidad recursiva, y la tenacidad
@@ -186,7 +188,7 @@
                                                                     los mejores resultados. La pasión es lo que une y distingue
                                                                     a Conaltura.</p>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
                                                                 <img src="images/servicios/PASION.png" alt="" class="noo-image" style="height: 150px;" />
 
                                                             </div>
@@ -212,7 +214,7 @@
         </div>
 
 
-        <div class="container">
+        <div class="container mt-2">
             <div class="text-block">
                 <h4>Nuestros Servicios</h4>
             </div>
@@ -226,7 +228,7 @@
                     <div class="overlay"></div>
                     <div class="our-sevices-content">
                         <div class="col-12 d-flex justify-content-center flex-wrap clearfix">
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-key"></i></a>
@@ -238,7 +240,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-vector-square"></i></a>
@@ -249,7 +251,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-building"></i></a>
@@ -260,7 +262,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-home"></i></a>
@@ -271,7 +273,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-money-check-alt"></i></a>
@@ -282,9 +284,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
                                 <span class="service-icon">
-                                    <a href="contactanos.html" style="color: #fff; ">
+                                    <a href="contactanos.php" style="color: #fff; ">
                                         <i class="fa fa-handshake"></i></a>
                                 </span>
                                 <hr class="noo-gap">

@@ -11,6 +11,7 @@ $pagina = 'inicio';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <?php include 'layout/archivosheader.php'; ?>
+    <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
 </head>
 
@@ -171,7 +172,7 @@ $pagina = 'inicio';
                 <div class="container">
                     <div class="col-12"></div>
                     <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                        <div class="col-xs-12 col-sm-4 col-md-4 ">
+                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
@@ -191,7 +192,7 @@ $pagina = 'inicio';
                                 </div>
                             </article>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 ">
+                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="detalle_inmueble.php">
@@ -210,11 +211,31 @@ $pagina = 'inicio';
                                 </div>
                             </article>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 ">
+                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb" alt="" style="width: 100%;height: 245px; " />
+                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
+                                    </a>
+                                </div>
+                                <div class="agent-wrap">
+                                    <div class="agent-summary">
+                                        <div class="agent-info">
+
+                                            <hr>
+                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
+                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
+                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
+                            <article class="hentry has-featured">
+                                <div class="property-featured">
+                                    <a class="content-thumb" href="">
+                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
                                     </a>
                                 </div>
                                 <div class="agent-wrap">
@@ -247,7 +268,7 @@ $pagina = 'inicio';
                 <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
 
 
-                    <div class="item">
+                    <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                         <article class="fondo_blanco_asesores">
                             <div class="agent-featured" style="width: 50%;display: table-cell;">
                                 <div class="">
@@ -256,22 +277,21 @@ $pagina = 'inicio';
                             </div>
                             <div class="agent-wrap" style="width: 50%;display: table-cell;vertical-align: top;">
 
-                                <div class="">
+                                <div class="mt-4">
                                     <div class="agent-info">
                                         <div class="fuente_asesor">Diego Mauricio Piedrahita</div>
                                         <div class="fuente_asesor">Asesor Comercial</div>
-                                        <div><i class="fa fa-envelope-square"></i><a href="mailto:dmpiedrahita@conaltura.com" class="__cf_email__" style="font-size: 10px;"> dmpiedrahita@conaltura.com</a></div>
+                                        <div><i class="fa fa-envelope tamaño"></i><a href="mailto:dmpiedrahita@conaltura.com" class="__cf_email__" style="font-size: 10px;"> dmpiedrahita@conaltura.com</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3017235158"> 3017235168</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898 Extension 217</a></div>
                                     </div>
 
                                 </div>
                             </div>
-
                         </article>
                     </div>
 
-                    <div class="item">
+                    <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
 
                         <article class="fondo_blanco_asesores">
                             <div class="agent-featured" style="width: 50%;display: table-cell;">
@@ -281,11 +301,11 @@ $pagina = 'inicio';
                             </div>
                             <div class="agent-wrap" style="width: 50%;display: table-cell;vertical-align: top;">
 
-                                <div class="">
+                                <div class="mt-4">
                                     <div class="agent-info">
                                         <div class="fuente_asesor">Veronica Tabares</div>
                                         <div class="fuente_asesor">Secretaria</div>
-                                        <div><i class="fa fa-envelope-square"></i><a href="mailto:vtabares@conaltura.com" class="__cf_email__">
+                                        <div><i class="fa fa-envelope tamaño"></i><a href="mailto:vtabares@conaltura.com" class="__cf_email__">
                                                 vtabares@conaltura.com</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898 Extension 217</a></div>
@@ -297,7 +317,7 @@ $pagina = 'inicio';
                         </article>
                     </div>
 
-                    <div class="item">
+                    <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                         <article class="fondo_blanco_asesores">
                             <div class="agent-featured" style="width: 50%;display: table-cell;">
                                 <div class="">
@@ -306,11 +326,11 @@ $pagina = 'inicio';
                             </div>
                             <div class="agent-wrap" style="width: 50%;display: table-cell;vertical-align: top;">
 
-                                <div class="">
+                                <div class="mt-4">
                                     <div class="agent-info">
                                         <div class="fuente_asesor">Fauto Arias</div>
                                         <div class="fuente_asesor">Director</div>
-                                        <div><i class="fa fa-envelope-square"></i><a href="mailto:farias@conaltura.com " class="__cf_email__">
+                                        <div><i class="fa fa-envelope tamaño"></i><a href="mailto:farias@conaltura.com " class="__cf_email__">
                                                 farias@conaltura.com</a></div>
 
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898</a></div>
@@ -322,8 +342,8 @@ $pagina = 'inicio';
                         </article>
 
                     </div>
-                    <div class="item">
 
+                    <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                         <article class="fondo_blanco_asesores">
                             <div class="agent-featured" style="width: 50%;display: table-cell;">
                                 <div class="">
@@ -332,11 +352,11 @@ $pagina = 'inicio';
                             </div>
                             <div class="agent-wrap" style="width: 50%;display: table-cell;vertical-align: top;">
 
-                                <div class="">
+                                <div class="mt-4">
                                     <div class="agent-info">
                                         <div class="fuente_asesor">Fabio Leon Jimenez</div>
                                         <div class="fuente_asesor">Asesor Comercial</div>
-                                        <div><i class="fa fa-envelope-square"></i><a href="mailto:fjimenez@conaltura.com" class="__cf_email__">
+                                        <div><i class="fa fa-envelope tamaño"></i><a href="mailto:fjimenez@conaltura.com" class="__cf_email__">
                                                 fjimenez@conaltura.com</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3128945407"> 3128945407</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898 ext 216</a></div>
@@ -347,8 +367,8 @@ $pagina = 'inicio';
 
                         </article>
                     </div>
-                    <div class="item">
 
+                    <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                         <article class="fondo_blanco_asesores">
                             <div class="agent-featured" style="width: 50%;display: table-cell;">
                                 <div class="">
@@ -357,11 +377,11 @@ $pagina = 'inicio';
                             </div>
                             <div class="agent-wrap" style="width: 50%;display: table-cell;vertical-align: top;">
 
-                                <div class="">
+                                <div class="mt-4">
                                     <div class="agent-info">
                                         <div class="fuente_asesor">Adriana Molina Tamayo</div>
                                         <div class="fuente_asesor">Asesor Comercial</div>
-                                        <div><i class="fa fa-envelope-square"></i><a href="mailto:amolina@conaltura.com" class="__cf_email__">
+                                        <div><i class="fa fa-envelope tamaño"></i><a href="mailto:amolina@conaltura.com" class="__cf_email__">
                                                 amolina@conaltura.com</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3214777488"> 3214777488</a></div>
                                         <div><i class="fa fa-phone"></i><a href="tel:3229898"> 322 9898 ext 213</a></div>

@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <?php include 'layout/archivosheader.php'; ?>
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
