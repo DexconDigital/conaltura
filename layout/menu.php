@@ -37,7 +37,7 @@
         }
     </style>
     <div id="wrap-preload">
-        <img src="images/preloader.gif" alt="gif" class="gif" id="gif">
+        <img src="images/Preloader.gif" alt="gif" class="gif" id="gif">
     </div>
     <script>
         var loader = document.getElementById("wrap-preload");

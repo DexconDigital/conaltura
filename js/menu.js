@@ -36,7 +36,7 @@
         '<a href="quienes-somos.php">Quienes Somos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '<li class="dropdown" id="items3">' +
-        '<a href="inmuebles.php">Inmuebles&nbsp;<span class="caret"></span></a>' +
+        '<a href="inmuebles.php?">Inmuebles&nbsp;<span class="caret"></span></a>' +
         '</li>' +
         '<li class="dropdown">' +
         '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +

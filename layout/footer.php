@@ -1,3 +1,4 @@
+
 <!-- <div id="back-to-top" class="back-to-top"> -->
 <i class="fa fa-angle-up subir"></i>
 <!-- </div>   -->
@@ -5,7 +6,7 @@
     <div class="footer-nav">
         <div class="container contenedor_footer">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
                     <div class="ft-about-us">
                         <h4 class="ft-col-title">Conaltura Inmobiliaria</h4>
                         <div class="text-block">
@@ -19,21 +20,13 @@
                     <a href="" title="contadores para web">
                         <img src="https://counter5.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=x21rex5ewkubbf5pcf2ztncgnq4llm1p" border="0" title="contadores para web" alt="contadores para web"></a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
                     <div class="ft-featured-properties">
                         <h4 class="ft-col-title">Propiedades Destacadas en Venta</h4>
                         <div class="featured-property">
                             <ul>
                                 <!-- cards -->
-                                <li>
-                                    <div class="featured-image">
-                                        <a href="detalle_inmueble.php"><img src="images/no_image.png" alt="" style="height: 55px; object-fit:container;"></a>
-                                    </div>
-                                    <div class="featured-decs">
-                                        <span class="featured-status"><a href="index.php"></a></span>
-                                        <h4 class="featured-title"><a href="detalle_inmueble.php">Maria Auxiliadora, Sabaneta</a></h4>
-                                    </div>
-                                </li>
+
                                 <li>
                                     <div class="featured-image">
                                         <a href="detalle_inmueble.php"><img src="images/no_image.png" alt="" style="height: 55px; object-fit:container;"></a>
@@ -60,20 +53,11 @@
                                         <h4 class="featured-title"><a href="detalle_inmueble.php">Maria Auxiliadora, Sabaneta</a></h4>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="featured-image">
-                                        <a href="detalle_inmueble.php"><img src="images/no_image.png" alt="" style="height: 55px; object-fit:container;"></a>
-                                    </div>
-                                    <div class="featured-decs">
-                                        <span class="featured-status"><a href="index.php"></a></span>
-                                        <h4 class="featured-title"><a href="detalle_inmueble.php">Maria Auxiliadora, Sabaneta</a></h4>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
                     <div class="ft-useful-links">
                         <h4 class="ft-col-title">Formularios Aseguradoras</h4>
                         <nav class="useful-links-menu" role="navigation">
@@ -89,7 +73,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
                     <div class="ft-contact-info">
                         <h4 class="ft-col-title">Contáctanos</h4>
                         <ul class="detail-contact-info">
@@ -119,15 +103,14 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 text-block">
+                <div class="col-lg-2 col-md-3 col-12 text-block">
                     <div class="logo-image">
                         <a href="index.html"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 logo-block copy">
-                    Copyright
-                    &copy; 2018
-                    <a href="https://www.dexcondigital.com/" target="_blank">Dexcon Digital.</a> Todos los derechos reservados.
+                <div class="col-lg-10 col-md-9 col-12 logo-block copy d-flex align-items-center">
+                    <p>Diseñado y Desarrollado por&nbsp<a href="https://www.dexcondigital.com/" style="font-weight: bold;color: #4d4d4d;" target="_blank"> Dexcon Digital.</a>
+                        &copy; Copyright 2020 para <a href="index.php" style="font-weight: bold;color: #4d4d4d;" target="_blank">Conaltura Inmobiliaria.</a> Todos los derechos reservados. </p>
                     <br />
 
 

@@ -1,6 +1,6 @@
 <?php
 require_once 'variables/config.php';
-require 'modelo_inmueble.php';
+require 'modelo_mini_footer.php';
 
 $ch = curl_init();
     $headers =  'Authorization:' . TOKEN;
@@ -14,37 +14,25 @@ $ch = curl_init();
     curl_close($ch);
     $api = json_decode($result, true);
     
-    
-// inmuebles destacados en arriendo
-function inmuebles_destacados($r)
+
+// dos  propiedades destacadas  en venta
+function inmuebles_destacados3($r)
 {
     if (is_array($r)) {
             $cantidad_inmuebles= count($r)-1;
-            modelo_inmueble_destacadas_arriendo($r, $cantidad_inmuebles);
+            propiedad_desc_venta($r, $cantidad_inmuebles);
     } else {
         echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
     }
 }
-// inmuebles destacados en venta
-function inmuebles_destacados2($r)
+// dos  propiedades destacadas  en arriendo
+function inmuebles_destacados4($r)
 {
     if (is_array($r)) {
             $cantidad_inmuebles= count($r)-1;
-            modelo_inmueble_destacadas_venta($r, $cantidad_inmuebles);
+            propiedad_desc_arriendo($r, $cantidad_inmuebles);
     } else {
         echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
     }
 }
-
-function cantidad_inmuebles_imprimir($r){
-    if (is_array($r)) {
-    $cantidad_inmuebles = count($r)-1;
-    echo '<script>var cantidad_inmuebles = '.$cantidad_inmuebles.'</script>';
-    }else{
-        echo '<script>var cantidad_inmuebles;</script>';
-    }
-}
-
-cantidad_inmuebles_imprimir($api);
-
 ?>

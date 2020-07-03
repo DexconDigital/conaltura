@@ -1895,6 +1895,24 @@ div#preloader {
   .mapa_detalle {
     display: inherit; } }
 
+.pagination > li > a, .pagination > li > span {
+  color: #4d4d4d !important;
+  font-weight: bold; }
+
+.page-item.active .page-link {
+  background-color: #7ab21f !important;
+  color: white !important; }
+
+.collapse:not(.show) {
+  display: inherit !important; }
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  background-color: #005f68;
+  color: white !important; }
+
+.range-slider {
+  margin-top: -22px; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -4401,8 +4419,7 @@ input[type="button"].btn-block {
     opacity: 0; }
 
 .collapse:not(.show) {
-  /* display: none;  */
-}
+  display: none; }
 
 .collapsing {
   position: relative;

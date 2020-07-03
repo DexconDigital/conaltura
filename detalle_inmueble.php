@@ -1,3 +1,6 @@
+<?php
+require 'controllers/detalleInmuebleController.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,13 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle Inmueble</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta property="title" content="Inmueble <?php echo $codigo; ?> de Conaltura" />
+    <!-- facebook -->
+    <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
     <meta property="og:site_name" content="Conaltura" />
-    <meta property="og:url" content="https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $codigo; ?>" />
+    <meta property="og:url" content="https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" />
     <meta property="og:type" content="place" />
-    <meta property="og:title" content="Inmueble <?php echo $codigo; ?> de Conaltura" />
+    <meta property="og:title" content="Inmueble <?php echo $co; ?> de Conaltura" />
     <meta property="og:description" id="metap" content="Inmueble de Conaltura" />
     <meta property="og:image" content="<?php echo $r["fotos"][0]["foto"]; ?>" id="metai" />
+    <!-- fin facebook -->
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?>">
+    <meta name="twitter:description" content="Inmueble ubicado en: <?php echo $r['barrio'] . ', ' . $r['ciudad'] . ', ' . $r['depto']; ?> ">
+    <meta name="twitter:image" content="<?php echo $r['fotos'][0]['foto']; ?>">
+    <!-- fin de datos para compartir por twitter -->
     <link rel="shortcut icon" href="images/icon/favicon.jpg.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <?php include 'layout/archivosheader.php'; ?>
@@ -21,26 +32,83 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+    <link rel="stylesheet" href="css/rangos.css">
+    <link rel="stylesheet" href="mapas/leaflet.css" crossorigin="" />
+    <link itemprop="thumbnailUrl" href="<?php echo $r['fotos'][0]['foto']; ?>">
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="<?php echo $r['fotos'][0]['foto']; ?>">
+    </span>
 </head>
 
 <style>
-    @media screen and (min-width:320px) and (max-width:768px)
-    {.mapa_detalle1{
-        display: none;
-     }}
-    @media screen and (min-width:1024px) and (max-width:1140px)
-    {.mapa_detalle1{
-        display: inherit;
-     }}
-     @media screen and (min-width:320px) and (max-width:768px)
-    {.mapa_detalle2{
-        display: inherit;
-     }}
-    @media screen and (min-width:1024px) and (max-width:2560px)
-    {.mapa_detalle2{
-        display: none;
-     }}
+    @media screen and (min-width:300px) {
+        .lista_detalle {
+            column-count: 1;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        .lista_detalle {
+            column-count: 2;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .lista_detalle {
+            column-count: 2;
+        }
+    }
+
+    @media screen and (min-width:1140px) {
+        .lista_detalle {
+            column-count: 2;
+        }
+    }
+
+    #map {
+        height: 300px;
+        z-index: 20;
+    }
+
+    .leaflet-control {
+        z-index: 200;
+    }
+
+    .leaflet-control {
+        z-index: 20;
+    }
+
+    @media screen and (min-width:300px) {
+        .titulo_ubicacion {
+            padding-left: 9%;
+        }
+    }
+
+    @media screen and (min-width:420px) {
+        .titulo_ubicacion {
+            padding-left:7%;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        .titulo_ubicacion {
+            margin-right: -1%;
+            padding-left: inherit
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .titulo_ubicacion {
+            margin-right: -1%;
+            padding-left: inherit
+        }
+    }
+
+    @media screen and (min-width:1140px) {
+        .titulo_ubicacion {
+            margin-right: 8%
+        }
+    }
 </style>
 
 <body>
@@ -62,15 +130,19 @@
                                 <div class="noo-content col-lg-8 col-md-12 col-12 p-0">
 
                                     <article class="property">
-                                        <h1 class="property-title"> Detalle del Inmueble 472-704<small id="">Cumbres, Envigado</small>
+                                        <h1 class="property-title"> Detalle del Inmueble 472-<span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
                                         </h1>
                                         <ul class="social-list property-share clearfix">
-                                            <li><a href="httpss://www.facebook.com/sharer/sharer.php?u=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $codigo; ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
-                                            <li><a href="httpss://twitter.com/?status=Me encanta este Inmueble de https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $codigo; ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
-                                            <li><a href="httpss://plus.google.com/share?url=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $codigo; ?>" target="_blank"><i class="fab fa-google-plus-g social-top2"></i></a></li>
-                                            <li><a href="whatsapp://send?text= https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $codigo; ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.conalturainmobiliaria.com%2Fsupropiedad%2FdetalleInmueble%2Fcodigo%2F&amp;src=sdkpreparse/' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
+                                            <!-- <li><a href="httpss://twitter.com/?status=Me encanta este Inmueble de https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li> -->
+                                            <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
+                                            <!-- <li><a href="httpss://plus.google.com/share?url=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-google-plus-g social-top2"></i></a></li> -->
+                                            <li>
+                                                <a data-action="share/whatsapp/share" href="<?php echo 'whatsapp://send?text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] . '%20Descripción:%20' . $r['descrip'] . '%20 http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co ?>" target="_blank">
+                                                    <i class="fab fa-whatsapp social-top2"></i></a></li>
                                             <li><a href="#" target="_blank"><i class="fa fa-envelope social-top2"></i></a></li>
-                                            <li><a href="detalle-inmueble.php?dt=<?php echo $codigo; ?>" title="Imprimir" onClick="window.print()" target="_blank"><i class="fas fa-print social-top2"></i></a></li>
+                                            <li><a href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=472-<?php echo $co; ?>" target="_blank" title="Imprimir"><i class="fas fa-print social-top2"></i></a></li>
+                                            <!-- <li><a href="detalle-inmueble.php?dt=<?php echo $co; ?>" title="Imprimir" onClick="window.print()" target="_blank"><i class="fas fa-print social-top2"></i></a></li> -->
                                         </ul>
                                         <div class="clearfix"></div>
                                         <div class="text-center">
@@ -107,17 +179,6 @@
                                                 ?>
                                             </section>
                                         </div>
-                                        <!-- <div class="carousel slide" id="myCarousel" data-ride="carousel">
-                                            <div class="carousel-inner"></div>
-                                            <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="top:50%;">
-                                                <span class="glyphicon fa fa-toggle-left"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="right carousel-control" href="#myCarousel" data-slide="next" style="top:50%;">
-                                                <span class="glyphicon fa fa-toggle-right"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
                                         <div class="property-summary">
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -126,22 +187,28 @@
                                                         <div class="property-detail-content">
                                                             <div class="detail-field row">
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-home"></i> Tipo de Inmueble </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="tipo"> Apartamento</a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="tipo"> <?php echo $r['Tipo_Inmueble'] ?></a></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Barrio </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="barrio">Santa Librada </a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="barrio"> </a><?php echo $r['barrio'] ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Ciudad </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="ciudad"> Medellin</a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="ciudad"> <?php echo $r['ciudad'] ?></a></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-dollar"></i> Precio </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value">
-                                                                    <span class="amount" id="precio"> $2.200.000</span> </span>
+                                                                    <span class="amount" id="precio"> <?php if ($r['Gestion'] == 'Arriendo') {
+                                                                                                            echo '<span class="precio">$ ' . $r['ValorCanon'] . '</span>';
+                                                                                                        } else if ($r['Gestion'] == 'Venta') {
+                                                                                                            echo '<span class="precio">$ ' . $r['ValorVenta'] . '</span>';
+                                                                                                        } else {
+                                                                                                            echo '<span class="precio">$ ' . $r['ValorCanon'] . ' /$' . $r['ValorVenta'] . '</span>';
+                                                                                                        } ?></span></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-compress"></i> Area </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="area"> 79.00 mts<s>2</s> </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="area"> <?php echo $area_construida; ?> mts<sup>2<sup> </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label" style="font-size: 13px;"><i class="fa fa-bed"></i> Alcobas </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"> 2</span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bath"></i> Baños </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="banios"> 2</span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="banios"><?php echo $banios; ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bullseye"></i> Gestión </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="gestion">Arriendo </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="gestion"><?php echo $r['Gestion'] ?></span>
 
                                                             </div>
                                                         </div>
@@ -151,7 +218,7 @@
                                                     <div class="property-desc">
                                                         <h4 class="property-detail-title">Descripción</h4>
                                                         <p id="descripcion" class="texto_descrip">
-                                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quis vel quo doloribus vero tenetur quas ipsa eaque? Voluptate, non at. Nihil rem, sit iure laboriosam deleniti quis adipisci numquam.
+                                                            <?php echo $descripcion ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -161,49 +228,81 @@
                                         <div class="">
                                             <div class="row">
                                                 <!-- Externas -->
-                                                <div class="col-md-12">
-                                                    <div class="property-desc">
+                                                <?php if (count($r['caracteristicasExternas']) > 0) {
+                                                    echo '<div class="col-md-12">
+                                                        <div class="property-desc">
                                                         <h4 class="property-detail-title">Características Externas</h4>
-                                                        <ul class="lista_detalle">
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                        <ul class="lista_detalle">';
+                                                    for ($i = 0; $i < count($r['caracteristicasExternas']); $i++) {
+                                                        $caracteristicas = ltrim($r['caracteristicasExternas'][$i]['Descripcion']);
+                                                        echo '<li>' . $caracteristicas . '</li>';
+                                                    }
+                                                    echo  '</ul>
+                                                        </div>
+                                                        </div>
+                                                        ';
+                                                } ?>
                                                 <!-- Internas -->
-                                                <div class="col-md-12">
-                                                    <div class="property-desc">
+                                                <?php if (count($r['caracteristicasInternas']) > 0) {
+                                                    echo '<div class="col-md-12">
+                                                        <div class="property-desc">
                                                         <h4 class="property-detail-title">Características Internas</h4>
-                                                        <ul class="lista_detalle">
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                            <li>Texto</li>
-                                                        </ul>
-                                                    </div>
+                                                        <ul class="lista_detalle">';
+                                                    for ($i = 0; $i < count($r['caracteristicasInternas']); $i++) {
+                                                        $caracteristicas = ltrim($r['caracteristicasInternas'][$i]['Descripcion']);
+                                                        echo '<li>' . $caracteristicas . '</li>';
+                                                    }
+                                                    echo  '</ul>
+                                                        </div>
+                                                        </div>
+                                                        ';
+                                                } ?>
+                                                <!-- Alrrededores -->
+                                                <?php if (count($r['caracteristicasAlrededores']) > 0) {
+                                                    echo '<div class="col-md-12">
+                                                        <div class="property-desc">
+                                                        <h4 class="property-detail-title">Características Alrededores</h4>
+                                                        <ul class="lista_detalle">';
+                                                    for ($i = 0; $i < count($r['caracteristicasAlrededores']); $i++) {
+                                                        $caracteristicas = ltrim($r['caracteristicasAlrededores'][$i]['Descripcion']);
+                                                        echo '<li>' . $caracteristicas . '</li>';
+                                                    }
+                                                    echo  '</ul>
+                                                        </div>
+                                                        </div>
+                                                        ';
+                                                } ?>
+                                                <!-- Video -->
+                                                <div class="col-md-12">
+                                                    <?php if ($r['video'] != "") {
+                                                        echo '
+                                                        <div class="property-desc">
+                                                        <h4 class="property-detail-title">Video</h4>
+                                                        <iframe src="' . $r['video'] . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                        </div>';
+                                                    } ?>
                                                 </div>
                                             </div>
                                         </div>
-                                        <section class="property-summary mapa_detalle2">
+
+                                        <?php
+                                        if ($video360 != "") {
+                                            echo '
+                                            <section class="">
                                             <div class="property-map mt-5">
                                                 <div class="container">
-                                                    <h4 class="property-map-title">Ubicación</h4>
+                                                    <h4 class="property-map-title">Foto 360</h4>
                                                 </div>
-                                                <div class="property-map-content p-0">
-                                                    <div class="map-position">
-                                                        <div id="map" style="height:300px">
-                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.442682422836!2d-75.57216528568385!3d6.205189828504449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281a2c06633%3A0xd2912572b12fe1d4!2sCl.%205A%20%2339%2095%20Oficina%20306%2C%20Edificio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1592934457478!5m2!1ses-419!2sco" width="600%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                                        </div>
-                                                    </div>
+                                                <div class="col-12 mt-2 p-0">
+                                                    <iframe width="560" height="315" src="' . $video360 . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 </div>
                                             </div>
                                         </section>
+                                                ';
+                                        } else {
+                                            echo '';
+                                        }
+                                        ?>
 
                                     </article>
                                 </div>
@@ -216,16 +315,8 @@
                                             <div class="featured-property">
                                                 <ul class="similarListing">
                                                     <!-- cards -->
-                                                    <li>
-                                                        <div class="featured-image">
-                                                            <a href=""><img src="images/no_image.png" alt="" style="height: 60px; object-fit:contain;"></a>
-                                                        </div>
-                                                        <div class="featured-decs">
-                                                            <span class="featured-status"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">472-123</a></span>
-                                                            <h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">Bogotá Cundinamarca</a></h4>
-                                                        </div>
-                                                    </li>
-                                                    <li>
+                                                    <?php similares($r['IdCiudad'], $r['IdTpInm']); ?>
+                                                    <!-- <li>
                                                         <div class="featured-image">
                                                             <a href=""><img src="images/no_image.png" alt="" style="height: 60px;object-fit:contain;"></a>
                                                         </div>
@@ -233,32 +324,27 @@
                                                             <span class="featured-status"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">472-123</a></span>
                                                             <h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">Bogotá Cundinamarca</a></h4>
                                                         </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="featured-image">
-                                                            <a href=""><img src="images/no_image.png" alt="" style="height: 60px;object-fit:contain;"></a>
-                                                        </div>
-                                                        <div class="featured-decs">
-                                                            <span class="featured-status"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">472-123</a></span>
-                                                            <h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">Bogotá Cundinamarca</a></h4>
-                                                        </div>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="noo-sidebar-inner">
-
+                                    <div class="noo-sidebar-inner pr-0">
                                         <div class="block-sidebar recent-property">
                                             <h3 class="title-block-sidebar">Contacto con Asesor</h3>
-                                            <div class="featured-property">
-                                                <p class="detalle-asesor">
-                                                    <p class="p1">Nombre y Apellido </p>
-                                                    <p class="p1"><a href="" target="_blank"><i class="fa fa-envelope"></i> correo@dominio.com</p></a>
-                                                    <p class="p1"><a href="" target="_blank"><i class="fa fa-phone"></i> 123-456-789</p></a>
-                                                    <p class="p1"><a href="" target="_blank"><i class="fa fa-phone"></i> 310-123-1212</p></a>
-                                                </p>
+                                            <div class="featured-property d-flex flex-wrap">
+                                                <div class="text-center col-12 col-md-6 col-lg-12 mb-4">
+                                                    <img class="cont_img" src="<?php echo $asesor['FotoAsesor']; ?>" width="100%" height="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-12 col-md-6 col-12">
+                                                    <p class="detalle-asesor">
+                                                        <p class="p1"><span><?php echo $asesor['ntercero']; ?></span> </p>
+                                                        <p class="p1"><a href="<?php echo $asesor['correo'] ?>" target="_blank"><i class="fa fa-envelope"></i> <?php echo $asesor['correo'] ?></p></a>
+                                                        <p class="p1"><a href="tel:+573229898"><i class="fa fa-phone"></i> 3229898</p></a>
+                                                        <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -283,15 +369,17 @@
         </div>
     </section>
     <div class="">
-        <div class="property-map mapa_detalle1">
+        <div class="property-map mapa_detalle">
             <div class="container">
-                <h4 class="property-map-title">Ubicación</h4>
+                <h4 class="property-map-title titulo_ubicacion">Ubicación</h4>
             </div>
-            <div class="property-map-content p-0">
-                <div class="map-position">
-                    <div id="map" style="height:300px">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.442682422836!2d-75.57216528568385!3d6.205189828504449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281a2c06633%3A0xd2912572b12fe1d4!2sCl.%205A%20%2339%2095%20Oficina%20306%2C%20Edificio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1592934457478!5m2!1ses-419!2sco" width="600%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="property-map-content p-0 ">
+                <div class="map-position card mapa_tamaño">
+
+                    <div class="">
+                        <div id="map" class="w-100"></div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -301,6 +389,7 @@
     <?php include 'layout/footer.php'; ?>
 </body>
 <?php include 'layout/archivosfooter.php'; ?>
+<script src="./menu/menu.js.download"></script>
 <script src="js/slick.min.js"></script>
 <script>
     $(".btn-atras").click(function() {
@@ -309,10 +398,13 @@
 
     });
 </script>
+<!-- slider miniaturas -->
 <script>
     $('#slide-detalle').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplayTimeout: 4000,
         arrows: true,
         fade: true,
         asNavFor: '#miniaturas'
@@ -351,5 +443,23 @@
         ]
     });
 </script>
+<!-- mapa del inmueble -->
+<script src="mapas/leaflet.js" crossorigin=""></script>
+<script>
+    var map = L.map('map').setView([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>], 14);
+
+    L.tileLayer('https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=1rAGHv3KcO1nrS6S9cgI', {
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
+    }).addTo(map);
+
+    L.marker([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>]).addTo(map)
+        .bindPopup('<img src="<?php echo $r['fotos'][0]['foto'] ?>"])" alt="" width="55px" height="auto"><br>Ubicación')
+        .openPopup();
+</script>
+<script src="conexion_api/token_api.js"></script>
+<script src="conexion_api/validadores.js"></script>
+<script src="conexion_api/buscador.js"></script>
+<!-- barra de rangos -->
+<script src="js/rangos.js"></script>
 
 </html>

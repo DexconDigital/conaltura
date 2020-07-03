@@ -375,4 +375,21 @@ text-align: justify;
         display: inherit;
     }
 }
-
+.pagination>li>a, .pagination>li>span{
+    color:#4d4d4d !important;
+    font-weight:bold;
+}
+.page-item.active .page-link{
+    background-color:#7ab21f !important;
+    color: white !important;
+}
+.collapse:not(.show){
+    display: inherit !important;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus{
+    background-color:#005f68;
+    color:white !important;
+}
+.range-slider{
+    margin-top: -22px;
+}

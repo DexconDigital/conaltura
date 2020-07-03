@@ -14,6 +14,8 @@ $pagina = 'inicio';
     <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
     <?php require 'controllers/indexController.php'; ?>
+    <?php require 'controllers/miniaturasController.php'; ?>
+    <link rel="stylesheet" href="css/rangos.css">
 </head>
 
 <body>
@@ -187,7 +189,7 @@ $pagina = 'inicio';
                 <div class="container">
                     <div class="col-12"></div>
                     <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
@@ -207,7 +209,7 @@ $pagina = 'inicio';
                                 </div>
                             </article>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="detalle_inmueble.php">
@@ -226,7 +228,7 @@ $pagina = 'inicio';
                                 </div>
                             </article>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
@@ -246,7 +248,27 @@ $pagina = 'inicio';
                                 </div>
                             </article>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 mt-5">
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
+                            <article class="hentry has-featured">
+                                <div class="property-featured">
+                                    <a class="content-thumb" href="">
+                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
+                                    </a>
+                                </div>
+                                <div class="agent-wrap">
+                                    <div class="agent-summary">
+                                        <div class="agent-info">
+
+                                            <hr>
+                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
+                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
+                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
                             <article class="hentry has-featured">
                                 <div class="property-featured">
                                     <a class="content-thumb" href="">
@@ -460,5 +482,10 @@ $pagina = 'inicio';
     <?php include 'layout/footer.php'; ?>
 </body>
 <?php include 'layout/archivosfooter.php'; ?>
+<script src="conexion_api/token_api.js"></script>
+<script src="conexion_api/validadores.js"></script>
+<script src="conexion_api/buscador.js"></script>
+<!-- barra de rangos -->
+<script src="js/rangos.js"></script>
 
 </html>

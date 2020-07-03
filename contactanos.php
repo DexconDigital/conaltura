@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
-
+    <link rel="stylesheet" href="css/rangos.css">
 </head>
 
 <body>
@@ -47,14 +47,14 @@
                                                 <div class="text-block">
                                                     <ul>
 
-                                                        <li><b><i class="fa fa-phone"></i> Telefono</b><a href="tel:0343229898" target="_blank">(034)2662277 Extensión
+                                                        <li><b><i class="fa fa-phone"></i></b><a href="tel:0343229898" target="_blank">(034)2662277 Extensión
                                                                 4</a></li>
-                                                        <li><b><i class="fa fa-phone"></i> Telefono</b><a href="tel:0343229898" target="_blank">(034)2662277 Extensión
+                                                        <li><b><i class="fa fa-phone"></i></b><a href="tel:0343229898" target="_blank">(034)2662277 Extensión
                                                                 209</a></li>
-                                                        <li><b><i class="fa fa-phone"></i> Telefono</b><a href="tel:0342662277" target="_blank">(034)3229898</a></li>
-                                                        <li><b><i class="fab fa-whatsapp"></i> Whatsapp</b><a href="https://wa.me/573193777281" target="_blank">319 377
+                                                        <li><b><i class="fa fa-phone"></i></b><a href="tel:0342662277" target="_blank">(034)3229898</a></li>
+                                                        <li><b><i class="fab fa-whatsapp"></i></b><a href="https://wa.me/573193777281" target="_blank">319 377
                                                                 7281 </a></li>
-                                                        <li><b><i class="fa fa-envelope"></i> Email</b><a href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</a></li>
+                                                        <li><b><i class="fa fa-envelope"></i></b><a href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</a></li>
 
                                                     </ul>
                                                 </div>
@@ -125,5 +125,10 @@
     <?php include 'layout/footer.php'; ?>
 </body>
 <?php include 'layout/archivosfooter.php'; ?>
+<script src="conexion_api/token_api.js"></script>
+<script src="conexion_api/validadores.js"></script>
+<script src="conexion_api/buscador.js"></script>
+<!-- barra de rangos -->
+<script src="js/rangos.js"></script>
 
 </html>
