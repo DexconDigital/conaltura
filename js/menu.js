@@ -210,10 +210,10 @@ setTimeout(function () {
                             '<div class="featured-image">';
                         if (data[i].foto1 != "") {
 
-                            res += '<a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
+                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
 
                         } else {
-                            res += '<a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
+                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
 
                         }
                         res += '</div>' +
@@ -269,10 +269,10 @@ setTimeout(function () {
                             '<div class="featured-image">';
                         if (data[i].foto1 != "") {
 
-                            res += '<a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
+                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
 
                         } else {
-                            res += '<a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
+                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
 
                         }
                         res += '</div>' +

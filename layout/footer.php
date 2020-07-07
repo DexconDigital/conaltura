@@ -24,35 +24,14 @@
                     <div class="ft-featured-properties">
                         <h4 class="ft-col-title">Propiedades Destacadas en Venta</h4>
                         <div class="featured-property">
-                            <ul>
-                                <!-- cards -->
-
-                                <li>
-                                    <div class="featured-image">
-                                        <a href="detalle_inmueble.php"><img src="images/no_image.png" alt="" style="height: 55px; object-fit:container;"></a>
-                                    </div>
-                                    <div class="featured-decs">
-                                        <span class="featured-status"><a href="index.php"></a></span>
-                                        <h4 class="featured-title"><a href="detalle_inmueble.php">Maria Auxiliadora, Sabaneta</a></h4>
-                                    </div>
-                                </li>
+                            <ul id="ulti-prop-v">
                             </ul>
                         </div>
                     </div>
                     <div class="ft-featured-properties">
                         <h4 class="ft-col-title">Propiedades Destacadas en Arriendo</h4>
                         <div class="featured-property">
-                            <ul>
-                                <!-- cards -->
-                                <li>
-                                    <div class="featured-image">
-                                        <a href="detalle_inmueble.php"><img src="images/no_image.png" alt="" style="height: 55px; object-fit:container;"></a>
-                                    </div>
-                                    <div class="featured-decs">
-                                        <span class="featured-status"><a href="index.php"></a></span>
-                                        <h4 class="featured-title"><a href="detalle_inmueble.php">Maria Auxiliadora, Sabaneta</a></h4>
-                                    </div>
-                                </li>
+                            <ul id="ulti-prop-a">
                             </ul>
                         </div>
                     </div>

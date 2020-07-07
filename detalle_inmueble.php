@@ -66,7 +66,7 @@ require 'controllers/detalleInmuebleController.php';
     }
 
     #map {
-        height: 300px;
+        height: 400px;
         z-index: 20;
     }
 
@@ -86,7 +86,7 @@ require 'controllers/detalleInmuebleController.php';
 
     @media screen and (min-width:420px) {
         .titulo_ubicacion {
-            padding-left:7%;
+            padding-left: 7%;
         }
     }
 
@@ -107,6 +107,41 @@ require 'controllers/detalleInmuebleController.php';
     @media screen and (min-width:1140px) {
         .titulo_ubicacion {
             margin-right: 8%
+        }
+    }
+
+    @media screen and (min-width:420px) {
+        #video {
+            height: 295px;
+            width: 718px;
+        }
+    }
+
+    @media screen and (min-width:320px) {
+        #video {
+            height: 295px;
+            width: 718px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        #video {
+            height: 295px;
+            width: 718px;
+        }
+    }
+
+    @media screen and (min-width:1020px) {
+        #video {
+            width: 718px;
+            height: 500px;
+        }
+    }
+
+    @media screen and (min-width:1140px) {
+        #video {
+            width: 718px;
+            height: 500px;
         }
     }
 </style>
@@ -273,12 +308,12 @@ require 'controllers/detalleInmuebleController.php';
                                                         ';
                                                 } ?>
                                                 <!-- Video -->
-                                                <div class="col-md-12">
+                                                <div class="col-12">
                                                     <?php if ($r['video'] != "") {
                                                         echo '
                                                         <div class="property-desc">
                                                         <h4 class="property-detail-title">Video</h4>
-                                                        <iframe src="' . $r['video'] . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                        <iframe id="video" src="' . $r['video'] . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>';
                                                     } ?>
                                                 </div>
@@ -446,8 +481,8 @@ require 'controllers/detalleInmuebleController.php';
 <!-- mapa del inmueble -->
 <script src="mapas/leaflet.js" crossorigin=""></script>
 <script>
-    var map = L.map('map').setView([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>], 14);
-
+    var map = L.map('map').setView([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>], 17);
+      
     L.tileLayer('https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=1rAGHv3KcO1nrS6S9cgI', {
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
     }).addTo(map);
