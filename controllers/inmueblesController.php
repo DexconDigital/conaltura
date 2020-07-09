@@ -48,13 +48,21 @@ $ch = curl_init();
     curl_setopt($ch, CURLOPT_USERPWD, $headers);
     $result = curl_exec($ch);
     curl_close($ch);
-    $api = json_decode($result, true);
+    $api = json_decode($result, true); 
    
 function listar_inmuebles($r)
 {
             modelo_inmueble($r);
  
 }
+
+function geomapa($r){
+
+	modelogeomapa($r);
+}
+    
+
+
 $totalinmuebles=0;
 if(is_array($api)){
     $totalinmuebles = $api['datosGrales']['totalInmuebles'];
@@ -69,4 +77,3 @@ $currentPage = $pag;
 $urlPattern = $url_pagina.'&pag=(:num)';
 
 $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-?>

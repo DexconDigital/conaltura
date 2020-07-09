@@ -8,7 +8,7 @@
         '<span class="icon-bar"></span>' +
         '<span class="icon-bar"></span>' +
         '</button>' +
-        '<div class="logo">' +
+        '<div class="logo" style="margin-top:11px;" >' +
         '<div class="logo-image">' +
         '<a href="index.php" class="a-calling">' +
         '<img src="images/other/conaltura.png" />' +

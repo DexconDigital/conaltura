@@ -106,8 +106,12 @@ function modelo_inmueble($r)
             <div class="property-featured">
             <a class="content-thumb" href="./detalle_inmueble.php?co=' . $codigo . '">
                 <img src="' . $imagen . '" style="object-fit: cover;" alt="">
-                <span class="property-label"> Código: ' . $codigo . '</span>
-                <span class="property-category-2"> ' . $api['Tipo_Inmueble'] . ' </span>
+                <span class="property-label"> Código: ' . $codigo . '</span>';
+                  if ($api['foto360'] != ' ' ){
+                      echo '<span class="property-label-2" >Incluye fotos 360</span>';
+                  } else{ ' ';}
+                echo '
+                <span class="property-category-2"> ' . $api['Tipo_Inmueble'] . ' en '.$api['Gestion'].' </span>
             </a>
         </div>
         <div class="property-wrap">
@@ -159,7 +163,25 @@ function modelo_inmueble_similare($r)
     </li>';
     }
 }
+function modelogeomapa($r)
+{
+    for ($i = 0; $i < count($r); $i++) {
+        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
+        $api = $r[$i];
 
+        echo '
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Codigo: '.$codigo.' </li>
+                    <li class="list-group-item">Longitud: '.$api['latitud'].' </li>
+                    <li class="list-group-item">Latitud: '.$api['longitud'].' </li>
+                </ul>
+            </div>
+        </div>    
+        ';
+    }
+}
 // Funciones para los modelos de propiedades
 function existeImagen($r)
 {

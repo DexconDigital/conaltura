@@ -29,7 +29,7 @@
 
                         <div class="noo-content ">
                             <div class="page-content">
-                                <div class="contact-map">
+                                <div class="contact-map p-1">
                                     <div class="text-block">
                                         <h4>CONTÁCTANOS</h4>
                                     </div>
@@ -40,7 +40,7 @@
                                 <div class="contact-form">
                                     <div class="col-12">
                                         <div class="col-sm-12 col-md-12 p-0 col-lg-4 text-justify mb-4">
-                                            <div class="contact-info">
+                                            <div class="contact-info p-0">
                                                 <div class="text-block">
                                                     <h4>Información de Contacto</h4>
                                                 </div>
