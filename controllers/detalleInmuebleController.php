@@ -47,7 +47,7 @@ $asesor = $r['asesor'][0];
 $video360 = $r['video360'];
 
 if ($asesor['FotoAsesor'] == 'https://simicrm.app/mcomercialweb/') {
-    $asesor['FotoAsesor'] = 'images/no_image.png';
+    $asesor['FotoAsesor'] = './images/no_image.png';
 }
 
 

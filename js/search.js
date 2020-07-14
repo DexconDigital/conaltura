@@ -342,7 +342,7 @@ $(document).ready(function () {
 
 
         if (code !== "") {
-            location.href = 'detalle-inmueble.php?dt=472-' + code + '';
+            location.href = 'detalle_inmueble.php?dt=472-' + code + '';
         } else {
           
                 location.href = 'inmuebles-b.php?gs=' + operacion + '&&ti=' + inmueble + '&&ci=' + ciudad + '&&zo=' + zona + '&&pre=' + precio + '&&pre1=' + precio1 + '';

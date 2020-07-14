@@ -2374,7 +2374,8 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1140px; }
+     }
 
 .container-fluid {
   width: 100%;
@@ -4415,7 +4416,7 @@ input[type="button"].btn-block {
   .fade:not(.show) {
     opacity: 0; }
 
-.collapse:not(.show) {
+.collapse:not(.in) {
   display: none; }
 
 .collapsing {

@@ -14,7 +14,6 @@ $pagina = 'inicio';
     <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
     <?php require 'controllers/indexController.php'; ?>
-    <?php require 'controllers/miniaturasController.php'; ?>
     <link rel="stylesheet" href="css/rangos.css">
 </head>
 
@@ -482,6 +481,8 @@ $pagina = 'inicio';
     <?php include 'layout/footer.php'; ?>
 </body>
 <?php include 'layout/archivosfooter.php'; ?>
+<!-- <script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/jquery.nouislider.all.min.js"></script> -->
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>

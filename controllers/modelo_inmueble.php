@@ -5,7 +5,7 @@ function modelo_inmueble_destacadas_arriendo($r, $cantidad_inmuebles)
 {
     for ($i = 0; $i < $cantidad_inmuebles; $i++) {
         $imagen = existeImagen(($r[$i]['foto1']));
-        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
+        $codigo = str_ireplace("", "", $r[$i]['Codigo_Inmueble']);
         $api = $r[$i];
         if ($r[$i]['Gestion'] == "Arriendo" && $r[$i]['Gestion'] != ' ') {
             echo '
@@ -52,7 +52,7 @@ function modelo_inmueble_destacadas_venta($r, $cantidad_inmuebles)
 {
     for ($i = 0; $i < $cantidad_inmuebles; $i++) {
         $imagen = existeImagen(($r[$i]['foto1']));
-        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
+        $codigo = str_ireplace("", "", $r[$i]['Codigo_Inmueble']);
         $api = $r[$i];
         if ($r[$i]['Gestion'] == "Venta" && $r[$i]['Gestion'] != ' ') {
             echo '         <div class="container">
@@ -98,7 +98,7 @@ function modelo_inmueble($r)
 
     for ($i = 0; $i < count($r); $i++) {
         $imagen = existeImagen(($r[$i]['foto1']));
-        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
+        $codigo = str_ireplace("", "", $r[$i]['Codigo_Inmueble']);
         $api = $r[$i];
         echo '
         <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -149,7 +149,7 @@ function modelo_inmueble_similare($r)
 
     for ($i = 0; $i < count($r); $i++) {
         $imagen = existeImagen(($r[$i]['foto1']));
-        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
+        $codigo = str_ireplace("", "", $r[$i]['Codigo_Inmueble']);
         $api = $r[$i];
 
         echo '<li>
@@ -161,25 +161,6 @@ function modelo_inmueble_similare($r)
             <h4 class="featured-title"><a href="./detalle_inmueble.php?co=' . $codigo . '">' . $api['Barrio'] . ', ' . $api['Ciudad'] . '</a></h4>
         </div>
     </li>';
-    }
-}
-function modelogeomapa($r)
-{
-    for ($i = 0; $i < count($r); $i++) {
-        $codigo = str_ireplace("472-", "", $r[$i]['Codigo_Inmueble']);
-        $api = $r[$i];
-
-        echo '
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Codigo: '.$codigo.' </li>
-                    <li class="list-group-item">Longitud: '.$api['latitud'].' </li>
-                    <li class="list-group-item">Latitud: '.$api['longitud'].' </li>
-                </ul>
-            </div>
-        </div>    
-        ';
     }
 }
 // Funciones para los modelos de propiedades

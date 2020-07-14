@@ -195,7 +195,7 @@ require 'controllers/detalleInmuebleController.php';
                                 <div class="noo-content col-lg-8 col-md-12 col-12 p-0">
 
                                     <article class="property">
-                                        <h1 class="property-title"> Detalle del Inmueble 472-<span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
+                                        <h1 class="property-title"> Detalle del Inmueble <span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
                                         </h1>
                                         <ul class="social-list property-share clearfix">
                                             <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.conalturainmobiliaria.com%2Fsupropiedad%2FdetalleInmueble%2Fcodigo%2F&amp;src=sdkpreparse/' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
@@ -404,7 +404,14 @@ require 'controllers/detalleInmuebleController.php';
                                             <h3 class="title-block-sidebar">Contacto con Asesor</h3>
                                             <div class="featured-property d-flex flex-wrap">
                                                 <div class="text-center col-12 col-md-6 col-lg-12 mb-4">
-                                                    <img class="cont_img" src="<?php echo $asesor['FotoAsesor']; ?>" width="100%" height="100%" alt="">
+                                                    <?php 
+                                                    if($asesor['FotoAsesor'] == ' '){
+                                                        echo'<img class="cont_img" src="images/no_image.png" width="100%" height="100%" alt="">';
+                                                    }else{
+                                                        echo '<img class="cont_img" src="'.$asesor['FotoAsesor'].'" width="100%" height="100%" alt="">';
+                                                    }
+                                                    ?>
+                                                    
                                                 </div>
                                                 <div class="col-lg-12 col-md-6 col-12">
                                                     <p class="detalle-asesor">

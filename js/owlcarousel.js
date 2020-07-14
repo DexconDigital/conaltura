@@ -1,3 +1,5 @@
+
+$(document).ready(function () {
 $('.owl-carousel1').owlCarousel({
     loop:true,
     margin:10,
@@ -74,3 +76,4 @@ $('.owl-carousel4').owlCarousel({
     }
 })
 
+});

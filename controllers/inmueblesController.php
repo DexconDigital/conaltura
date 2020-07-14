@@ -49,18 +49,28 @@ $ch = curl_init();
     $result = curl_exec($ch);
     curl_close($ch);
     $api = json_decode($result, true); 
-   
+
+    
+    
+	// echo "<pre>";
+	// print_r($api);
+	// echo "</pre>";
+
+// for($i=0; $i<8; $i++){
+//     print_r ($api['Inmuebles'][$i]['longitud'])."<br>";
+// }
+// for($i=0; $i<8; $i++){
+//     print_r ($api['Inmuebles'][$i]['latitud'])."<br>";
+// }
+    // print_r ($api['Inmuebles'][0]['longitud']);
 function listar_inmuebles($r)
 {
             modelo_inmueble($r);
  
 }
 
-function geomapa($r){
 
-	modelogeomapa($r);
-}
-    
+
 
 
 $totalinmuebles=0;
