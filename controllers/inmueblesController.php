@@ -56,13 +56,7 @@ $ch = curl_init();
 	// print_r($api);
 	// echo "</pre>";
 
-// for($i=0; $i<8; $i++){
-//     print_r ($api['Inmuebles'][$i]['longitud'])."<br>";
-// }
-// for($i=0; $i<8; $i++){
-//     print_r ($api['Inmuebles'][$i]['latitud'])."<br>";
-// }
-    // print_r ($api['Inmuebles'][0]['longitud']);
+
 function listar_inmuebles($r)
 {
             modelo_inmueble($r);
@@ -85,5 +79,6 @@ $totalItems = $totalinmuebles;
 $itemsPerPage = 9;
 $currentPage = $pag;
 $urlPattern = $url_pagina.'&pag=(:num)';
-
 $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+
+?>

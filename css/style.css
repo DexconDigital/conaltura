@@ -4413,9 +4413,10 @@ input[type="button"].btn-block {
       -webkit-transition: none;
       -o-transition: none;
       transition: none; } }
+      
   .fade:not(.show) {
     opacity: 0; }
-
+/* cambiar */
 .collapse:not(.in) {
   display: none; }
 

@@ -273,11 +273,11 @@
         config = {
             type: "single",
 
-            min: 10,
-            max: 100,
+            min: 900000,
+            max: 1500000000,
             from: null,
             to: null,
-            step: 1,
+            step: 1000000,
 
             min_interval: 0,
             max_interval: 0,
@@ -2368,6 +2368,19 @@
 
 }));
 
+var vmaximo;
+var vminimo;
+var vinical;
+var vsaltos;
+
+
+function operaciogeneral(){
+    // console.log(vmaximo)    
+    // console.log(vmaximo)
+    // console.log(vinical)    
+    // console.log(vsaltos)    
+};
+operaciogeneral();
 
 
 // Trigger
@@ -2378,8 +2391,8 @@ var $range = $(".js-range-slider"),
     $inputFrom = $(".js-input-from"),
     $inputTo = $(".js-input-to"),
     instance,
-    min = 0,
-    max = 20000000,
+    min = vminimo,
+    max = vmaximo,
     from = 0,
     to = 0;
 
@@ -2388,11 +2401,11 @@ $range.ionRangeSlider({
     min: min,
     max: max,
     from: 0,
-    to: 2000000,
+    to: vinical,
     prefix: '',
     onStart: updateInputs,
     onChange: updateInputs,
-    step: 100000,
+    step: vsaltos,
     prettify_enabled: true,
     prettify_separator: ".",
   values_separator: " - ",

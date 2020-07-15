@@ -17,7 +17,7 @@ $pagina = 'inicio';
     <link rel="stylesheet" href="css/rangos.css">
 </head>
 
-<body>
+<body >
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
 

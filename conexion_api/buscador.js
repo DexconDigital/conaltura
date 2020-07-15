@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // window.onload = estoyencero;
     // si el campo codigo tiene un valor los demas  campos se desabilitan
     $('#codigo_buscar').keyup(function () {
         var value = $(this).val();
@@ -95,13 +96,11 @@ $(document).ready(function () {
         },
         'dataType': "json",
         success: function (gestion) {
+            // var operacion = localStorage.getItem("gestion");
             //Eliminar un campo del array 
             gestion.splice(2, 1)
-
-
             var gestion_resultados = " ";
             for (var i = 0; i < gestion.length; i++) {
-
                 gestion_resultados +=
                     '<option value="' + gestion[i].idGestion + '">' +
                     gestion[i].Nombre +
@@ -111,8 +110,47 @@ $(document).ready(function () {
             }
             $('#tipo_gestion_buscar').append(gestion_resultados);
 
+
         }
     });
+    // function estoyencero(){
+    //     function agregarcero() {
+    //         console.log('estoy cero')
+    //         return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
+    //     }
+    //     return agregarcero(), operaciogeneral();
+    // }
+    // $("#tipo_gestion_buscar").change(function () {
+    //     var operacion = $('#tipo_gestion_buscar option:selected').val();
+
+    //     if (operacion != 1 && operacion != 2 && operacion != 5) {
+    //         console.log('estoy cero')
+    //         function agregarcero() {
+    //             return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
+    //         }
+    //         return agregarcero(), operaciogeneral();
+    //     }
+    //    else if (operacion == 1) {
+    //         console.log('estoy en uno')
+    //         function agregaruno() {
+    //             return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
+    //         }
+    //         return agregaruno(), operaciogeneral();
+
+    //     } else if (operacion == 2) {
+    //         console.log('estoy en dos')
+    //         function agregardos(){
+    //             return vmaximo = 1500000000 ,  vminimo = 900000 , vinical = 1500000000 , vsaltos = 1000000;
+    //         }
+    //         return agregardos(), operaciogeneral();
+    //     } else if (operacion == 5) {
+    //         console.log('estoy en tres')
+    //         function agregartres(){
+    //             return vmaximo = 1500000000 ,  vminimo = 2000000 , vinical = 1500000000 , vsaltos = 1000000;
+    //         }
+    //         return agregartres(),operaciogeneral();
+    //     }
+    // });
 
     // Funcion que trae el tipo de inmueble ejm: apartamento casa etc
     $.ajax({
@@ -183,78 +221,10 @@ var busqueda = function () {
     precio_minimo_buscar = existeCampo(precio_minimo_buscar);
     precio_maximo_buscar = existeCampo(precio_maximo_buscar);
 
-    
+
     if (code !== "") {
         window.location.href = 'detalle_inmueble.php?co=' + code + '';
     } else {
-
-        // $.ajax({
-        //     url: 'http://www.simi-api.com/ApiSimiweb/response/v2.1.1/filtroInmueble/limite/0/total/9/departamento/0/ciudad/'+ciudad_buscar+'/zona/0/barrio/'+barrio_buscar+'/tipoInm/'+tipo_inmueble_buscar+'/tipOper/'+gestion_buscar+'/areamin/0/areamax/0/valmin/'+ precio_minimo_buscar +'/valmax/'+ precio_maximo_buscar +'/campo/0/order/desc/banios/0/alcobas/0/garajes/0/sede/0/usuario/0',
-        //     type: 'GET',
-        //     beforeSend: function (xhr) {
-        //         xhr.setRequestHeader(
-        //             'Authorization',
-        //             'Basic ' + btoa('Authorization:67YGONEOnLdTmlYuToDOh8sULqFCJqmMLAaj8j4z-472'));
-        //     },
-        //     'dataType': "json",
-        //     success: function (data) {
-        //         console.log(data);
-        //         var cities = L.layerGroup();
-    
-        //         // for (i = 0; i < parseInt(data.Inmuebles.length); i++) {
-        //         //     //    Consulta del api a los datos que necesito
-        //         //     // console.log(data.Inmuebles[i].latitud, data.Inmuebles[i].longitud, data.Inmuebles[i].Codigo_Inmueble);
-    
-    
-        //         //     L.marker([data.Inmuebles[i].latitud, data.Inmuebles[i].longitud]).bindPopup('<img src="' + data.Inmuebles[i].foto1 + '" alt="" style=""><p class="text-center" >Código: ' + data.Inmuebles[i].Codigo_Inmueble + '</p><p class="text-center">' + data.Inmuebles[i].Tipo_Inmueble + ' en ' + data.Inmuebles[i].Gestion + '</p><p class="text-center"><a href="detalle_inmueble.php?co=' + data.Inmuebles[i].Codigo_Inmueble + '">Ver más</a></p>').addTo(cities)
-                    
-        //         // }
-    
-    
-        //         var mbAttr = ' <a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a> ' +
-        //             ' <a href="http://creativecommons.org/licenses/by-sa/2.0/"> CC-BY-SA </a>, ' +
-        //             ' Imágenes © <a href="http://mapbox.com"> Mapbox </a> ',
-        //             mbUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    
-    
-        //         // coordenadas del mapa 
-        //         // L.marker([4.7042101, -74.05383970000003],{ title:"Hola Mundo", }).addTo(cities).bindPopup('<img src="images/no_image.png" alt="" style="max-width: 200px;"><p class="text-left">Código:1100</p><p class="text-left">Casa en venta</p><p class="text-center"><a href="">Ver más</a></p>').openPopup(),
-        //         //     L.marker([4.7046101, -74.05483990000003]).bindPopup('<img src="images/no_image.png" alt="" style="max-width: 200px;"><p class="text-left">Código:1100</p><p class="text-left">Casa en venta</p><p class="text-center"><a href="">Ver más</a></p>').addTo(cities),
-        //         //     L.marker([4.7048101, -74.05583100000003]).bindPopup('<img src="images/no_image.png" alt="" style="max-width: 200px;"><p class="text-left">Código:1100</p><p class="text-left">Casa en venta</p><p class="text-center"><a href="">Ver más</a></p>').addTo(cities);
-    
-    
-    
-    
-        //         var grayscale = L.tileLayer(mbUrl, {
-        //             id: 'mapbox.light',
-        //             attribution: mbAttr
-        //         }),
-        //             streets = L.tileLayer(mbUrl, {
-        //                 id: 'mapbox.streets',
-        //                 attribution: mbAttr
-        //             });
-    
-        //         var map = L.map('map', {
-        //             center: [data.Inmuebles[0].latitud, data.Inmuebles[0].longitud],
-        //             zoom: 12,
-        //             layers: [grayscale, cities]
-        //         });
-    
-        //         var baseLayers = {
-        //             "Grayscale": grayscale,
-        //             "Streets": streets
-        //         };
-    
-        //         var overlays = {
-        //             "Cities": cities
-        //         };
-    
-        //         L.control.layers(baseLayers, overlays).addTo(map);
-        //     }
-    
-    
-        // });
-
 
         window.location.href = 'inmuebles-a.php?ci=' + ciudad_buscar +
             '&bar=' + barrio_buscar +
@@ -264,11 +234,11 @@ var busqueda = function () {
             '&premax=' + precio_maximo_buscar +
             '';
 
-           
+
     }
-    
-      
-    
+
+
+
 }
 
 
