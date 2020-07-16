@@ -1,7 +1,4 @@
 <?php
-require 'controllers/indexController.php';
-?>
-<?php
 require 'controllers/inmueblesController.php';
 ?>
 <!DOCTYPE html>
@@ -14,7 +11,6 @@ require 'controllers/inmueblesController.php';
     <meta name="description" content="">
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/rangos.css">
     <link rel="stylesheet" href="mapas/leaflet.css" crossorigin="" />
 </head>
 <style>
@@ -143,8 +139,7 @@ require 'controllers/inmueblesController.php';
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>
-<!-- barra de rangos -->
-<script src="js/rangos.js"></script>
+
 
 <script src="mapas/leaflet.js" crossorigin=""></script>
 <script>
@@ -159,7 +154,7 @@ require 'controllers/inmueblesController.php';
             },
             'dataType': "json",
             success: function(data) {
-                // console.log(data);
+                console.log(data);
                 var res = "";
                 var cities = L.layerGroup();
 

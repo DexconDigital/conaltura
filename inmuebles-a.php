@@ -1,7 +1,4 @@
 <?php
-require 'controllers/indexController.php';
-?>
-<?php
 require 'controllers/inmueblesController.php';
 ?>
 <!DOCTYPE html>
@@ -14,7 +11,7 @@ require 'controllers/inmueblesController.php';
     <meta name="description" content="">
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/rangos.css">
+    
     
     
     
@@ -115,6 +112,5 @@ require 'controllers/inmueblesController.php';
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>
-<!-- barra de rangos -->
-<script src="js/rangos.js"></script>
+
 </html>

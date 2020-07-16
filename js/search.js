@@ -2,7 +2,7 @@ $(document).ready(function () {
     //guarda el id de los departamentos
     var res = new Array();
 
-    //peticion departamentos
+    // Funcion para cargar departamentos, ciudades y barrios
     $.ajax({
         url: "https://www.simi-api.com/ApiSimiweb/response/v2/departamento/",
         type: "GET",
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
                                 }
                             }
-                            $(".ciudad").append(resultado);
+                            $("#ciudad_buscar").append(resultado);
                         }
                     });
                 }
@@ -107,11 +107,11 @@ $(document).ready(function () {
         });
     });
 
-    //get list of barrios
 
-    //get list of properties
+
+    // Funcion que trae el tipo de inmueble ejm: apartamento casa etc
     $.ajax({
-        url: "https://www.simi-api.com/ApiSimiweb/response/tipoInmuebles/",
+        url: "https://www.simi-api.com/ApiSimiweb/response/tipoInmuebles/unique/1",
         type: "GET",
         beforeSend: function (xhr) {
             xhr.setRequestHeader(
@@ -150,7 +150,7 @@ $(document).ready(function () {
         }
     });
 
-    //get list of the transactions
+    // Funcion para traer tipo de gestion ejm: "arriendo, venta etc."
     $.ajax({
         url: "https://www.simi-api.com/ApiSimiweb/response/gestion/",
         type: "GET",

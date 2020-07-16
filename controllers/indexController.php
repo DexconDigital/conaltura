@@ -47,4 +47,3 @@ function cantidad_inmuebles_imprimir($r){
 
 cantidad_inmuebles_imprimir($api);
 
-?>

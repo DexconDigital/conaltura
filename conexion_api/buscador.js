@@ -7,14 +7,14 @@ $(document).ready(function () {
             $('#ciudad_buscar').attr("disabled", true);
             $('#barrio_buscar').attr("disabled", true);
             $('#tipo_inmueble_buscar').attr("disabled", true);
-            $('#tipo_gestion_buscar').attr("disabled", true);
+            $('.operacion').attr("disabled", true);
             $('#precio_minimo_buscar').attr("disabled", true);
             $('#precio_maximo_buscar').attr("disabled", true);
         } else {
             $('#ciudad_buscar').removeAttr("disabled");
             $('#barrio_buscar').removeAttr("disabled");
             $('#tipo_inmueble_buscar').removeAttr("disabled");
-            $('#tipo_gestion_buscar').removeAttr("disabled");
+            $('.operacion').removeAttr("disabled");
             $('#precio_minimo_buscar').removeAttr("disabled");
             $('#precio_maximo_buscar').removeAttr("disabled");
         }
@@ -85,74 +85,158 @@ $(document).ready(function () {
             }
         });
     });
+
     // Funcion para traer tipo de gestion ejm: "arriendo, venta etc."
     $.ajax({
-        url: PROTOCOLO + '://www.simi-api.com/ApiSimiweb/response/gestion',
-        type: 'GET',
+        url: "https://www.simi-api.com/ApiSimiweb/response/gestion/",
+        type: "GET",
         beforeSend: function (xhr) {
             xhr.setRequestHeader(
-                'Authorization',
-                'Basic ' + btoa('Authorization:' + TOKEN));
+                "Authorization",
+                "Basic " +
+                btoa("Authorization:67YGONEOnLdTmlYuToDOh8sULqFCJqmMLAaj8j4z-472")
+            );
         },
-        'dataType': "json",
-        success: function (gestion) {
-            // var operacion = localStorage.getItem("gestion");
-            //Eliminar un campo del array 
-            gestion.splice(2, 1)
-            var gestion_resultados = " ";
-            for (var i = 0; i < gestion.length; i++) {
-                gestion_resultados +=
-                    '<option value="' + gestion[i].idGestion + '">' +
-                    gestion[i].Nombre +
-                    '</option>';
+        dataType: "json",
+        success: function (data) {
+            var resultado = '<option class="bs-title-option" value="0">¿En venta o Arriendo?</option>';
+            var operacion = localStorage.getItem("gestion");
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].idGestion != 3) {
+                    if (operacion == data[i].idGestion) {
 
+                        resultado += '<option selected value="' +
+                            data[i].idGestion + '">' +
+                            data[i].Nombre +
+                            "</option>";
+                    }
+                    else {
+                        resultado += '<option value="' +
+                            data[i].idGestion + '">' +
+                            data[i].Nombre +
+                            "</option>";
+                    }
+                }
+                else {
+
+                }
 
             }
-            $('#tipo_gestion_buscar').append(gestion_resultados);
-
+            $(".operacion").html(resultado);
 
         }
     });
-    // function estoyencero(){
-    //     function agregarcero() {
-    //         console.log('estoy cero')
-    //         return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
-    //     }
-    //     return agregarcero(), operaciogeneral();
-    // }
-    // $("#tipo_gestion_buscar").change(function () {
-    //     var operacion = $('#tipo_gestion_buscar option:selected').val();
 
-    //     if (operacion != 1 && operacion != 2 && operacion != 5) {
-    //         console.log('estoy cero')
-    //         function agregarcero() {
-    //             return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
-    //         }
-    //         return agregarcero(), operaciogeneral();
-    //     }
-    //    else if (operacion == 1) {
-    //         console.log('estoy en uno')
-    //         function agregaruno() {
-    //             return vmaximo = 50000000, vminimo = 900000, vinical = 20000000, vsaltos = 1000000;
-    //         }
-    //         return agregaruno(), operaciogeneral();
+    $.ajax({
+        url: "https://www.simi-api.com/ApiSimiweb/response/gestion/",
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader(
+                "Authorization",
+                "Basic " +
+                btoa("Authorization:67YGONEOnLdTmlYuToDOh8sULqFCJqmMLAaj8j4z-472")
+            );
+        },
+        dataType: "json",
+        success: function (data) {
+            var resultado = '<option class="bs-title-option" value="0">¿En venta o Arriendo?</option>';
+            var operacion = localStorage.getItem("gestion");
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].idGestion != 3) {
+                    if (operacion == data[i].idGestion) {
 
-    //     } else if (operacion == 2) {
-    //         console.log('estoy en dos')
-    //         function agregardos(){
-    //             return vmaximo = 1500000000 ,  vminimo = 900000 , vinical = 1500000000 , vsaltos = 1000000;
-    //         }
-    //         return agregardos(), operaciogeneral();
-    //     } else if (operacion == 5) {
-    //         console.log('estoy en tres')
-    //         function agregartres(){
-    //             return vmaximo = 1500000000 ,  vminimo = 2000000 , vinical = 1500000000 , vsaltos = 1000000;
-    //         }
-    //         return agregartres(),operaciogeneral();
-    //     }
-    // });
+                        resultado += '<option selected value="' +
+                            data[i].idGestion + '">' +
+                            data[i].Nombre +
+                            "</option>";
+                    }
+                    else {
+                        resultado += '<option value="' +
+                            data[i].idGestion + '">' +
+                            data[i].Nombre +
+                            "</option>";
+                    }
+                }
+                else {
 
+                }
+
+            }
+            $(".operacion").html(resultado);
+
+        }
+    });
+    $(".operacion").change(function () {
+        var operacion = $(".operacion option:selected").val();
+
+
+        if (window.location.pathname == "/inmuebles.php") {
+            sessionStorage.setItem("operacionselect", operacion);
+
+        }
+        if (window.location.pathname == "/") {
+            sessionStorage.setItem("operacionselect", operacion);
+
+        }
+        if (window.location.pathname == "/index.html") {
+            sessionStorage.setItem("operacionselect", operacion);
+
+        }
+
+        if (operacion == 1) {
+
+            $(".gprice-slider-range").noUiSlider({
+                start: [900000, 20000000],
+                range: { 'min': 900000, 'max': 50000000 },
+                step: 200000
+            }, true);
+        }
+        else if (operacion == 2) {
+
+            $(".gprice-slider-range").noUiSlider({
+                start: [900000, 1500000000],
+                range: { 'min': 900000, 'max': 1500000000 }
+            }, true);
+
+        }
+        else if (operacion == 5) {
+
+            $(".gprice-slider-range").noUiSlider({
+                start: [2000000, 1500000000],
+                range: { 'min': 2000000, 'max': 1500000000 }
+            }, true);
+
+        }
+
+    });
+
+    $(function () {
+
+        if (localStorage.gestion == 1) {
+
+            $(".gprice-slider-range").noUiSlider({
+                start: [900000, 50000000],
+                range: { 'min': 900000, 'max': 20000000 }
+            }, true);
+        }
+        else if (localStorage.gestion == 2) {
+
+            $(".gprice-slider-range").noUiSlider({
+                start: [900000, 1500000000],
+                range: { 'min': 900000, 'max': 1500000000 }
+            }, true);
+
+        }
+        else if (localStorage.gestion == 5) {
+            $(".gprice-slider-range").noUiSlider({
+                start: [2000000, 1500000000],
+                range: { 'min': 2000000, 'max': 1500000000 }
+            }, true);
+        }
+
+    });
     // Funcion que trae el tipo de inmueble ejm: apartamento casa etc
+
     $.ajax({
         url: PROTOCOLO + '://www.simi-api.com/ApiSimiweb/response/v2/tipoInmuebles/unique/1',
         type: 'GET',
@@ -193,10 +277,12 @@ $(document).ready(function () {
 var code,
     ciudad_buscar,
     barrio_buscar,
-    gestion_buscar,
+    operacion,
     tipo_inmueble_buscar,
-    precio_maximo_buscar,
-    precio_minimo_buscar;
+    // precio_maximo_buscar,
+    // precio_minimo_buscar;
+    precio,
+    precio1;
 
 
 // Esta funcion trae los campos digitados en el buscador
@@ -204,10 +290,35 @@ var busqueda = function () {
     code = $("#codigo_buscar").val();
     ciudad_buscar = $('#ciudad_buscar option:selected').val();
     barrio_buscar = $('#barrio_buscar option:selected').val();
-    gestion_buscar = $('#tipo_gestion_buscar option:selected').val();
+    operacion = $('.operacion   option:selected').val();
     tipo_inmueble_buscar = $('#tipo_inmueble_buscar option:selected').val();
-    precio_minimo_buscar = $('#precio_minimo_buscar').val();
-    precio_maximo_buscar = $('#precio_maximo_buscar').val();
+    // precio_minimo_buscar = $('#precio_minimo_buscar').val();
+    // precio_maximo_buscar = $('#precio_maximo_buscar').val();
+    $(".gprice-slider-range").Link('lower').to('-inline-<div class="tooltip"></div>', function (value) {
+        (
+            precio = value.replace('.', '')
+        );
+    });
+
+    $(".gprice-slider-range").Link('upper').to('-inline-<div class="tooltip"></div>', function (value) {
+        (
+            precio1 = value.replace('.', '')
+        )
+    });
+    precio = precio.replace('&#36;', '')
+    precio = precio.replace('.', '')
+    precio = precio.replace('.', '')
+    precio = precio.replace('.', '')
+    precio = precio.replace('.', '')
+
+    precio1 = precio1.replace('.', '')
+    precio1 = precio1.replace('.', '')
+    precio1 = precio1.replace('.', '')
+    precio1 = precio1.replace('.', '')
+    precio1 = precio1.replace('&#36;', '')
+
+    sessionStorage.setItem("preciogeo1", precio);
+    sessionStorage.setItem("preciogeo2", precio1);
 
 
     // precio_minimo_buscar = precio_minimo_buscar.replace('.', '');
@@ -216,10 +327,10 @@ var busqueda = function () {
 
     ciudad_buscar = existeCampo(ciudad_buscar);
     barrio_buscar = existeCampo(barrio_buscar);
-    gestion_buscar = existeCampo(gestion_buscar);
+    operacion = existeCampo(operacion);
     tipo_inmueble_buscar = existeCampo(tipo_inmueble_buscar);
-    precio_minimo_buscar = existeCampo(precio_minimo_buscar);
-    precio_maximo_buscar = existeCampo(precio_maximo_buscar);
+    // precio_minimo_buscar = existeCampo(precio_minimo_buscar);
+    // precio_maximo_buscar = existeCampo(precio_maximo_buscar);
 
 
     if (code !== "") {
@@ -228,10 +339,10 @@ var busqueda = function () {
 
         window.location.href = 'inmuebles-a.php?ci=' + ciudad_buscar +
             '&bar=' + barrio_buscar +
-            '&ge=' + gestion_buscar +
+            '&ge=' + operacion +
             '&in=' + tipo_inmueble_buscar +
-            '&premin=' + precio_minimo_buscar +
-            '&premax=' + precio_maximo_buscar +
+            '&premin=' + precio +
+            '&premax=' + precio1 +
             '';
 
 

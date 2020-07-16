@@ -1,7 +1,3 @@
-<?php 
-require 'controllers/indexController.php';
-include 'controllers/miniaturasController.php';
-?>
 <!doctype html>
 <html lang="es">
 

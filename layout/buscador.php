@@ -7,7 +7,7 @@
                         <div class="form-group gbath">
                             <span class="gprice-label">Tipo de Operación</span>
                             <div class="label-select">
-                                <select class="form-control" id="tipo_gestion_buscar">
+                                <select class="form-control operacion">
                                     <option selected="" value="0">¿En venta o Arriendo?</option>
                                 </select>
                             </div>
@@ -42,18 +42,12 @@
                         </div>
                         <div class="form-group gprice">
                             <span class="gprice-label">Precio</span>
-                            <div class="wrapper">
-                                <div class="range-slider">
-                                    <input type="text" class="js-range-slider" value="" />
-                                </div>
-                                <div class="extra-controls form-inline">
-                                    <div class="form-group" style="display:none;">
-                                        <input type="text" class="js-input-from form-control" id="precio_minimo_buscar" value="0" aria-describedby="emailHelp" />
-                                        <input type="text" class="js-input-to form-control" id="precio_maximo_buscar" value="0" aria-describedby="emailHelp" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <div class="gslider-range gprice-slider-range"></div>
+
+
+                            <span class="gslider-range-value gprice-slider-range-value-min" id="input-number-1"></span>
+                            <span class="gslider-range-value gprice-slider-range-value-max" id="input-number"></span>
+                        </div>  
 
                     </div>
                     <div class="gsearch-action">

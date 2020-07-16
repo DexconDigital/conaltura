@@ -1910,6 +1910,12 @@ div#preloader {
 .range-slider {
   margin-top: -22px; }
 
+.tooltip {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  line-height: 1.4 !important; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -2374,8 +2380,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; }
-     }
+      max-width: 1140px; } }
 
 .container-fluid {
   width: 100%;
@@ -4413,10 +4418,9 @@ input[type="button"].btn-block {
       -webkit-transition: none;
       -o-transition: none;
       transition: none; } }
-      
   .fade:not(.show) {
     opacity: 0; }
-/* cambiar */
+
 .collapse:not(.in) {
   display: none; }
 
