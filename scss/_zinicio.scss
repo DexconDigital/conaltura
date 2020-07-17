@@ -397,4 +397,57 @@ text-align: justify;
     line-height: 1.4 !important;
 
 }
+.item-post {
+    box-sizing: border-box;
+    padding: 0px;
+}
 
+.item-post {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+}
+
+.cuerpo {
+    background-color: white;
+}
+
+.post-header {
+    padding: 20px;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(146, 146, 146);
+}
+
+.more-link {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(128, 188, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+}
+
+.texto {
+    color: #80bc00;
+}
+
+.texto:hover {
+    color: #095c70;
+}
+
+.image {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.imagen-destacada{
+    overflow: hidden;
+    position: relative;
+    height: 259px;
+}

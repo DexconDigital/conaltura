@@ -14,11 +14,11 @@ $pagina = 'inicio';
     <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
     <?php require 'controllers/indexController.php'; ?>
-    
-    
+
+
 </head>
 
-<body >
+<body>
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
 
@@ -189,111 +189,133 @@ $pagina = 'inicio';
                 <div class="container">
                     <div class="col-12"></div>
                     <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
-                            <article class="hentry has-featured">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
-                                    </a>
-                                </div>
-                                <div class="agent-wrap">
-                                    <div class="agent-summary">
-                                        <div class="agent-info">
-
-                                            <hr>
-                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
-                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="detalle_noticia.php" title="" class="">
+                                            <img class="image" src="images/images_noticias/1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
                                         </div>
+                                        <a class="more-link" href="detalle_noticia.php">Leer más</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
-                            <article class="hentry has-featured">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="detalle_inmueble.php">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
-                                    </a>
-                                </div>
-                                <div class="agent-wrap">
-                                    <div class="agent-summary">
-                                        <div class="agent-info">
-                                            <hr>
-                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="detalle_inmueble.php" style="color: #fff; font-size: 15px; ">Ver más</a></div>
-                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                        <!-- fin cards -->
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="detalle_noticia.php" title="" class="">
+                                            <img class="image" src="images/images_noticias/2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
                                         </div>
+                                        <a class="more-link" href="detalle_noticia.php">Leer más</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
-                            <article class="hentry has-featured">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
-                                    </a>
-                                </div>
-                                <div class="agent-wrap">
-                                    <div class="agent-summary">
-                                        <div class="agent-info">
-
-                                            <hr>
-                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
-                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                        <!-- fin cards -->
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="detalle_noticia.php" title="" class="">
+                                            <img class="image" src="images/images_noticias/3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
                                         </div>
+                                        <a class="more-link" href="detalle_noticia.php">Leer más</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
-                            <article class="hentry has-featured">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
-                                    </a>
-                                </div>
-                                <div class="agent-wrap">
-                                    <div class="agent-summary">
-                                        <div class="agent-info">
-
-                                            <hr>
-                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
-                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                        <!-- fin cards -->
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="" title="" class="">
+                                            <img class="image" src="images/images_noticias/4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="">Texto de la Noticia a publicar</a></p>
                                         </div>
+                                        <a class="more-link" href="">Leer más</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mt-5">
-                            <article class="hentry has-featured">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="">
-                                        <img src="images/no_image.png" alt="" class="attachment-agent-thumb cont_img" alt="" />
-                                    </a>
-                                </div>
-                                <div class="agent-wrap">
-                                    <div class="agent-summary">
-                                        <div class="agent-info">
-
-                                            <hr>
-                                            <div>Todos los cuidados para tu mascota en tu vivienda nueva</div>
-                                            <div class="buttton ver-mas"><a href="" style="color: #fff; font-size: 15px; ">Ver más</a></div>
-                                            <div><i class="fa fa-calendar-alt"></i> Fecha</div>
+                        <!-- fin cards -->
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="detalle_noticia.php" title="" class="">
+                                            <img class="image" src="images/images_noticias/5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
                                         </div>
+                                        <a class="more-link" href="detalle_noticia.php">Leer más</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
+                        <!-- fin cards -->
+                        <!-- cards -->
+                        <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <div class="post-item">
+                                <div class="item-post">
+                                    <div class="imagen-destacada">
+                                        <a href="detalle_noticia.php" title="" class="">
+                                            <img class="image" src="images/images_noticias/6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cuerpo">
+                                        <div class="post-header">
+                                            <div class="date mb-4">24 jun 20</div>
+                                            <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                        </div>
+                                        <a class="more-link" href="detalle_noticia.php">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin cards -->
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <!-- Acesores -->
     <section id="recent-agents-slider" class="fondo_asesores espacio_destacadas">

@@ -10,7 +10,6 @@
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 
     <!-- Menu  Inicial-->
@@ -30,32 +29,129 @@
 
     <!-- cards -->
     <section>
-        <div class="container">
-            <div class="col-12 espacio_destacadas">
-                <article class="hentry format-standard has-featured">
-                    <div class="content-wrap">
-                        <header class="content-header">
-                            <h2 class="content-title">
-                                <a href="detalle_noticia.php">Titulo de la noticia</a>
-                            </h2>
-                            <p class="content-meta">
-                                <i class="fa fa-calendar-alt"></i>
-                                <span>
-                                    <time class="entry-date"> Fecha</time></span>
-                            </p>
-                        </header>
-                        <div class="content-featured">
-                            <a class="content-thumb" href="detalle_noticia.php">
-                                <img src="images/no_image.png" alt="" class="attachment-property-image" alt="">
-                            </a>
-                        </div>
-                        <div class="content-excerpt">
-                            <p>Descripción</p>
-                            <div><a href="detalle_noticia.php" class="read-more">Ver Más</a>
+        <div class="container p-0">
+            <div class="col-12 espacio_destacadas d-flex flex-wrap justify-content-center">
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="detalle_noticia.php" title="" class="">
+                                    <img class="image" src="images/images_noticias/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="detalle_noticia.php">Leer más</a>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
+                <!-- fin cards -->
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="detalle_noticia.php" title="" class="">
+                                    <img class="image" src="images/images_noticias/2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="detalle_noticia.php">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin cards -->
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="detalle_noticia.php" title="" class="">
+                                    <img class="image" src="images/images_noticias/3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="detalle_noticia.php">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin cards -->
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="" title="" class="">
+                                    <img class="image" src="images/images_noticias/4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin cards -->
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="detalle_noticia.php" title="" class="">
+                                    <img class="image" src="images/images_noticias/5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="detalle_noticia.php">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin cards -->
+                <!-- cards -->
+                <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                    <div class="post-item">
+                        <div class="item-post">
+                            <div class="imagen-destacada">
+                                <a href="detalle_noticia.php" title="" class="">
+                                    <img class="image" src="images/images_noticias/6.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="cuerpo">
+                                <div class="post-header">
+                                    <div class="date mb-4">24 jun 20</div>
+                                    <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
+                                </div>
+                                <a class="more-link" href="detalle_noticia.php">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin cards -->
+                
             </div>
         </div>
     </section>

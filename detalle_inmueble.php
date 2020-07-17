@@ -174,6 +174,46 @@ require 'controllers/detalleInmuebleController.php';
             padding: inherit;
         }
     }
+
+    @media screen and (min-width:330px) {
+        .formulariob {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .formulariob {
+            display: inherit;
+        }
+    }
+
+    @media screen and (min-width:330px) {
+        .formularioa {
+            display: inherit;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .formularioa {
+            display: none;
+        }
+    }
+    @media screen and (min-width:330px) {
+        .btn_atras {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .btn_atras {
+            margin-top: 30%;
+            margin-bottom: inherit;
+        }
+    }
+    .sticky-top{
+        z-index: 100 !important;
+    }
 </style>
 
 <body>
@@ -404,27 +444,37 @@ require 'controllers/detalleInmuebleController.php';
                                             <h3 class="title-block-sidebar">Contacto con Asesor</h3>
                                             <div class="featured-property d-flex flex-wrap">
                                                 <div class="text-center col-12 col-md-6 col-lg-12 mb-4">
-                                                    <?php 
-                                                    if($asesor['FotoAsesor'] == ' '){
-                                                        echo'<img class="cont_img" src="images/no_image.png" width="100%" height="100%" alt="">';
-                                                    }else{
-                                                        echo '<img class="cont_img" src="'.$asesor['FotoAsesor'].'" width="100%" height="100%" alt="">';
+                                                    <?php
+                                                    if ($asesor['FotoAsesor'] == ' ') {
+                                                        echo '<img class="cont_img" src="images/no_image.png" width="100%" height="100%" alt="">';
+                                                    } else {
+                                                        echo '<img class="cont_img" src="' . $asesor['FotoAsesor'] . '" width="100%" height="100%" alt="">';
                                                     }
                                                     ?>
-                                                    
                                                 </div>
                                                 <div class="col-lg-12 col-md-6 col-12">
                                                     <p class="detalle-asesor">
                                                         <p class="p1"><span><?php echo $asesor['ntercero']; ?></span> </p>
                                                         <p class="p1"><a href="<?php echo $asesor['correo'] ?>" target="_blank"><i class="fa fa-envelope"></i> <?php echo $asesor['correo'] ?></p></a>
                                                         <p class="p1"><a href="tel:+573229898"><i class="fa fa-phone"></i> 3229898</p></a>
-                                                        <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a></p>
-                                                        <p class="p1"><a href=""><i class="fab fa-whatsapp"></i> Contactanos por WhatsApp</p></a>
+                                                        <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
+                                                    </p>
+                                                    <p class="p1"><a href=""><i class="fab fa-whatsapp"></i> Contactanos por WhatsApp</p></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0">
+                                    <div class="col-12 pr-0 text-center btn_atras">
+                                        <div class="block-sidebar recent-property">
+                                            <center>
+                                                <div class="btn-atras">
+                                                    <i class="fa fa-arrow-left" style=" color:  black;"></i>
+                                                </div>
+                                                <h3 class="title-block-sidebar">Regresar a la pagina anterior</h3>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formularioa">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
                                             <form class="p-0">
@@ -457,15 +507,38 @@ require 'controllers/detalleInmuebleController.php';
                                         </div>
 
                                     </div>
-                                    <div class="col-12 pr-0 text-center">
-                                        <div class="block-sidebar recent-property">
-                                            <center>
-                                                <div class="btn-atras">
-                                                    <i class="fa fa-arrow-left" style=" color:  black;"></i>
+                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top" style="padding-top: 48px;">
+                                        <div class="container form_detalle">
+                                            <h3 class="title-block-sidebar">Formulario de contacto</h3>
+                                            <form class="p-0">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" required>
                                                 </div>
-                                                <h3 class="title-block-sidebar">Regresar a la pagina anterior</h3>
-                                            </center>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="numero" aria-describedby="emailHelp" placeholder="Numero de Contacto" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Correo" required>
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control" name="mensaje" placeholder="Escriba su solicitud" rows="3" required></textarea>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" required>
+                                                    He leído y acepto la Política de Datos.
+                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;">Descarga Nuestra Política de Datos.</a>
+                                                </div>
+                                                <select name="codigo" class="invisible display:none">
+                                                    <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
+                                                </select>
+                                                <div class="col-12 text-center">
+                                                    <button type="submit" class="btn btn-primary col-6">Enviar</button>
+                                                </div>
+
+                                            </form>
                                         </div>
+
                                     </div>
 
                                 </div>
