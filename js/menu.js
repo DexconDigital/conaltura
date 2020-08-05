@@ -18,38 +18,48 @@
         '</div>' +
         '<div class="calling-info">' +
         '<div class="calling-content">' +
-        '<i class="fa fa-mobile-alt"></i>' +
-        '<div class="calling-desc">' +
-        'Llámanos <br>' +
-        '<span><a href="tel:0343229898">(034) 3229898</a></span>' +
-        '</div>' +
-        '</div>' +
-        '<a href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank"><img src="images/other/logo-pse.png" style="margin-top: 10px;"/></a>' +
+        // '<i class="fa fa-mobile-alt"></i>' +
+        // '<div class="calling-desc">' +
+        // 'Llámanos <br>' +
+        // '<span><a href="tel:0343229898">(034) 3229898</a></span>' +
+        // '</div>' +
+        // '</div>' +
+        // '<a href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank"><img src="images/other/logo-pse.png" style="margin-top: 10px;"/></a>' +
         '</div>' +
         '<div class="main-navigation">' +
         '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation" style="background-color: white;">' +
         '<ul class="nav navbar-nav options" id="items_en_uso">' +
-        '<li class="dropdown" id="items1">' +
+        '<li class="dropdown linea top" id="items1">' +
         '<a href="index.php">Inicio&nbsp;<span class="caret"></span></a>  ' +
         '</li>' +
-        '<li class="dropdown" id="items2">' +
-        '<a href="quienes-somos.php">Quienes Somos&nbsp;<span class="caret"></span></a>    ' +
+        '<li class="dropdown linea">' +
+        '<a href="https://conaltura.com/proyectos-de-vivienda-nueva/">Proyectos de <br> Vivienda nueva&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown" id="items3">' +
+        '<li class="dropdown linea">' +
+        '<a href="https://conaltura.com/proyectos-terminados/">Proyectos <br> terminados&nbsp;<span class="caret"></span></a> ' +
+        '</li>' +
+        '<li class="dropdown linea">' +
+        '<a href="https://conaltura.com/colombianos-en-el-exterior/">Colombianos <br> en el exterior&nbsp;<span class="caret"></span></a> ' +
+        '</li>' +
+        '<li class="dropdown linea top" id="items2">' +
+        '<a href="quienes-somos.php">Conócenos&nbsp;<span class="caret"></span></a>    ' +
+        '</li>' +
+        '<li class="dropdown linea top" id="items3">' +
         '<a href="inmuebles.php?">Inmuebles&nbsp;<span class="caret"></span></a>' +
         '</li>' +
-        '<li class="dropdown">' +
-        '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
-        '</li>' +
-        '<li class="dropdown">' +
+        // '<li class="dropdown linea top">' +
+        // '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
+        // '</li>' +
+        '<li class="dropdown linea top">' +
         '<a href="noticias.php">Blog&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown">' +
-        '<a href="contactanos.php">Contáctanos&nbsp;<span class="caret"></span></a>    ' +
+        '<li class="dropdown top text-center">' +
+        '<a href="contactanos.php">Contáctanos&nbsp;<br>&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '</ul>' +
         '</nav>' +
         '</div>';
+
 
     $(".menu-ppal").html(menu);
 
@@ -162,15 +172,15 @@
 
         '<div class="top-header-content">' +
         '<ul class="social-top">' +
-        '<li><a href="https://www.facebook.com/Conalturainmobiliaria" title="Facebook" target="_blank"><i class="fab fa-facebook-f "></i></a></li>' +
+        // '<li><a href="https://www.facebook.com/Conalturainmobiliaria" title="Facebook" target="_blank"><i class="fab fa-facebook-f "></i></a></li>' +
         '</ul>' +
-        '<div class="emailto content-item">' +
-        '<a href="mailto:inmobiliaria@conaltura.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;Email:' +
-        '<span>inmobiliaria@conaltura.com</span></a>' +
-        '</div>' +
+        // '<div class="emailto content-item">' +
+        // '<a href="mailto:inmobiliaria@conaltura.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;Email:' +
+        // '<span>inmobiliaria@conaltura.com</span></a>' +
+        // '</div>' +
         '<div class="register content-item">' +
-        '<a href="tel:0343229898" target="_blank"><i class="fa fa-phone"></i> (034) 2662277 Opc. 4 - </a>' +
-        '<a href="tel:0343229898" target="_blank"><i class="fa fa-phone"></i> (034) 2662277 ext 209</a>' +
+        '<a class=" btn_pagos" style = "text-transform:capitalize;" href="clientes.php">iniciar sesión </a>' +
+        '<a class=" btn_pagos" style = "text-transform:capitalize;" href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank">pagos en línea</a>' +
         '</div>' +
         '</div>' +
         '</div>' +

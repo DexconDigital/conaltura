@@ -12,11 +12,19 @@
   src: url("../fonts/FUENTES/ITC Avant Garde Gothic ExtLt/ITCAvantGardeGothic-ExtLt7.ttf"); }
 
 @font-face {
+  font-family: "Poppins,Sans-serif";
+  src: url("../fonts/FUENTES/Poppins-Regular.ttf"); }
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/FUENTES/OpenSans-Regular.ttf"); }
+
+@font-face {
   font-family: "CenturyGothic";
   src: url("../fonts/Century Gothic.ttf"); }
 
 body {
-  font-family: "ITCAvantGardeGothicExtraLight8";
+  font-family: "Poppins,Sans-serif";
   font-size: 16px;
   line-height: 1.5;
   font-style: normal;
@@ -27,11 +35,11 @@ body {
   clear: both; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "ITCAvantGardeGothicBold12";
+  font-family: "Poppins,Sans-serif";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.1;
-  color: #4d4d4d; }
+  color: #80BC00; }
 
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 24px;
@@ -42,16 +50,16 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 12px; }
 
 h1, .h1 {
-  font-size: 41px; }
+  font-size: 50px; }
 
 h2, .h2 {
   font-size: 34px; }
 
 h3, .h3 {
-  font-size: 28px; }
+  font-size: 44px; }
 
 h4, .h4 {
-  font-size: 23px; }
+  font-size: 40px; }
 
 h5, .h5 {
   font-size: 21px; }
@@ -532,7 +540,7 @@ ul.social-top > li a i {
     background: #fff; } }
 
 .main-navigation ul.navbar-nav > li a {
-  font-family: "ITCAvantGardeGothicMedium13";
+  font-family: "Poppins,Sans-serif";
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -1354,7 +1362,7 @@ ul.social-top > li a i {
 
 .noo-sidebar .gsearch .gsearch-wrap .gsearch-content .gsearch-action .gsubmit .btn {
   width: 100%;
-  font-size: 24px;
+  font-size: 12px;
   color: #94a2a7;
   background: #ededed;
   padding: 10px; }
@@ -1687,7 +1695,7 @@ input[type=checkbox]:checked:before {
   width: 10%; }
 
 .p1 {
-  font-family: "CenturyGothic"; }
+  font-family: "Poppins,Sans-serif"; }
 
 div#preloader {
   position: fixed;
@@ -1779,7 +1787,7 @@ div#preloader {
   height: 200px; }
 
 .fuente_asesor {
-  font-family: "CenturyGothic";
+  font-family: "Poppins,Sans-serif";
   text-align: left; }
 
 .tamaño_buscador {
@@ -1967,6 +1975,183 @@ div#preloader {
   overflow: hidden;
   position: relative;
   height: 259px; }
+
+.linea {
+  text-align: center; }
+  @media (max-width: 2560px) {
+    .linea {
+      border-right: solid 1px #707070; } }
+  @media (max-width: 1440px) {
+    .linea {
+      border-right: solid 1px #707070; } }
+  @media (max-width: 1024px) {
+    .linea {
+      border-right: solid 1px #707070; } }
+  @media (max-width: 768px) {
+    .linea {
+      border-right: solid 0px #707070; } }
+  @media (max-width: 425px) {
+    .linea {
+      border-right: solid 0px #707070; } }
+  @media (max-width: 375px) {
+    .linea {
+      border-right: solid 0px #707070; } }
+  @media (max-width: 230px) {
+    .linea {
+      border-right: solid 0px #707070; } }
+
+.top {
+  padding-top: 1rem;
+  padding-bottom: 5px; }
+
+.btn_pagos {
+  margin: 2rem;
+  font-family: 'OpenSans-Regular' !important;
+  background-color: transparent !important;
+  color: #7b7b7b !important;
+  font-size: 11px !important;
+  text-transform: capitalize;
+  font-weight: 100 !important;
+  padding: 10px 20px !important;
+  border-radius: unset !important; }
+  .btn_pagos:hover {
+    color: #7AB21F !important; }
+
+@media (max-width: 2560px) {
+  .btn_pagos {
+    padding: 10px 20px !important;
+    margin: 2rem; } }
+
+@media (max-width: 1440px) {
+  .btn_pagos {
+    padding: 10px 20px !important;
+    margin: 2rem; } }
+
+@media (max-width: 1024px) {
+  .btn_pagos {
+    padding: 10px 20px !important;
+    margin: 2rem; } }
+
+@media (max-width: 768px) {
+  .btn_pagos {
+    padding: 10px 20px !important;
+    margin: 2rem; } }
+
+@media (max-width: 425px) {
+  .btn_pagos {
+    padding: 10px 27px !important;
+    margin: 3rem; } }
+
+@media (max-width: 375px) {
+  .btn_pagos {
+    padding: 10px 17px !important;
+    margin: 3rem; } }
+
+@media (max-width: 360px) {
+  .btn_pagos {
+    padding: 10px 12px !important;
+    margin: 3rem; } }
+
+.tipo_open {
+  font-family: 'OpenSans-Regular' !important;
+  font-weight: 600;
+  color: #80BC00; }
+
+.tipo_open_option {
+  font-family: 'OpenSans-Regular' !important;
+  font-weight: 400; }
+
+#parallax4 .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 500; }
+
+.superposicion {
+  z-index: 700 !important; }
+
+#texslider {
+  position: absolute;
+  z-index: 500; }
+  @media (max-width: 2560px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 1440px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 1024px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 768px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 425px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 375px) {
+    #texslider {
+      top: 26rem; } }
+  @media (max-width: 230px) {
+    #texslider {
+      top: 26rem; } }
+
+.texto1_slider {
+  line-height: 1;
+  color: white; }
+  @media (max-width: 2560px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 1440px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 1024px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 768px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 425px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 375px) {
+    .texto1_slider {
+      font-size: 22px; } }
+  @media (max-width: 230px) {
+    .texto1_slider {
+      font-size: 22px; } }
+
+.texto2_slider {
+  font-weight: 500;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white; }
+  @media (max-width: 2560px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 1440px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 1024px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 768px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 425px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 375px) {
+    .texto2_slider {
+      font-size: 50px; } }
+  @media (max-width: 230px) {
+    .texto2_slider {
+      font-size: 50px; } }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -4473,7 +4658,7 @@ input[type="button"].btn-block {
   .fade:not(.show) {
     opacity: 0; }
 
-.collapse:not(.in) {
+.collapse:not(.show) {
   display: none; }
 
 .collapsing {

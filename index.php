@@ -20,6 +20,7 @@ $pagina = 'inicio';
 
 <body>
     <!-- Menu  Inicial-->
+    <!-- .collapse:not(.show) -->
     <?php include 'layout/menu.php'; ?>
 
     <!-- Buscador -->

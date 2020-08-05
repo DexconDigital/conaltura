@@ -46,7 +46,7 @@
         });
     </script>
     <!-- Fin de codigo preloader -->
-    <header class="noo-header">
+    <header class="noo-header superposicion">
 
         <div class="top-header header-ppal">
         </div>

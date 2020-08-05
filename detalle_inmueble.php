@@ -192,7 +192,6 @@ require 'controllers/detalleInmuebleController.php';
             display: inherit;
         }
     }
-
     @media screen and (min-width:1024px) {
         .formularioa {
             display: none;

@@ -62,7 +62,8 @@
     padding: 3px 5px;
 }
 .top-header {
-    height: 60px;
+    height: 54px;
+    margin-top: 2rem;
 }
 .gsearch .gsearch-wrap .gsearch-content .gsearch-field .form-group .gslider-range .noUi-handle .tooltip {
     opacity: 1;
