@@ -78,6 +78,12 @@ require 'controllers/detalleInmuebleController.php';
         z-index: 20;
     }
 
+    .titulo_ubicacion {
+        font-size: 27px;
+        color: #095C70;
+        font-weight: 700;
+    }
+
     @media screen and (min-width:300px) {
         .titulo_ubicacion {
             padding-left: 9%;
@@ -192,11 +198,13 @@ require 'controllers/detalleInmuebleController.php';
             display: inherit;
         }
     }
+
     @media screen and (min-width:1024px) {
         .formularioa {
             display: none;
         }
     }
+
     @media screen and (min-width:330px) {
         .btn_atras {
             margin-top: 10%;
@@ -210,7 +218,8 @@ require 'controllers/detalleInmuebleController.php';
             margin-bottom: inherit;
         }
     }
-    .sticky-top{
+
+    .sticky-top {
         z-index: 100 !important;
     }
 </style>
@@ -221,7 +230,9 @@ require 'controllers/detalleInmuebleController.php';
 
     <!-- Buscador -->
     <?php include 'layout/buscador.php'; ?>
-
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <section>
         <div class="container">
             <div class="col-12">
@@ -498,8 +509,8 @@ require 'controllers/detalleInmuebleController.php';
                                                 <select name="codigo" class="invisible display:none">
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
-                                                <div class="col-12 text-center">
-                                                    <button type="submit" class="btn btn-primary col-6">Enviar</button>
+                                                <div class="col-12 text-center border-0">
+                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;">Enviar</button>
                                                 </div>
 
                                             </form>
@@ -532,7 +543,7 @@ require 'controllers/detalleInmuebleController.php';
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
                                                 <div class="col-12 text-center">
-                                                    <button type="submit" class="btn btn-primary col-6">Enviar</button>
+                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;">Enviar</button>
                                                 </div>
 
                                             </form>

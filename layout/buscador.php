@@ -1,37 +1,6 @@
-<section id="parallax4" style="position: relative;">
-    <div class="overlay"></div>
-    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="10000">
-                <img src="images/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-interval="2000">
-                <img src="images/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
-
-<div id="texslider" class="container col-12 border text-center d-flex justify-content-center">
-    <div class="col-9 border p-0">
-        <p class="texto1_slider">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
-        <h1 class="texto2_slider">Apartamentos nuevos en venta desde 100 millones de pesos.</h1>
-    </div>
-</div>
 
 <section id="search-box" class="wrap search-box">
-    <div class="gsearch" style="">
+    <div class="gsearch" style="background: #095C70;">
         <div class="container tamaño_buscador">
             <div class="gsearch-wrap">
                 <div class="gsearch-content">

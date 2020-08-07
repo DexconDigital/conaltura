@@ -52,7 +52,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col p-0">
                     <div class="ft-contact-info">
                         <h4 class="ft-col-title">Contáctanos</h4>
                         <ul class="detail-contact-info">
@@ -64,7 +64,7 @@
                             <li><a href="tel:0342662277" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)2662277, ext 209</a></li>
                             <li><a href="tel:0343229898" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)3229898</a></li>
                             <li><a href="https://wa.me/573193777281" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp; 319 377 7281 </a></li>
-                            <li><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</span></a></li>
+                            <li><i class="fa fa-envelope"></i>&nbsp;<a class="text-break" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</span></a></li>
                             <li><i class="fa fa-calendar-alt"></i>&nbsp;<label>Horario de Atención: </label>
                                 <br>
                                 <label style="margin-left: 47px;">Lunes a Viernes: </label>

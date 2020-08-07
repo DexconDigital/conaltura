@@ -34,7 +34,9 @@ require 'controllers/inmueblesController.php';
 
     <!-- Buscador -->
     <?php include 'layout/buscador.php'; ?>
-
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <!-- mapa -->
     <section>
         <div class="property-map-content p-0 ">
@@ -57,7 +59,7 @@ require 'controllers/inmueblesController.php';
                     if (is_array($api)) {
                         $totalinmuebles = $api['datosGrales']['totalInmuebles'];
                     } ?>
-                    <h4 class="">Se han encontrado <span><?php echo $totalinmuebles ?></span> inmuebles</h4>
+                    <h4 class="titulo_inmuebles_inicio">Se han encontrado <span><?php echo $totalinmuebles ?></span> inmuebles</h4>
                 </div>
                 <div class="d-flex flex-wrap align-items-center justify-content-center ">
                     <!-- <div class="col-4">
@@ -126,7 +128,7 @@ require 'controllers/inmueblesController.php';
                         <?php endif; ?>
                     </ul>
                 <?php endif; ?>
-                
+
             </div>
 
     </section>
@@ -168,7 +170,7 @@ require 'controllers/inmueblesController.php';
                     // console.log(data.Inmuebles[i].latitud, data.Inmuebles[i].longitud, data.Inmuebles[i].Codigo_Inmueble);
 
 
-                    L.marker([data.Inmuebles[i].latitud, data.Inmuebles[i].longitud]).bindPopup('<img src="' + data.Inmuebles[i].foto1 + '" alt="" style=""><p class="text-center" >Código: ' + data.Inmuebles[i].Codigo_Inmueble + '</p><p class="text-center">'+ data.Inmuebles[i].Tipo_Inmueble +' en '+ data.Inmuebles[i].Gestion +'</p><p class="text-center"><a href="detalle_inmueble.php?co=' + data.Inmuebles[i].Codigo_Inmueble + '">Ver más</a></p>').addTo(cities)
+                    L.marker([data.Inmuebles[i].latitud, data.Inmuebles[i].longitud]).bindPopup('<img src="' + data.Inmuebles[i].foto1 + '" alt="" style=""><p class="text-center" >Código: ' + data.Inmuebles[i].Codigo_Inmueble + '</p><p class="text-center">' + data.Inmuebles[i].Tipo_Inmueble + ' en ' + data.Inmuebles[i].Gestion + '</p><p class="text-center"><a href="detalle_inmueble.php?co=' + data.Inmuebles[i].Codigo_Inmueble + '">Ver más</a></p>').addTo(cities)
 
                 }
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,11 +9,57 @@
     <meta name="author" content="">
     <?php include 'layout/archivosheader_clientes.php' ?>
 </head>
+<style>
+    #redes_conaltura {
+        background-color: white;
+        height: auto;
+        position: fixed;
+        left: 0;
+        top: 30%;
+        z-index: 1000;
+        padding: 10px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: auto;
+    }
+
+    #redes_conaltura .elementor-social-icon {
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 17px;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: #80bc00;
+        border-radius: 50%;
+        margin-bottom: 3px;
+        padding: .5em;
+    }
+
+    #redes_conaltura .elementor-social-icon:hover {
+        background-color: #80BC00;
+    }
+
+    #redes_conaltura i {
+        width: 1em;
+        height: 1em;
+        position: relative;
+        display: block;
+        font-weight: 400;
+        color: #80bc00;
+        text-align: center;
+    }
+
+    #redes_conaltura i:hover {
+        color: white;
+    }
+</style>
 
 <body>
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
 
+    <!-- redes sociales -->
+    <!-- < ? php include 'layout/redes.php'; ? > -->
+    <!-- fin redes sociales -->
     <div class="noo-wrapper">
 
         <!-- banner -->
@@ -44,7 +89,7 @@
                                     </span>
                                     <hr class="noo-gap">
                                     <div class="text-block">
-                                        <h5 style="color:  #4d4d4d "> Arrendatarios</h5>
+                                        <h5> Arrendatarios</h5>
 
                                     </div>
                                 </div>
@@ -54,7 +99,7 @@
                                     </span>
                                     <hr class="noo-gap">
                                     <div class="text-block">
-                                        <h5 style="color:  #4d4d4d ">Propietarios</h5>
+                                        <h5>Propietarios</h5>
 
                                     </div>
                                 </div>
@@ -66,7 +111,7 @@
                                     <hr class="noo-gap">
                                     <div class="text-block">
                                         <a href="https://gateway2.tucompra.com.co/sites/conaltura/facturacion.xhtml?idTerminal=1057" target="blank">
-                                            <h5 style="color:  #4d4d4d ">PSE</h5>
+                                            <h5 style=" margin: 0 0 12px;font-weight: 700;font-size: 27px;color: #095C70;">PSE</h5>
                                         </a>
 
                                     </div>

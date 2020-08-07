@@ -10,11 +10,14 @@
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
-
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <!-- imagen baner -->
     <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
         <div class="property-slider">
@@ -151,7 +154,7 @@
                     </div>
                 </div>
                 <!-- fin cards -->
-                
+
             </div>
         </div>
     </section>

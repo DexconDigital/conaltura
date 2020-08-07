@@ -25,6 +25,49 @@
         ga('create', 'UA-6655257-31', 'auto');
         ga('send', 'pageview');
     </script>
+    <style>
+        #redes_conaltura {
+            background-color: white;
+            height: auto;
+            position: fixed;
+            left: 0;
+            top: 30%;
+            z-index: 1000;
+            padding: 10px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            width: auto;
+        }
+
+        #redes_conaltura .elementor-social-icon {
+            background-color: rgba(255, 255, 255, 0);
+            font-size: 17px;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #80bc00;
+            border-radius: 50%;
+            margin-bottom: 3px;
+            padding: .5em;
+        }
+
+        #redes_conaltura .elementor-social-icon:hover {
+            background-color: #80BC00;
+        }
+
+        #redes_conaltura i {
+            width: 1em;
+            height: 1em;
+            position: relative;
+            display: block;
+            font-weight: 400;
+            color: #80bc00;
+            text-align: center;
+        }
+
+        #redes_conaltura i:hover {
+            color: white;
+        }
+    </style>
 </head>
 
 <body class="page-right-sidebar">
@@ -32,8 +75,10 @@
 
         <!-- Menu  Inicial-->
         <?php include 'layout/menu.php'; ?>
-
-    <!-- Descripcion empresa -->
+        <!-- redes sociales -->
+        <?php include 'layout/redes.php'; ?>
+        <!-- fin redes sociales -->
+        <!-- Descripcion empresa -->
         <div class="noo-wrapper">
             <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
                 <div class="property-slider">
@@ -216,7 +261,7 @@
 
         <div class="container mt-2">
             <div class="text-block">
-                <h4>Nuestros Servicios</h4>
+                <h4 class="titulo_quienes">Nuestros Servicios</h4>
             </div>
 
         </div>
@@ -236,7 +281,7 @@
                                 <hr class="noo-gap">
                                 <div class="text-block">
 
-                                    <h5>Arrendamiento de Vivienda</h5>
+                                    <h5 class="text-light">Arrendamiento de Vivienda</h5>
 
                                 </div>
                             </div>
@@ -247,7 +292,7 @@
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5>Arrendamiento de Locales</h5>
+                                    <h5 class="text-light">Arrendamiento de Locales</h5>
 
                                 </div>
                             </div>
@@ -258,7 +303,7 @@
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5>Arrendamiento de Oficinas</h5>
+                                    <h5 class="text-light">Arrendamiento de Oficinas</h5>
 
                                 </div>
                             </div>
@@ -269,7 +314,7 @@
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5>Venta de Apartamentos</h5>
+                                    <h5 class="text-light">Venta de Apartamentos</h5>
 
                                 </div>
                             </div>
@@ -280,7 +325,7 @@
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5>Venta de Locales</h5>
+                                    <h5 class="text-light">Venta de Locales</h5>
 
                                 </div>
                             </div>
@@ -291,7 +336,7 @@
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5>Administración de Inmuebles</h5>
+                                    <h5 class="text-light">Administración de Inmuebles</h5>
 
                                 </div>
                             </div>

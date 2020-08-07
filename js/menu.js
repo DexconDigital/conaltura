@@ -229,7 +229,7 @@ setTimeout(function () {
                         res += '</div>' +
                             '<div class="featured-decs">' +
                             '<span class="featured-status"><a href="index.php#"></a></span>' +
-                            '<h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '" >' + data[i].Barrio + ' , ' + data[i].Ciudad + '</a></h4>' +
+                            '<h4 class="featured-title"><a class="text-light" href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '" >' + data[i].Barrio + ' , ' + data[i].Ciudad + '</a></h4>' +
                             '</div>' +
                             '</li>';
 
@@ -279,16 +279,16 @@ setTimeout(function () {
                             '<div class="featured-image">';
                         if (data[i].foto1 != "") {
 
-                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
+                            res += '<a  href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="' + data[i].foto1 + '" alt="" style="height: 55px;"></a>';
 
                         } else {
-                            res += '<a href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
+                            res += '<a  href="detalle_inmueble.php?co=' + data[i].Codigo_Inmueble + '"><img src="images/no_image.png" alt="" style="height: 55px;"></a>';
 
                         }
                         res += '</div>' +
                             '<div class="featured-decs">' +
                             '<span class="featured-status"><a href="index.html#"></a></span>' +
-                            '<h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '" >' + data[i].Barrio + ' , ' + data[i].Ciudad + '</a></h4>' +
+                            '<h4 class="featured-title"><a class="text-light" href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '" >' + data[i].Barrio + ' , ' + data[i].Ciudad + '</a></h4>' +
                             '</div>' +
                             '</li>';
 

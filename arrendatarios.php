@@ -34,7 +34,7 @@
                     <div class="bg parallax-bg" style="background: none;"></div>
                     <div class="overlay" style="background: none;"></div>
                     <div class="our-sevices-content">
-                        <h4 style="text-align:center">Arrendatarios</h4>
+                        <h4 style="text-align:center;color: #095C70;font-weight: 700;">Arrendatarios</h4>
                         <div class="col-xs-12 col-sm-8 our-sevices-col ">
                             <div class="row clearfix">
                                 <iframe src="https://www.simiinmobiliarias.com/base/simired/simidocs/index.php?inmo=472&tipo=2" frameborder="0" style="min-height: 1093px;min-width: 100%;"></iframe>
@@ -54,7 +54,7 @@
                                             </span>
                                             <hr class="noo-gap">
                                             <div class="text-block">
-                                                <h5 style="color:  black; "> Arrendatarios</h5>
+                                                <h5> Arrendatarios</h5>
 
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@
                                             </span>
                                             <hr class="noo-gap">
                                             <div class="text-block">
-                                                <h5 style="color:  black; ">Propietarios</h5>
+                                                <h5>Propietarios</h5>
 
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@
                                             <hr class="noo-gap">
                                             <div class="text-block">
                                                 <a href="https://gateway2.tucompra.com.co/sites/conaltura/facturacion.xhtml?idTerminal=1057" target="blank">
-                                                    <h5 style="color:  black; ">PSE</h5>
+                                                    <h5 style=" margin: 0 0 12px;font-weight: 700;font-size: 27px;color: #095C70;">PSE</h5>
                                                 </a>
 
                                             </div>

@@ -53,6 +53,9 @@
 <body>
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <?php $imagen = 'images/images_noticias/1.jpg);' ?>
     <section>
         <div class="col-12 tamaño" style="background-image:url(<?php echo $imagen ?>">

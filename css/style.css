@@ -78,7 +78,7 @@ a:hover, a:focus {
   text-decoration: none; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #4d4d4d; }
+  color: #7b7b7b !important; }
 
 img {
   max-width: 100%;
@@ -1799,18 +1799,18 @@ div#preloader {
 .subir {
   display: none;
   padding: 13px 15px;
-  background-color: rgba(0, 0, 0, 0.15);
-  color: #005f68;
-  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 15px;
   cursor: pointer;
   position: fixed;
   bottom: 47px;
-  border-radius: 50%;
+  border-radius: 3%;
   right: 20px;
   z-index: 38; }
   .subir:hover {
-    background-color: white;
-    color: black; }
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white; }
 
 .cont_img {
   -o-object-fit: cover;
@@ -1957,7 +1957,12 @@ div#preloader {
   text-decoration: none;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s; }
+  transition: all 0.5s ease 0s;
+  border-color: #095c70;
+  border-width: 1px;
+  border-style: solid; }
+  .more-link:hover {
+    color: #095C70 !important; }
 
 .texto {
   color: #80bc00; }
@@ -2152,6 +2157,91 @@ div#preloader {
   @media (max-width: 230px) {
     .texto2_slider {
       font-size: 50px; } }
+
+#texto_descrip_seccion .cont_texto {
+  margin-top: 4rem;
+  margin-bottom: 3rem; }
+
+#texto_descrip_seccion .texto_style1 {
+  font-size: 27px;
+  color: #095C70; }
+
+#texto_descrip_seccion .cont_texto2 {
+  margin-bottom: 7rem; }
+
+#texto_descrip_seccion .texto_style2 {
+  padding: 0rem 4rem; }
+
+#banner_home {
+  background-image: url("../images/banner-home2.png");
+  padding: 90px 0 100px 0;
+  position: relative; }
+  #banner_home .overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4); }
+  #banner_home h1 {
+    color: white;
+    font-size: 44px; }
+  #banner_home a {
+    color: white;
+    font-size: 15px;
+    background-color: #80BC00;
+    border-radius: 100px 100px 100px 100px;
+    padding: 5px 50px 5px 50px; }
+    #banner_home a:hover {
+      color: #095C70; }
+
+#redes_conaltura {
+  background-color: white;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 30%;
+  z-index: 1000;
+  padding: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: auto; }
+  #redes_conaltura .elementor-social-icon {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 17px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #80bc00;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    padding: .5em; }
+    #redes_conaltura .elementor-social-icon:hover {
+      background-color: #80BC00; }
+  #redes_conaltura i {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+    font-weight: 400;
+    color: #80bc00;
+    text-align: center; }
+    #redes_conaltura i:hover {
+      color: white; }
+
+.titulo_inmuebles_inicio {
+  font-size: 20px;
+  color: #095C70;
+  font-weight: 600; }
+
+#lista_contacto a {
+  color: #7b7b7b !important; }
+  #lista_contacto a:hover {
+    color: #095C70 !important; }
+
+.btn_enviar_inm {
+  border-radius: 0%; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

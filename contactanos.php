@@ -19,7 +19,9 @@
 
     <!-- Buscador -->
     <?php include 'layout/buscador.php'; ?>
-
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <section>
         <div class="noo-wrapper">
 
@@ -31,10 +33,10 @@
                             <div class="page-content">
                                 <div class="contact-map p-1">
                                     <div class="text-block">
-                                        <h4>CONTÁCTANOS</h4>
+                                        <h4>Contáctanos</h4>
                                     </div>
                                     <div class="noo-gmaps">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4364452551467!2d-75.57325188568394!3d6.20601842849546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281ca3fffff%3A0x4449cdf2dea0d01d!2sCONALTURA%20INMOBILIARIA!5e0!3m2!1ses-419!2sco!4v1594662022362!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4364452551467!2d-75.57325188568394!3d6.20601842849546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281ca3fffff%3A0x4449cdf2dea0d01d!2sCONALTURA%20INMOBILIARIA!5e0!3m2!1ses-419!2sco!4v1594662022362!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                     </div>
                                 </div>
                                 <div class="contact-form">
@@ -42,10 +44,10 @@
                                         <div class="col-sm-12 col-md-12 p-0 col-lg-4 text-justify mb-4">
                                             <div class="contact-info p-0">
                                                 <div class="text-block">
-                                                    <h4>Información de Contacto</h4>
+                                                    <h4>Información <br> de Contacto</h4>
                                                 </div>
                                                 <div class="text-block">
-                                                    <ul>
+                                                    <ul id="lista_contacto">
 
                                                         <li><b><i class="fa fa-phone"></i></b><a href="tel:0343229898" target="_blank">(034)2662277 Extensión
                                                                 4</a></li>

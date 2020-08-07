@@ -22,16 +22,74 @@ $pagina = 'inicio';
     <!-- Menu  Inicial-->
     <!-- .collapse:not(.show) -->
     <?php include 'layout/menu.php'; ?>
-
+    <!-- slider  -->
+    <section id="parallax4" style="position: relative;">
+        <div class="overlay"></div>
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="10000">
+                    <img src="images/banner-home.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="images/banner-home.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner-home.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <div id="texslider" class="container col-12  text-center d-flex justify-content-center">
+        <div class="col-9  p-0">
+            <p class="texto1_slider">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
+            <h1 class="texto2_slider">Apartamentos nuevos en venta desde 100 millones de pesos.</h1>
+        </div>
+    </div>
+    <!-- slider -->
     <!-- Buscador -->
     <?php include 'layout/buscador.php'; ?>
 
+
+    <!-- texto descriptivo -->
+    <section id="texto_descrip_seccion" class="">
+        <div class="col-12  d-flex justify-content-center flex-wrap">
+            <div class=" col-5 text-center cont_texto">
+                <h3 class="texto_style1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam</h3>
+            </div>
+            <div class=" col-8 text-center cont_texto2">
+                <p class="texto_style2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, excepturi eveniet optio fugit saepe omnis animi illo quaerat, suscipit a sint consectetur, numquam eius totam tenetur ea.</p>
+            </div>
+        </div>
+    </section>
+    <!-- fin texto descriptivo -->
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
+    <!-- banner -->
+    <section id="banner_home">
+        <div class="overlay2"></div>
+        <div id="" class="container col-12  text-center d-flex justify-content-center d-flex align-items-center">
+            <div class="col-9  p-0">
+                <h1 class="">Hay una vivienda para cada necesidad</h1>
+                <a class="btn mt-3" href="inmuebles.php">Haz clic y consigue lo que necesitas</a>
+            </div>
+        </div>
+    </section>
+    <!-- fin banner -->
     <!-- inmuebles en arreindo -->
     <section class="recent-properties pt-0">
         <div class="container">
             <div class="recent-properties-inner">
                 <div class="section-title">
-                    <h3 class="titulos">Propiedades Destacadas en Arriendo</h3>
+                    <h3 class="titulos">Propiedades destacadas en arriendo</h3>
                 </div>
                 <div class="recent-properties-content">
                     <div style="position:relative;">
@@ -109,7 +167,7 @@ $pagina = 'inicio';
         <div class="container">
             <div class="recent-properties-inner">
                 <div class="section-title">
-                    <h3 class="espacio_destacadas titulos">PROPIEDADES DESTACADAS EN VENTA</h3>
+                    <h3 class="espacio_destacadas titulos">Propiedade destacadas en venta</h3>
                 </div>
                 <div class="recent-properties-content">
                     <div class="owl-carousel owl-theme" id="owl-propiedades-venta">
@@ -323,7 +381,7 @@ $pagina = 'inicio';
         <div class="container">
             <div class="recent-agents-inner">
                 <div class="section-title">
-                    <h3>Nuestros Asesores</h3>
+                    <h3>Nuestros asesores</h3>
                 </div>
                 <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
 
@@ -464,7 +522,7 @@ $pagina = 'inicio';
         <div class="container">
             <div class="our-partners-inner">
                 <div class="section-title">
-                    <h3 class="text-center">Nuestras Alianzas y Afiliaciones</h3>
+                    <h3 class="text-center">Nuestras alianzas y afiliaciones</h3>
                 </div>
                 <div class="owl-carousel owl-carousel1 owl-theme" id="aliados_slide">
 

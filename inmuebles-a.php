@@ -23,6 +23,9 @@ require 'controllers/inmueblesController.php';
     <!-- Buscador -->
     <?php include 'layout/buscador.php'; ?>
     <!-- inmuebles -->
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
     <section id="" class="espacio_destacadas">
         <div class="container p-0">
             <div class="col-12 p-0">
@@ -31,7 +34,7 @@ require 'controllers/inmueblesController.php';
                     if (is_array($api)) {
                         $totalinmuebles = $api['datosGrales']['totalInmuebles'];
                     } ?>
-                    <h4 class="">Se han encontrado <span><?php echo $totalinmuebles ?></span> inmuebles</h4>
+                    <h4 class="titulo_inmuebles_inicio">Se han encontrado <span><?php echo $totalinmuebles ?></span> inmuebles</h4>
                 </div>
                 <div class="d-flex flex-wrap align-items-center justify-content-center ">
                     <!-- <div class="col-4">
