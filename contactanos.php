@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
+    <title>Contáctanos | Conaltura Inmobiliaria</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <?php include 'layout/archivosheader.php'; ?>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-4">
                                         <i class="fab fa-whatsapp tamaño_icon"></i>
-                                        <p class="mt-4 sub_titulos">Whatsapp</p>
+                                        <p class="mt-4 sub_titulos">WhatsApp</p>
                                         <p class="cont_tel"><a class="color_gris" href="https://wa.me/573193777281" target="_blank">319 377 7281 </a></p>
                                     </div>
                                 </div>

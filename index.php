@@ -9,7 +9,7 @@ $pagina = 'inicio';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
+    <title>Inicio | Conaltura Inmobiliaria</title>
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
     <?php require 'variables/metaEtiquetas.php'; ?>
@@ -62,10 +62,10 @@ $pagina = 'inicio';
     <section id="texto_descrip_seccion" class="">
         <div class="col-12  d-flex justify-content-center flex-wrap">
             <div class=" col-5 text-center cont_texto">
-                <h3 class="texto_style1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam</h3>
+                <h3 class="texto_style1">Encuentra tu proyecto de vivienda en Medellín.</h3>
             </div>
             <div class=" col-8 text-center cont_texto2">
-                <p class="texto_style2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, excepturi eveniet optio fugit saepe omnis animi illo quaerat, suscipit a sint consectetur, numquam eius totam tenetur ea.</p>
+                <p class="texto_style2">Encuentra inmuebles en venta en diferentes partes de Medellín o elige apartamentos de 2 y 3 habitaciones con zonas comunes, gimnasios, parqueadero, cercanos a centros comerciales y mucho más.</p>
             </div>
         </div>
     </section>
@@ -167,7 +167,7 @@ $pagina = 'inicio';
         <div class="container">
             <div class="recent-properties-inner">
                 <div class="section-title">
-                    <h3 class="espacio_destacadas titulos">Propiedade destacadas en venta</h3>
+                    <h3 class="espacio_destacadas titulos">Propiedades destacadas en venta</h3>
                 </div>
                 <div class="recent-properties-content">
                     <div class="owl-carousel owl-theme" id="owl-propiedades-venta">

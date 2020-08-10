@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Noticias</title>
+    <title>Detalle Noticias | Conaltura Inmobiliaria</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <?php include 'layout/archivosheader.php'; ?>

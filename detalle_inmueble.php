@@ -7,7 +7,7 @@ require 'controllers/detalleInmuebleController.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Inmueble</title>
+    <title>Detalle Inmueble | Conaltura Inmobiliaria</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- facebook -->
     <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
@@ -420,7 +420,20 @@ require 'controllers/detalleInmuebleController.php';
                                                 } ?>
                                             </div>
                                         </div>
-
+                                        <div class="col-9 mt-4 pl-0 pr-0 text-center d-flex">
+                                            <div class="block-sidebar recent-property">
+                                                <center>
+                                                    <div class="btn-atras">
+                                                        <i class="fa fa-arrow-left" style=" color:  black;"></i>
+                                                    </div>
+                                                </center>
+                                            </div>
+                                            <div class="mt-5 ml-3">
+                                                <center>
+                                                    <h3 class="title-block-sidebar">Regresar a la pagina anterior</h3>
+                                                </center>
+                                            </div>
+                                        </div>
 
 
                                     </article>
@@ -474,16 +487,6 @@ require 'controllers/detalleInmuebleController.php';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 pr-0 text-center btn_atras">
-                                        <div class="block-sidebar recent-property">
-                                            <center>
-                                                <div class="btn-atras">
-                                                    <i class="fa fa-arrow-left" style=" color:  black;"></i>
-                                                </div>
-                                                <h3 class="title-block-sidebar">Regresar a la pagina anterior</h3>
-                                            </center>
-                                        </div>
-                                    </div>
                                     <div class="col-12 mb-5 mt-4 form_detalle pr-0 formularioa">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
@@ -517,6 +520,7 @@ require 'controllers/detalleInmuebleController.php';
                                         </div>
 
                                     </div>
+
                                     <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top" style="padding-top: 48px;">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
@@ -550,7 +554,6 @@ require 'controllers/detalleInmuebleController.php';
                                         </div>
 
                                     </div>
-
                                 </div>
 
 

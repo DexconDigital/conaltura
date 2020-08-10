@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Quienes Somos</title>
+    <title>Quienes Somos | Conaltura Inmobiliaria</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
