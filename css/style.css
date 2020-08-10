@@ -2243,6 +2243,41 @@ div#preloader {
 .btn_enviar_inm {
   border-radius: 0%; }
 
+#titulo_principal {
+  font-size: 30px;
+  font-weight: 700;
+  color: #80bc00; }
+
+.secundario {
+  font-size: 14px; }
+
+.sub_titulos {
+  font-size: 18px;
+  color: #095C70;
+  font-weight: 700; }
+
+.tamaño_icon {
+  font-size: 50px; }
+
+.correo_cont {
+  font-size: 14px;
+  font-weight: 400; }
+
+.color_gris {
+  color: #7B7B7B !important; }
+  .color_gris:hover {
+    color: #80BC00 !important; }
+
+.cont_tel {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 5px; }
+
+.sub_formulario {
+  font-size: 20px;
+  font-weight: 700;
+  color: #095C70; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

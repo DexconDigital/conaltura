@@ -39,9 +39,34 @@
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4364452551467!2d-75.57325188568394!3d6.20601842849546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281ca3fffff%3A0x4449cdf2dea0d01d!2sCONALTURA%20INMOBILIARIA!5e0!3m2!1ses-419!2sco!4v1594662022362!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                     </div>
                                 </div>
+                                <div class="col-12  d-flex justify-content-center flex-wrap">
+                                    <h2 id="titulo_principal">Escríbenos, nos encantaría ponernos en contacto</h2>
+                                    <p class=" secundario">Nunca estamos demasiado ocupados para hablar y atender tus dudas.</p>
+                                </div>
+                                <div class="col-12  text-center d-flex mt-3">
+                                    <div class="col-4 ">
+                                        <i class="fa fa-envelope tamaño_icon"></i>
+                                        <p class="mt-4 sub_titulos">Escríbenos</p>
+                                        <p class="correo_cont"><a class="color_gris" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</a></p>
+                                    </div>
+                                    <div class="col-4 ">
+                                        <i class="fa fa-phone tamaño_icon"></i>
+                                        <p class="mt-4 sub_titulos">Llámanos</p>
+                                        <p class="cont_tel"><a class="color_gris" href="tel:0343229898" target="_blank">(034)2662277 Extensión 4</a></p>
+                                        <p class="cont_tel"><a class="color_gris" href="tel:0343229898" target="_blank">(034)2662277 Extensión 209</a></p>
+                                        <p class="cont_tel"><a class="color_gris" href="tel:0342662277" target="_blank">(034)3229898</a></p>
+
+
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fab fa-whatsapp tamaño_icon"></i>
+                                        <p class="mt-4 sub_titulos">Whatsapp</p>
+                                        <p class="cont_tel"><a class="color_gris" href="https://wa.me/573193777281" target="_blank">319 377 7281 </a></p>
+                                    </div>
+                                </div>
                                 <div class="contact-form">
                                     <div class="col-12">
-                                        <div class="col-sm-12 col-md-12 p-0 col-lg-4 text-justify mb-4">
+                                        <!-- <div class="col-sm-12 col-md-12 p-0 col-lg-4 text-justify mb-4">
                                             <div class="contact-info p-0">
                                                 <div class="text-block">
                                                     <h4>Información <br> de Contacto</h4>
@@ -62,12 +87,12 @@
                                                 </div>
                                             </div>
 
-                                        </div>
-                                        <div class="col-sm-12 col-md-12 col-lg-8">
+                                        </div> -->
+                                        <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
 
                                             <div class="contact-desc">
-                                                <div class="text-block">
-                                                    <h4>Formulario de Contacto </h4>
+                                                <div class="text-block text-center">
+                                                    <p class="sub_formulario">Formulario de Contacto </p>
                                                 </div>
                                                 <hr class="noo-gap">
                                                 <form name="contact-form" method="post" id="contact-form" class="validate-form">
@@ -108,6 +133,7 @@
                                                 </form>
 
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

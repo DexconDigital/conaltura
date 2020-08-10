@@ -87,9 +87,9 @@
                         <a href="index.html"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>
                     </div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-12 logo-block copy d-flex align-items-center">
-                    <p>Diseñado y Desarrollado por&nbsp<a href="https://www.dexcondigital.com/" style="font-weight: bold;color: #4d4d4d;" target="_blank"> Dexcon Digital.</a>
-                        &copy; Copyright 2020 para <a href="index.php" style="font-weight: bold;color: #4d4d4d;" target="_blank">Conaltura Inmobiliaria.</a> Todos los derechos reservados. </p>
+                <div class="col-lg-10 col-md-9 col-12 logo-block copy d-flex align-items-center d-flex justify-content-center">
+                    <p class="text-center">Diseñado y Desarrollado por&nbsp<a href="https://www.dexcondigital.com/" style="font-weight: bold;color: #4d4d4d;" target="_blank"> Dexcon Digital.</a>
+                        &copy; Copyright 2020 para <a href="index.php" style="font-weight: bold;color: #4d4d4d;" target="_blank">Conaltura Inmobiliaria.</a><br> Todos los derechos reservados. </p>
                     <br />
 
 

@@ -510,7 +510,7 @@ require 'controllers/detalleInmuebleController.php';
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
                                                 <div class="col-12 text-center border-0">
-                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;">Enviar</button>
+                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;"><span>Enviar</span></button>
                                                 </div>
 
                                             </form>
@@ -543,7 +543,7 @@ require 'controllers/detalleInmuebleController.php';
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
                                                 <div class="col-12 text-center">
-                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;">Enviar</button>
+                                                    <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;"><span style="font-size: 16px;">Enviar</span></button>
                                                 </div>
 
                                             </form>
