@@ -1,5 +1,6 @@
 <?php
 $pagina = 'inicio';
+$v = 'XD';
 ?>
 
 
@@ -20,7 +21,7 @@ $pagina = 'inicio';
 
 <body>
     <!-- Menu  Inicial-->
-    <!-- .collapse:not(.show) , menu.js agg in-->
+    <!-- .collapse:not(.show) , menu.js agg in http://html.nootheme.com/citilights/-->
     <?php include 'layout/menu.php'; ?>
     <!-- slider  -->
     <section id="parallax4" style="position: relative;">
@@ -566,6 +567,8 @@ $pagina = 'inicio';
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>
+
+
 
 
 

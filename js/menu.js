@@ -26,34 +26,34 @@
         // '</div>' +
         // '<a href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank"><img src="images/other/logo-pse.png" style="margin-top: 10px;"/></a>' +
         '</div>' +
-        '<div id="men" class="main-navigation">' +
-        '<nav class="collapse navbar-collapse in" id="main-collapse" role="navigation" style="background-color: white;">' +
+        '<div id="" class="main-navigation">' +
+        '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation" style="background-color: white;">' +
         '<ul class="nav navbar-nav options" id="items_en_uso">' +
-        '<li class="dropdown linea top op1" id="items1">' +
-        '<a href="index.php">Inicio&nbsp;<span class="caret"></span></a>  ' +
+        '<li class="dropdown linea top" id="items1">' +
+        '<a href="index.php">Inicio&nbsp<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea op1">' +
+        '<li class="dropdown linea">' +
         '<a href="https://conaltura.com/proyectos-de-vivienda-nueva/">Proyectos de <br> Vivienda nueva&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea op1">' +
+        '<li class="dropdown linea">' +
         '<a href="https://conaltura.com/proyectos-terminados/">Proyectos <br> terminados&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea op1">' +
+        '<li class="dropdown linea">' +
         '<a href="https://conaltura.com/colombianos-en-el-exterior/">Colombianos <br> en el exterior&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea top op1" id="items2">' +
+        '<li class="dropdown linea top" id="items2">' +
         '<a href="quienes-somos.php">Conócenos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
-        '<li class="dropdown linea op1" id="items3">' +
+        '<li class="dropdown linea" id="items3">' +
         '<a href="inmuebles.php?">Inmuebles en <br> arriendo<span class="caret"></span></a>' +
         '</li>' +
         // '<li class="dropdown linea top">' +
         // '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
         // '</li>' +
-        '<li class="dropdown linea top op1">' +
+        '<li class="dropdown linea top">' +
         '<a href="noticias.php">Blog&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown top text-center op1">' +
+        '<li class="dropdown top text-center">' +
         '<a href="contactanos.php">Contáctanos&nbsp;<br>&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '</ul>' +
@@ -62,6 +62,8 @@
 
 
     $(".menu-ppal").html(menu);
+
+   
 
     var footerinicio = '';
 
@@ -189,6 +191,7 @@
     $(".header-ppal").html(header);
 
 })
+
     (jQuery);
 
 
@@ -321,7 +324,6 @@ $(document).ready(function () {
 
     })
 });
-
 
 
 
