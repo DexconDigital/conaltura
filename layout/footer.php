@@ -56,14 +56,14 @@
                     <div class="ft-contact-info">
                         <h4 class="ft-col-title">Contáctanos</h4>
                         <ul class="detail-contact-info">
-                            <li><i class="fa fa-map-marker-alt"></i>&nbsp;<label>Cr 39 5ª 95 Oficina 306,</label>
+                            <li><i class="fa fa-map-marker-alt"></i>&nbsp;<label>Calle 5ª No 39-194 Local 104,</label>
                                 <br>
-                                <label style="margin-left: 47px;">Edificio Avantgarde- Poblado, Medellín </label>
+                                <label style="margin-left: 47px;">Edificio Dinners, Medellín.</label>
                             </li>
                             <li><a href="tel:0342662277" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)2662277, ext 4</a></li>
                             <li><a href="tel:0342662277" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)2662277, ext 209</a></li>
                             <li><a href="tel:0343229898" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)3229898</a></li>
-                            <li><a href="https://wa.me/573193777281" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp; 319 377 7281 </a></li>
+                            <li><a href="https://wa.me/573214780051" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp; 321 478 0051 </a></li>
                             <li><i class="fa fa-envelope"></i>&nbsp;<a class="text-break" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</span></a></li>
                             <li><i class="fa fa-calendar-alt"></i>&nbsp;<label>Horario de Atención: </label>
                                 <br>

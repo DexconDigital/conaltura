@@ -85,7 +85,7 @@
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-4 our-sevices-col">
                                     <span class="service-icon">
-                                        <a href="arrendatarios.php"><i class="fa fa-home" style=" color:  #4d4d4d;"></i></a>
+                                        <a href="https://www.simiinmobiliarias.com/base/simired/simidocs/index.php?inmo=472&tipo=2" target="_blank"><i class="fa fa-home" style=" color:  #4d4d4d;"></i></a>
                                     </span>
                                     <hr class="noo-gap">
                                     <div class="text-block">
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-4 our-sevices-col">
                                     <span class="service-icon">
-                                        <a href="propietarios.php"><i class="fa fa-key" style=" color:  #4d4d4d"></i></a>
+                                        <a href="https://www.simiinmobiliarias.com/base/simired/simidocs/index.php?inmo=472&tipo=1" target="_blank"><i class="fa fa-key" style=" color:  #4d4d4d"></i></a>
                                     </span>
                                     <hr class="noo-gap">
                                     <div class="text-block">

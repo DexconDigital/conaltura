@@ -27,45 +27,45 @@
     </script>
     <style>
         #redes_conaltura {
-            background-color: white;
-            height: auto;
-            position: fixed;
-            left: 0;
-            top: 30%;
-            z-index: 1000;
-            padding: 10px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-            width: auto;
+            background-color: white !important;
+            height: auto !important;
+            position: fixed !important;
+            left: 0 !important;
+            top: 30% !important;
+            z-index: 1000 !important;
+            padding: 10px !important;
+            border-top-right-radius: 25px !important;
+            border-bottom-right-radius: 25px !important;
+            width: auto !important;
         }
 
         #redes_conaltura .elementor-social-icon {
-            background-color: rgba(255, 255, 255, 0);
-            font-size: 17px;
-            border-style: solid;
-            border-width: 1px 1px 1px 1px;
-            border-color: #80bc00;
-            border-radius: 50%;
-            margin-bottom: 3px;
-            padding: .5em;
+            background-color: rgba(255, 255, 255, 0) !important;
+            font-size: 17px !important;
+            border-style: solid !important;
+            border-width: 1px 1px 1px 1px !important;
+            border-color: #80bc00 !important;
+            border-radius: 50% !important;
+            margin-bottom: 3px !important;
+            padding: .5em !important;
         }
 
         #redes_conaltura .elementor-social-icon:hover {
-            background-color: #80BC00;
+            background-color: #80BC00 !important;
         }
 
         #redes_conaltura i {
-            width: 1em;
-            height: 1em;
-            position: relative;
-            display: block;
-            font-weight: 400;
-            color: #80bc00;
-            text-align: center;
+            width: 1em !important;
+            height: 1em !important;
+            position: relative !important;
+            display: block !important;
+            font-weight: 400 !important;
+            color: #80bc00 !important;
+            text-align: center !important;
         }
 
         #redes_conaltura i:hover {
-            color: white;
+            color: white !important;
         }
     </style>
 </head>
@@ -273,7 +273,7 @@
                     <div class="overlay"></div>
                     <div class="our-sevices-content">
                         <div class="col-12 d-flex justify-content-center flex-wrap clearfix">
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-key"></i></a>
@@ -281,62 +281,62 @@
                                 <hr class="noo-gap">
                                 <div class="text-block">
 
-                                    <h5 class="text-light">Arrendamiento de Vivienda</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Arrendamiento de Vivienda</h5>
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-vector-square"></i></a>
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5 class="text-light">Arrendamiento de Locales</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Arrendamiento de Locales</h5>
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-building"></i></a>
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5 class="text-light">Arrendamiento de Oficinas</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Arrendamiento de Oficinas</h5>
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-home"></i></a>
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5 class="text-light">Venta de Apartamentos</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Venta de Apartamentos</h5>
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-money-check-alt"></i></a>
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5 class="text-light">Venta de Locales</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Venta de Locales</h5>
 
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 col-sm-2 our-sevices-col">
+                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="contactanos.php" style="color: #fff; ">
                                         <i class="fa fa-handshake"></i></a>
                                 </span>
                                 <hr class="noo-gap">
                                 <div class="text-block">
-                                    <h5 class="text-light">Administración de Inmuebles</h5>
+                                    <h5 class="text-light" style="color: #fff; ">Administración de Inmuebles</h5>
 
                                 </div>
                             </div>

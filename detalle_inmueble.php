@@ -42,6 +42,29 @@ require 'controllers/detalleInmuebleController.php';
 
 <style>
     @media screen and (min-width:300px) {
+        .similarListing {
+            column-count: 1;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        .similarListing {
+            column-count: 2;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .similarListing {
+            column-count: 2;
+        }
+    }
+
+    @media screen and (min-width:1140px) {
+        .similarListing {
+            column-count: 2;
+        }
+    }
+    @media screen and (min-width:300px) {
         .lista_detalle {
             column-count: 1;
         }
@@ -221,6 +244,7 @@ require 'controllers/detalleInmuebleController.php';
 
     .sticky-top {
         z-index: 100 !important;
+        top: 15%;
     }
 </style>
 
@@ -267,7 +291,7 @@ require 'controllers/detalleInmuebleController.php';
                                             <section class="">
                                             <div class="property-map mt-5">
                                                 <div class="container p-0">
-                                                    <h4 class="property-map-title">Foto 360</h4>
+                                                    <h4 class="property-detail-title">Foto 360</h4>
                                                 </div>
                                                 <div class="col-12 mt-2 p-0">
                                                     <iframe width="100%" height="315" src="' . $video360 . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -406,7 +430,7 @@ require 'controllers/detalleInmuebleController.php';
                                                 <!-- Alrrededores -->
                                                 <?php if (count($r['caracteristicasAlrededores']) > 0) {
                                                     echo '<div class="col-md-12">
-                                                        <div class="property-desc">
+                                                        <div class="property-desc mb-5 property-summary">
                                                         <h4 class="property-detail-title">Características Alrededores</h4>
                                                         <ul class="lista_detalle">';
                                                     for ($i = 0; $i < count($r['caracteristicasAlrededores']); $i++) {
@@ -420,15 +444,79 @@ require 'controllers/detalleInmuebleController.php';
                                                 } ?>
                                             </div>
                                         </div>
-                                        <div class="col-9 mt-4 pl-0 pr-0 text-center d-flex">
-                                            <div class="block-sidebar recent-property">
+                                        <div class="noo-sidebar-inner pr-0">
+                                            <div class="block-sidebar recent-property mb-5">
+                                                <h3 class="title-block-sidebar">Contacto con Asesor</h3>
+                                                <div class="featured-property d-flex flex-wrap">
+                                                    <div class="text-center col-12 col-md-6 col-lg-6 mb-4">
+                                                        <?php
+                                                        if ($asesor['FotoAsesor'] == ' ') {
+                                                            echo '<img class="cont_img" src="images/no_image.png" width="100%" height="100%" alt="">';
+                                                        } else {
+                                                            echo '<img class="cont_img" src="' . $asesor['FotoAsesor'] . '" width="100%" height="100%" alt="">';
+                                                        }
+                                                        ?>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-12">
+                                                        <p class="detalle-asesor">
+                                                            <p class="p1"><span><?php echo $asesor['ntercero']; ?></span> </p>
+                                                            <p class="p1"><a href="<?php echo $asesor['correo'] ?>" target="_blank"><i class="fa fa-envelope"></i> <?php echo $asesor['correo'] ?></p></a>
+                                                            <p class="p1"><a href="tel:+573229898"><i class="fa fa-phone"></i> 3229898</p></a>
+                                                            <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
+                                                        </p>
+                                                        <p class="p1"><a href="https://wa.me/573214780051"><i class="fab fa-whatsapp"></i> Contactanos por WhatsApp</p></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-12">
+                                            <div class="property-map mapa_detalle">
+                                                <div class="container">
+                                                    <h4 class="property-map-title titulo_ubicacion">Ubicación</h4>
+                                                </div>
+                                                <div class="property-map-content p-0 ">
+                                                    <div class="map-position card mapa_tamaño">
+
+                                                        <div class="">
+                                                            <div id="map" class="w-100"></div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-12">
+                                            <div class="noo-sidebar-inner mb-4">
+                                                <div class="block-sidebar recent-property">
+                                                    <h3 class="title-block-sidebar">Propiedades Similares</h3>
+                                                    <div class="featured-property">
+                                                        <ul class="similarListing p-0">
+                                                            <!-- cards -->
+                                                            <?php similares($r['IdCiudad'], $r['IdTpInm']); ?>
+                                                            <!-- <li>
+                                                        <div class="featured-image">
+                                                            <a href=""><img src="images/no_image.png" alt="" style="height: 60px;object-fit:contain;"></a>
+                                                        </div>
+                                                        <div class="featured-decs">
+                                                            <span class="featured-status"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">472-123</a></span>
+                                                            <h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">Bogotá Cundinamarca</a></h4>
+                                                        </div>
+                                                    </li> -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-12 mt-4 pl-0 pr-0 text-center d-flex flex-wrap">
+                                            <div class=" col-12 block-sidebar recent-property">
                                                 <center>
                                                     <div class="btn-atras">
                                                         <i class="fa fa-arrow-left" style=" color:  black;"></i>
                                                     </div>
                                                 </center>
                                             </div>
-                                            <div class="mt-5 ml-3">
+                                            <div class="col-12 mt-5">
                                                 <center>
                                                     <h3 class="title-block-sidebar">Regresar a la pagina anterior</h3>
                                                 </center>
@@ -441,28 +529,8 @@ require 'controllers/detalleInmuebleController.php';
 
 
                                 <div class="noo-sidebar noo-sidebar-right col-lg-4 col-xs-12 col-md-12 col-12">
-                                    <div class="noo-sidebar-inner mb-4">
-                                        <div class="block-sidebar recent-property">
-                                            <h3 class="title-block-sidebar">Propiedades Similares</h3>
-                                            <div class="featured-property">
-                                                <ul class="similarListing">
-                                                    <!-- cards -->
-                                                    <?php similares($r['IdCiudad'], $r['IdTpInm']); ?>
-                                                    <!-- <li>
-                                                        <div class="featured-image">
-                                                            <a href=""><img src="images/no_image.png" alt="" style="height: 60px;object-fit:contain;"></a>
-                                                        </div>
-                                                        <div class="featured-decs">
-                                                            <span class="featured-status"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">472-123</a></span>
-                                                            <h4 class="featured-title"><a href="detalle-inmueble.php?dt=' + data[i].Codigo_Inmueble + '">Bogotá Cundinamarca</a></h4>
-                                                        </div>
-                                                    </li> -->
-                                                </ul>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                    <div class="noo-sidebar-inner pr-0">
+                                    <!-- <div class="noo-sidebar-inner pr-0">
                                         <div class="block-sidebar recent-property">
                                             <h3 class="title-block-sidebar">Contacto con Asesor</h3>
                                             <div class="featured-property d-flex flex-wrap">
@@ -486,7 +554,7 @@ require 'controllers/detalleInmuebleController.php';
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-12 mb-5 mt-4 form_detalle pr-0 formularioa">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
@@ -521,7 +589,7 @@ require 'controllers/detalleInmuebleController.php';
 
                                     </div>
 
-                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top" style="padding-top: 48px;">
+                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
                                             <form class="p-0">
@@ -565,22 +633,7 @@ require 'controllers/detalleInmuebleController.php';
             </div>
         </div>
     </section>
-    <div class="">
-        <div class="property-map mapa_detalle">
-            <div class="container">
-                <h4 class="property-map-title titulo_ubicacion">Ubicación</h4>
-            </div>
-            <div class="property-map-content p-0 ">
-                <div class="map-position card mapa_tamaño">
 
-                    <div class="">
-                        <div id="map" class="w-100"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- footer -->
     <?php include 'layout/footer.php'; ?>

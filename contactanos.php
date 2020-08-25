@@ -43,13 +43,13 @@
                                     <h2 id="titulo_principal">Escríbenos, nos encantaría ponernos en contacto</h2>
                                     <p class=" secundario">Nunca estamos demasiado ocupados para hablar y atender tus dudas.</p>
                                 </div>
-                                <div class="col-12  text-center d-flex mt-3">
-                                    <div class="col-4 ">
+                                <div class="col-12  text-center d-flex flex-wrap mt-3">
+                                    <div class="col-lg-4 col-md-4 col-12 ">
                                         <i class="fa fa-envelope tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">Escríbenos</p>
                                         <p class="correo_cont"><a class="color_gris" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</a></p>
                                     </div>
-                                    <div class="col-4 ">
+                                    <div class="col-lg-4 col-md-4 col-12 ">
                                         <i class="fa fa-phone tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">Llámanos</p>
                                         <p class="cont_tel"><a class="color_gris" href="tel:0343229898" target="_blank">(034)2662277 Extensión 4</a></p>
@@ -58,10 +58,10 @@
 
 
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-lg-4 col-md-4 col-12">
                                         <i class="fab fa-whatsapp tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">WhatsApp</p>
-                                        <p class="cont_tel"><a class="color_gris" href="https://wa.me/573193777281" target="_blank">319 377 7281 </a></p>
+                                        <p class="cont_tel"><a class="color_gris" href="https://wa.me/573214780051" target="_blank">321 478 0051</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-form">

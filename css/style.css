@@ -1630,7 +1630,7 @@ input[type=checkbox]:checked:before {
   margin-bottom: 10px; }
 
 #bsiguiente:hover, #banterior:hover {
-  background: #7ab21f none repeat scroll 0 0;
+  background: #80BC00 none repeat scroll 0 0;
   color: white; }
 
 #flechas {
@@ -1657,7 +1657,7 @@ input[type=checkbox]:checked:before {
   width: 100px;
   text-align: center;
   color: #fff;
-  background: #7ab21f;
+  background: #80BC00;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1758,7 +1758,7 @@ div#preloader {
 
 .btn-atras:hover {
   background: #005f68;
-  border: 10px solid #7ab21f; }
+  border: 10px solid #80BC00; }
 
 .options {
   vertical-align: top;
@@ -1908,7 +1908,7 @@ div#preloader {
   font-weight: bold; }
 
 .page-item.active .page-link {
-  background-color: #7ab21f !important;
+  background-color: #80BC00 !important;
   color: white !important; }
 
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
@@ -2020,7 +2020,7 @@ div#preloader {
   padding: 10px 20px !important;
   border-radius: unset !important; }
   .btn_pagos:hover {
-    color: #7AB21F !important; }
+    color: #80BC00 !important; }
 
 @media (max-width: 2560px) {
   .btn_pagos {
@@ -2091,19 +2091,19 @@ div#preloader {
       top: 26rem; } }
   @media (max-width: 1024px) {
     #texslider {
-      top: 26rem; } }
+      top: 21rem; } }
   @media (max-width: 768px) {
     #texslider {
       top: 26rem; } }
   @media (max-width: 425px) {
     #texslider {
-      top: 26rem; } }
+      top: 18rem; } }
   @media (max-width: 375px) {
     #texslider {
-      top: 26rem; } }
+      top: 17rem; } }
   @media (max-width: 230px) {
     #texslider {
-      top: 26rem; } }
+      top: 17rem; } }
 
 .texto1_slider {
   line-height: 1;
@@ -2122,13 +2122,13 @@ div#preloader {
       font-size: 22px; } }
   @media (max-width: 425px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 10px; } }
   @media (max-width: 375px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 10px; } }
   @media (max-width: 230px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 10px; } }
 
 .texto2_slider {
   font-weight: 500;
@@ -2144,19 +2144,19 @@ div#preloader {
       font-size: 50px; } }
   @media (max-width: 1024px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 44px; } }
   @media (max-width: 768px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 33px; } }
   @media (max-width: 425px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 16px; } }
   @media (max-width: 375px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 16px; } }
   @media (max-width: 230px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 16px; } }
 
 #texto_descrip_seccion .cont_texto {
   margin-top: 4rem;
@@ -2170,7 +2170,8 @@ div#preloader {
   margin-bottom: 7rem; }
 
 #texto_descrip_seccion .texto_style2 {
-  padding: 0rem 4rem; }
+  padding: 0rem 4rem;
+  color: #7b7b7b; }
 
 #banner_home {
   background-image: url("../images/banner-home2.png");
@@ -2192,8 +2193,28 @@ div#preloader {
     color: white;
     font-size: 15px;
     background-color: #80BC00;
-    border-radius: 100px 100px 100px 100px;
-    padding: 5px 50px 5px 50px; }
+    border-radius: 100px 100px 100px 100px; }
+    @media (max-width: 2560px) {
+      #banner_home a {
+        padding: 5px 50px 5px 50px; } }
+    @media (max-width: 1440px) {
+      #banner_home a {
+        padding: 5px 50px 5px 50px; } }
+    @media (max-width: 1024px) {
+      #banner_home a {
+        padding: 5px 50px 5px 50px; } }
+    @media (max-width: 768px) {
+      #banner_home a {
+        padding: 5px 50px 5px 50px; } }
+    @media (max-width: 425px) {
+      #banner_home a {
+        padding: 5px 15px 5px 15px; } }
+    @media (max-width: 375px) {
+      #banner_home a {
+        padding: 5px 4px 5px 4px; } }
+    @media (max-width: 230px) {
+      #banner_home a {
+        padding: 5px 4px 5px 4px; } }
     #banner_home a:hover {
       color: #095C70; }
 
@@ -2207,6 +2228,8 @@ div#preloader {
   padding: 10px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+  -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   width: auto; }
   #redes_conaltura .elementor-social-icon {
     background-color: rgba(255, 255, 255, 0);

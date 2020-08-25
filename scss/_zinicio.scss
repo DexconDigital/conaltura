@@ -103,7 +103,7 @@ img{max-width:100%;height:auto;vertical-align:middle;border:0}.section-title h3{
   }
   
   #bsiguiente:hover, #banterior:hover{
-    background: #7ab21f none repeat scroll 0 0;
+    background: #80BC00 none repeat scroll 0 0;
     color: white;
   }
   
@@ -133,7 +133,7 @@ img{max-width:100%;height:auto;vertical-align:middle;border:0}.section-title h3{
   width: 100px;
   text-align: center;
   color: #fff;
-  background: #7ab21f;
+  background: #80BC00;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -247,7 +247,7 @@ div#preloader {
 
 .btn-atras:hover{
     background: #005f68;
-    border: 10px solid #7ab21f;
+    border: 10px solid #80BC00;
 }
 .options{
     vertical-align: top;
@@ -391,7 +391,7 @@ text-align: justify;
     font-weight:bold;
 }
 .page-item.active .page-link{
-    background-color:#7ab21f !important;
+    background-color:#80BC00 !important;
     color: white !important;
 }
 .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus{
@@ -508,7 +508,7 @@ text-align: justify;
     padding: 10px 20px!important;
     border-radius: unset!important;
     &:hover{
-        color: #7AB21F !important;
+        color: #80BC00 !important;
     }
 }
 .btn_pagos{
@@ -576,19 +576,19 @@ text-align: justify;
         top: 26rem;
     }
     @media (max-width: 1024px){
-        top: 26rem;
+        top: 21rem;
     }
     @media (max-width: 768px){
         top: 26rem;
     }
     @media (max-width: 425px){
-        top: 26rem;
+        top: 18rem;
     }
     @media (max-width: 375px){
-        top: 26rem;
+        top: 17rem;
     }
     @media (max-width: 230px){
-        top: 26rem;
+        top: 17rem;
     }
 }
 .texto1_slider{
@@ -607,13 +607,13 @@ text-align: justify;
         font-size:22px;
     }
     @media (max-width: 425px){
-        font-size:22px;
+        font-size:10px;
     }
     @media (max-width: 375px){
-        font-size:22px;
+        font-size:10px;
     }
     @media (max-width: 230px){
-        font-size:22px;
+        font-size:10px;
     }
 }
 .texto2_slider{
@@ -628,19 +628,19 @@ text-align: justify;
         font-size: 50px;
     }
     @media (max-width: 1024px){
-        font-size: 50px;
+        font-size: 44px;
     }
     @media (max-width: 768px){
-        font-size: 50px;
+        font-size: 33px;
     }
     @media (max-width: 425px){
-        font-size: 50px;
+        font-size: 16px;
     }
     @media (max-width: 375px){
-        font-size: 50px;
+        font-size: 16px;
     }
     @media (max-width: 230px){
-        font-size: 50px;
+        font-size: 16px;
     }
 }
 
@@ -658,6 +658,7 @@ text-align: justify;
     }
     .texto_style2{
         padding: 0rem 4rem;
+        color: #7b7b7b;
     }
 }
 
@@ -687,7 +688,28 @@ text-align: justify;
         font-size: 15px;
         background-color: #80BC00;
         border-radius: 100px 100px 100px 100px;
-        padding: 5px 50px 5px 50px;
+        
+        @media (max-width: 2560px){
+            padding: 5px 50px 5px 50px;
+        }
+        @media (max-width: 1440px){
+            padding: 5px 50px 5px 50px;
+        }
+        @media (max-width: 1024px){
+            padding: 5px 50px 5px 50px;
+        }
+        @media (max-width: 768px){
+            padding: 5px 50px 5px 50px;
+        }
+        @media (max-width: 425px){
+            padding: 5px 15px 5px 15px;
+        }
+        @media (max-width: 375px){
+            padding: 5px 4px 5px 4px;
+        }
+        @media (max-width: 230px){
+            padding: 5px 4px 5px 4px;
+        }
         &:hover{
             color: #095C70;
         }
@@ -703,7 +725,7 @@ text-align: justify;
     padding: 10px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    // box-shadow: 0 6px 15px rgb(0,0,0,.3);
+    box-shadow: 0 6px 15px rgba(0,0,0,.3);
     width: auto;
 
     .elementor-social-icon{

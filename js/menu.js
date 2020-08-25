@@ -11,7 +11,7 @@
         '<div class="logo" style="margin-top:11px;" >' +
         '<div class="logo-image">' +
         '<a href="index.php" class="a-calling">' +
-        '<img src="images/other/conaltura.png" />' +
+        '<img src="images/other/Logo-Conaltura.png" />' +
         '</a>' +
         '</div>' +
         '</div>' +
@@ -26,34 +26,34 @@
         // '</div>' +
         // '<a href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank"><img src="images/other/logo-pse.png" style="margin-top: 10px;"/></a>' +
         '</div>' +
-        '<div class="main-navigation">' +
-        '<nav class="collapse navbar-collapse" id="main-collapse" role="navigation" style="background-color: white;">' +
+        '<div id="men" class="main-navigation">' +
+        '<nav class="collapse navbar-collapse in" id="main-collapse" role="navigation" style="background-color: white;">' +
         '<ul class="nav navbar-nav options" id="items_en_uso">' +
-        '<li class="dropdown linea top" id="items1">' +
+        '<li class="dropdown linea top op1" id="items1">' +
         '<a href="index.php">Inicio&nbsp;<span class="caret"></span></a>  ' +
         '</li>' +
-        '<li class="dropdown linea">' +
+        '<li class="dropdown linea op1">' +
         '<a href="https://conaltura.com/proyectos-de-vivienda-nueva/">Proyectos de <br> Vivienda nueva&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea">' +
+        '<li class="dropdown linea op1">' +
         '<a href="https://conaltura.com/proyectos-terminados/">Proyectos <br> terminados&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea">' +
+        '<li class="dropdown linea op1">' +
         '<a href="https://conaltura.com/colombianos-en-el-exterior/">Colombianos <br> en el exterior&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown linea top" id="items2">' +
+        '<li class="dropdown linea top op1" id="items2">' +
         '<a href="quienes-somos.php">Conócenos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
-        '<li class="dropdown linea top" id="items3">' +
-        '<a href="inmuebles.php?">Inmuebles&nbsp;<span class="caret"></span></a>' +
+        '<li class="dropdown linea op1" id="items3">' +
+        '<a href="inmuebles.php?">Inmuebles en <br> arriendo<span class="caret"></span></a>' +
         '</li>' +
         // '<li class="dropdown linea top">' +
         // '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
         // '</li>' +
-        '<li class="dropdown linea top">' +
+        '<li class="dropdown linea top op1">' +
         '<a href="noticias.php">Blog&nbsp;<span class="caret"></span></a> ' +
         '</li>' +
-        '<li class="dropdown top text-center">' +
+        '<li class="dropdown top text-center op1">' +
         '<a href="contactanos.php">Contáctanos&nbsp;<br>&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '</ul>' +
@@ -145,7 +145,7 @@
         '<div class="row">' +
         '<div class="col-xs-12 col-sm-6 text-block"> ' +
         '<div class="logo-image">' +
-        '<a href="index.html"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>' +
+        '<a href="index.html"><img src="images/other/Logo-Conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>' +
         '</div>' +
         '</div>' +
         '<div class="col-xs-12 col-sm-6 logo-block">' +
@@ -321,6 +321,9 @@ $(document).ready(function () {
 
     })
 });
+
+
+
 
 
 

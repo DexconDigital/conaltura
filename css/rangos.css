@@ -194,26 +194,26 @@
 .irs-bar {
   height: 10px;
   top: 33px;
-  border-top: 1px solid #7ab21f;
-  border-bottom: 1px solid #7ab21f;
-  background: #7ab21f;
-  background: -webkit-gradient(linear, left bottom, left top, from(#7ab21f), to(#54de3f));
-  background: -webkit-linear-gradient(bottom, #7ab21f 0%, #54de3f 100%);
-  background: -o-linear-gradient(bottom, #7ab21f 0%, #54de3f 100%);
-  background: linear-gradient(to top, #7ab21f 0%, #54de3f 100%);
+  border-top: 1px solid #80BC00;
+  border-bottom: 1px solid #80BC00;
+  background: #80BC00;
+  background: -webkit-gradient(linear, left bottom, left top, from(#80BC00), to(#54de3f));
+  background: -webkit-linear-gradient(bottom, #80BC00 0%, #54de3f 100%);
+  background: -o-linear-gradient(bottom, #80BC00 0%, #54de3f 100%);
+  background: linear-gradient(to top, #80BC00 0%, #54de3f 100%);
   /* W3C */ }
 
 .irs-bar-edge {
   height: 10px;
   top: 33px;
   width: 14px;
-  border: 1px solid #7ab21f;
+  border: 1px solid #80BC00;
   border-right: 0;
-  background: #7ab21f;
-  background: -webkit-gradient(linear, left bottom, left top, from(#7ab21f), to(#54de3f));
-  background: -webkit-linear-gradient(bottom, #7ab21f 0%, #54de3f 100%);
-  background: -o-linear-gradient(bottom, #7ab21f 0%, #54de3f 100%);
-  background: linear-gradient(to top, #7ab21f 0%, #54de3f 100%);
+  background: #80BC00;
+  background: -webkit-gradient(linear, left bottom, left top, from(#80BC00), to(#54de3f));
+  background: -webkit-linear-gradient(bottom, #80BC00 0%, #54de3f 100%);
+  background: -o-linear-gradient(bottom, #80BC00 0%, #54de3f 100%);
+  background: linear-gradient(to top, #80BC00 0%, #54de3f 100%);
   /* W3C */
   border-radius: 16px 0 0 16px;
   -moz-border-radius: 16px 0 0 16px; }
@@ -270,7 +270,7 @@
   line-height: 1.333;
   text-shadow: none;
   padding: 1px 5px;
-  background: #7ab21f;
+  background: #80BC00;
   border-radius: 3px;
   -moz-border-radius: 3px; 
   top: 117%;
@@ -284,7 +284,7 @@
 
 .irs-grid-pol {
   opacity: 0.5;
-  background: #7ab21f; }
+  background: #80BC00; }
 
 .irs-grid-pol.small {
   background: #999; }

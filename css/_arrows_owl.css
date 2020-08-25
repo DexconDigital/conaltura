@@ -16,8 +16,8 @@
   opacity: 0.2; }
 
 .owl-carousel .prev-slide {
-  color: #7ab21f;
-  border: 1px solid #7ab21f;
+  color: #80BC00;
+  border: 1px solid #80BC00;
   background-color: white;
   left: 89%;
   top: -9%;
@@ -42,7 +42,7 @@
   .owl-carousel .prev-slide::before {
     content: "‹";
     font-size: 43px;
-    color: #7ab21f;
+    color: #80BC00;
     position: relative;
     right: 27px;
     top: -24px; }
@@ -63,8 +63,8 @@
         right: 27px; } }
 
 .owl-carousel .next-slide {
-  color: #7ab21f;
-  border: 1px solid #7ab21f;
+  color: #80BC00;
+  border: 1px solid #80BC00;
   background-color: white;
   left: 95%;
   top: -9%;
@@ -89,7 +89,7 @@
   .owl-carousel .next-slide::before {
     content: "›";
     font-size: 43px;
-    color: #7ab21f;
+    color: #80BC00;
     position: relative;
     right: 22px;
     top: -24px; }

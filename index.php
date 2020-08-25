@@ -20,7 +20,7 @@ $pagina = 'inicio';
 
 <body>
     <!-- Menu  Inicial-->
-    <!-- .collapse:not(.show) -->
+    <!-- .collapse:not(.show) , menu.js agg in-->
     <?php include 'layout/menu.php'; ?>
     <!-- slider  -->
     <section id="parallax4" style="position: relative;">
@@ -61,10 +61,10 @@ $pagina = 'inicio';
     <!-- texto descriptivo -->
     <section id="texto_descrip_seccion" class="">
         <div class="col-12  d-flex justify-content-center flex-wrap">
-            <div class=" col-5 text-center cont_texto">
+            <div class=" col-lg-5 col-md-7 col-10 text-center cont_texto">
                 <h3 class="texto_style1">Encuentra tu proyecto de vivienda en Medellín.</h3>
             </div>
-            <div class=" col-8 text-center cont_texto2">
+            <div class=" col-lg-8 col-md-10 col-11 text-center cont_texto2">
                 <p class="texto_style2">Encuentra inmuebles en venta en diferentes partes de Medellín o elige apartamentos de 2 y 3 habitaciones con zonas comunes, gimnasios, parqueadero, cercanos a centros comerciales y mucho más.</p>
             </div>
         </div>
@@ -77,7 +77,7 @@ $pagina = 'inicio';
     <section id="banner_home">
         <div class="overlay2"></div>
         <div id="" class="container col-12  text-center d-flex justify-content-center d-flex align-items-center">
-            <div class="col-9  p-0">
+            <div class="col-lg-9 col-md-9 col-10  p-0">
                 <h1 class="">Hay una vivienda para cada necesidad</h1>
                 <a class="btn mt-3" href="inmuebles.php">Haz clic y consigue lo que necesitas</a>
             </div>

@@ -36,8 +36,8 @@ $(document).ready(function() {
     $('#owl-propiedades-venta').owlCarousel({
         loop: true,
         margin: 10,
-        autoplay: true,
-        autoplayTimeout: 5000,
+        // autoplay: true,
+        // autoplayTimeout: 5000,
         responsive: {
             0: {
                 items: 1
