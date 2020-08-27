@@ -282,7 +282,7 @@ $WebK = Web_Key;
                                             <li>
                                                 <a data-action="share/whatsapp/share" href="<?php echo 'whatsapp://send?text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] . '%20Descripción:%20' . $r['descrip'] . '%20 http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co ?>" target="_blank">
                                                     <i class="fab fa-whatsapp social-top2"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fa fa-envelope social-top2"></i></a></li>
+                                            <!-- <li><a href="#" target="_blank"><i class="fa fa-envelope social-top2"></i></a></li> -->
                                             <li><a href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=472-<?php echo $co; ?>" target="_blank" title="Imprimir"><i class="fas fa-print social-top2"></i></a></li>
                                             <!-- <li><a href="detalle-inmueble.php?dt=<?php echo $co; ?>" title="Imprimir" onClick="window.print()" target="_blank"><i class="fas fa-print social-top2"></i></a></li> -->
                                         </ul>
@@ -360,11 +360,11 @@ $WebK = Web_Key;
                                                         <div class="property-detail-content">
                                                             <div class="detail-field row">
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-home"></i> Tipo de Inmueble </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="tipo"> <?php echo $r['Tipo_Inmueble'] ?></a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="tipo"> <?php echo $r['Tipo_Inmueble'] ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Barrio </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="barrio"> </a><?php echo $r['barrio'] ?></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="barrio"> </i><?php echo $r['barrio'] ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-map-marker-alt"></i> Ciudad </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value"><a href="#" rel="tag" id="ciudad"> <?php echo $r['ciudad'] ?></a></span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="ciudad"> <?php echo $r['ciudad'] ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-dollar"></i> Precio </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value">
                                                                     <span class="amount" id="precio"> <?php if ($r['Gestion'] == 'Arriendo') {
@@ -463,8 +463,8 @@ $WebK = Web_Key;
                                                     <div class="col-lg-6 col-md-6 col-12">
                                                         <p class="detalle-asesor">
                                                             <p class="p1"><span><?php echo $asesor['ntercero']; ?></span> </p>
-                                                            <p class="p1"><a href="<?php echo $asesor['correo'] ?>" target="_blank"><i class="fa fa-envelope"></i> <?php echo $asesor['correo'] ?></p></a>
-                                                            <p class="p1"><a href="tel:+573229898"><i class="fa fa-phone"></i> 3229898</p></a>
+                                                            <p class="p1"><a href="mailto:<?php echo $asesor['correo'] ?>"><i class="fa fa-envelope"></i> <?php echo $asesor['correo'] ?></p></a>
+                                                            <p class="p1"><a href="tel:0343229898"><i class="fa fa-phone"></i> 3229898</p></a>
                                                             <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
                                                         </p>
                                                         <p class="p1"><a href="https://wa.me/573214780051"><i class="fab fa-whatsapp"></i> Contactanos por WhatsApp</p></a>
