@@ -339,7 +339,11 @@ div#preloader {
      text-align: center;
      border-right: solid 1px #707070;
 }}  
-
+@media screen and (min-width:360px)
+{.top{
+    padding-top: 0rem;
+    padding-bottom: 0px;
+}}
 @media screen and (min-width:420px)
 {.top{
     padding-top: 0rem;
