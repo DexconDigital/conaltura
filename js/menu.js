@@ -33,19 +33,19 @@
         '<a href="index.php">Inicio&nbsp<span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown linea">' +
-        '<a href="https://conaltura.com/proyectos-de-vivienda-nueva/">Proyectos de <br> Vivienda nueva&nbsp;<span class="caret"></span></a> ' +
+        '<a href="https://conaltura.com/proyectos-de-vivienda-nueva/" class="padd_mnu"><span class="badge badge-primary text-wrap espacio_menu hover_m">Proyectos de Vivienda nueva&nbsp;</span><span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown linea">' +
-        '<a href="https://conaltura.com/proyectos-terminados/">Proyectos <br> terminados&nbsp;<span class="caret"></span></a> ' +
+        '<a href="https://conaltura.com/proyectos-terminados/" class="padd_mnu"><span class="badge badge-primary text-wrap espacio_menu hover_m">Proyectos terminados&nbsp;</span><span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown linea">' +
-        '<a href="https://conaltura.com/colombianos-en-el-exterior/">Colombianos <br> en el exterior&nbsp;<span class="caret"></span></a> ' +
+        '<a href="https://conaltura.com/colombianos-en-el-exterior/" class="padd_mnu"><span class="badge badge-primary text-wrap espacio_menu hover_m">Colombianos en el exterior&nbsp;</span><span class="caret"></span></a> ' +
         '</li>' +
         '<li class="dropdown linea top" id="items2">' +
         '<a href="quienes-somos.php">Conócenos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '<li class="dropdown linea" id="items3">' +
-        '<a href="inmuebles.php?">Inmuebles en <br> arriendo<span class="caret"></span></a>' +
+        '<a href="inmuebles.php?" class="padd_mnu"> <span class="badge badge-primary text-wrap espacio_menu hover_m">Inmuebles en arriendo</span><span class="caret"></span></a>' +
         '</li>' +
         // '<li class="dropdown linea top">' +
         // '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +

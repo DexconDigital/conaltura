@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <?php include 'layout/archivosheader_clientes.php' ?>
 </head>
-<style>
+<!-- <style>
     #redes_conaltura {
         background-color: white;
         height: auto;
@@ -51,14 +51,14 @@
     #redes_conaltura i:hover {
         color: white;
     }
-</style>
+</style> -->
 
 <body>
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
 
     <!-- redes sociales -->
-    <!-- < ? php include 'layout/redes.php'; ? > -->
+    <?php include 'layout/redes.php'; ?>
     <!-- fin redes sociales -->
     <div class="noo-wrapper">
 

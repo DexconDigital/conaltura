@@ -1,34 +1,26 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "ITCAvantGardeGothicBold12";
-  src: url("../fonts/FUENTES/ITC Avant Garde Gothic Demi/AvantGardeITCbyBT-Demi.ttf"); }
-
-@font-face {
-  font-family: "ITCAvantGardeGothicMedium13";
-  src: url("../fonts/FUENTES/ITC Avant Garde Gothic Med/ITCAvantGardeGothic-Medium12.ttf"); }
-
-@font-face {
-  font-family: "ITCAvantGardeGothicExtraLight8";
-  src: url("../fonts/FUENTES/ITC Avant Garde Gothic ExtLt/ITCAvantGardeGothic-ExtLt7.ttf"); }
-
-@font-face {
   font-family: "Poppins,Sans-serif";
-  src: url("../fonts/FUENTES/Poppins-Regular.ttf"); }
+  src: url("../fonts/FUENTES/Poppins-Regular.ttf");
+  font-display: swap; }
 
 @font-face {
   font-family: "OpenSans-Regular";
-  src: url("../fonts/FUENTES/OpenSans-Regular.ttf"); }
+  src: url("../fonts/FUENTES/OpenSans-Regular.ttf");
+  font-display: swap; }
 
 @font-face {
   font-family: "CenturyGothic";
-  src: url("../fonts/Century Gothic.ttf"); }
+  src: url("../fonts/Century Gothic.ttf");
+  font-display: swap; }
 
 body {
   font-family: "Poppins,Sans-serif";
   font-size: 16px;
   line-height: 1.5;
   font-style: normal;
-  font-weight: 300; }
+  font-weight: 300;
+  background-color: #FFFFFF !important; }
 
 .wrap {
   width: auto;
@@ -108,7 +100,7 @@ iframe {
   font-size: 16px;
   line-height: 1.5;
   color: #555;
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-image: none;
   border: 1px solid #dedede;
   border-radius: 4px;
@@ -1358,7 +1350,7 @@ ul.social-top > li a i {
   padding: 0; }
 
 .noo-sidebar .gsearch .gsearch-wrap .gsearch-content .gsearch-field .form-group select {
-  background-color: #fff; }
+  background-color: #FFFFFF; }
 
 .noo-sidebar .gsearch .gsearch-wrap .gsearch-content .gsearch-action .gsubmit .btn {
   width: 100%;
@@ -2097,7 +2089,8 @@ div#preloader {
       top: 26rem; } }
   @media (max-width: 425px) {
     #texslider {
-      top: 18rem; } }
+      top: 17rem;
+      width: 100%; } }
   @media (max-width: 375px) {
     #texslider {
       top: 17rem; } }
@@ -2300,6 +2293,209 @@ div#preloader {
   font-size: 20px;
   font-weight: 700;
   color: #095C70; }
+
+.menu-fixed {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100% !important; }
+
+.show {
+  visibility: visible; }
+
+@media (max-width: 2560px) {
+  .contact-desc {
+    width: 70%; } }
+
+@media (max-width: 1440px) {
+  .contact-desc {
+    width: 70%; } }
+
+@media (max-width: 1024px) {
+  .contact-desc {
+    width: 70%; } }
+
+@media (max-width: 768px) {
+  .contact-desc {
+    width: 100%; } }
+
+@media (max-width: 425px) {
+  .contact-desc {
+    width: 100%; } }
+
+@media (max-width: 375px) {
+  .contact-desc {
+    width: 100%; } }
+
+@media (max-width: 230px) {
+  .contact-desc {
+    width: 100%; } }
+
+@media (max-width: 2560px) {
+  .espacio {
+    padding: inherit; } }
+
+@media (max-width: 1440px) {
+  .espacio {
+    padding: inherit; } }
+
+@media (max-width: 1024px) {
+  .espacio {
+    padding: inherit; } }
+
+@media (max-width: 768px) {
+  .espacio {
+    padding: inherit; } }
+
+@media (max-width: 425px) {
+  .espacio {
+    padding: 0% 13%; } }
+
+@media (max-width: 375px) {
+  .espacio {
+    padding: 0% 8%; } }
+
+@media (max-width: 230px) {
+  .espacio {
+    padding: 0% 8%; } }
+
+@media (max-width: 2560px) {
+  .text_justify_somos {
+    text-align: justify; } }
+
+@media (max-width: 1440px) {
+  .text_justify_somos {
+    text-align: justify; } }
+
+@media (max-width: 1024px) {
+  .text_justify_somos {
+    text-align: justify; } }
+
+@media (max-width: 768px) {
+  .text_justify_somos {
+    text-align: justify; } }
+
+@media (max-width: 425px) {
+  .text_justify_somos {
+    text-align: center; } }
+
+@media (max-width: 375px) {
+  .text_justify_somos {
+    text-align: center; } }
+
+@media (max-width: 230px) {
+  .text_justify_somos {
+    text-align: center; } }
+
+.badge-primary {
+  color: #7B7B7B !important;
+  background-color: white !important; }
+
+.badge {
+  line-height: 2 !important; }
+  @media (max-width: 2560px) {
+    .badge {
+      font-weight: 500 !important;
+      font-size: 11px !important; } }
+  @media (max-width: 1440px) {
+    .badge {
+      font-weight: 500 !important;
+      font-size: 11px !important; } }
+  @media (max-width: 1024px) {
+    .badge {
+      font-weight: 500 !important;
+      font-size: 11px !important; } }
+  @media (max-width: 768px) {
+    .badge {
+      font-weight: 700 !important;
+      font-size: 11px !important; } }
+  @media (max-width: 425px) {
+    .badge {
+      font-weight: 700 !important;
+      font-size: 13px !important; } }
+  @media (max-width: 375px) {
+    .badge {
+      font-weight: 700 !important;
+      font-size: 13px !important; } }
+  @media (max-width: 230px) {
+    .badge {
+      font-weight: 700 !important;
+      font-size: 13px !important; } }
+
+@media (max-width: 2560px) {
+  .espacio_menu {
+    width: 10rem;
+    height: inherit; } }
+
+@media (max-width: 1440px) {
+  .espacio_menu {
+    width: 10rem;
+    height: inherit; } }
+
+@media (max-width: 1024px) {
+  .espacio_menu {
+    width: 10rem;
+    height: inherit; } }
+
+@media (max-width: 768px) {
+  .espacio_menu {
+    width: 10rem;
+    height: inherit; } }
+
+@media (max-width: 425px) {
+  .espacio_menu {
+    width: 21rem;
+    height: 4rem; } }
+
+@media (max-width: 375px) {
+  .espacio_menu {
+    width: 21rem;
+    height: 4rem; } }
+
+@media (max-width: 230px) {
+  .espacio_menu {
+    width: 21rem;
+    height: 4rem; } }
+
+.hover_m:hover {
+  color: #80BC00 !important; }
+
+.padd_mnu {
+  padding: 2px !important; }
+
+@media (max-width: 2560px) {
+  .options {
+    padding: 0.5em; } }
+
+@media (max-width: 1440px) {
+  .options {
+    padding: 0.5em; } }
+
+@media (max-width: 1024px) {
+  .options {
+    padding: 0em; } }
+
+@media (max-width: 768px) {
+  .options {
+    padding: 0.5em; } }
+
+@media (max-width: 425px) {
+  .options {
+    padding: 0.5em; } }
+
+@media (max-width: 375px) {
+  .options {
+    padding: 0.5em; } }
+
+@media (max-width: 230px) {
+  .options {
+    padding: 0.5em; } }
+
+input[type=checkbox]:focus {
+  outline: inherit !important;
+  outline-offset: 0 !important;
+  background-color: #80BC00;
+  color: white; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

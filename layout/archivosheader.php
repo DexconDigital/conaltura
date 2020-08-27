@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/jquery.nouislider.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/jquery.nouislider.min.css">
+
 <!-- <link rel="stylesheet" href="css/style-selector.css"> -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style2.css">

@@ -1,5 +1,7 @@
 <?php
 require 'controllers/detalleInmuebleController.php';
+require_once 'variables/captcha.php';
+$WebK = Web_Key;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -64,6 +66,7 @@ require 'controllers/detalleInmuebleController.php';
             column-count: 2;
         }
     }
+
     @media screen and (min-width:300px) {
         .lista_detalle {
             column-count: 1;
@@ -244,7 +247,7 @@ require 'controllers/detalleInmuebleController.php';
 
     .sticky-top {
         z-index: 100 !important;
-        top: 15%;
+        top: 20%;
     }
 </style>
 
@@ -266,7 +269,7 @@ require 'controllers/detalleInmuebleController.php';
                         <div class="noo-mainbody-inner">
                             <div class="row clearfix">
 
-                                <div class="noo-content col-lg-8 col-md-12 col-12 p-0">
+                                <div class="noo-content col-lg-7 col-md-12 col-12 p-0">
 
                                     <article class="property">
                                         <h1 class="property-title"> Detalle del Inmueble <span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
@@ -528,7 +531,7 @@ require 'controllers/detalleInmuebleController.php';
                                 </div>
 
 
-                                <div class="noo-sidebar noo-sidebar-right col-lg-4 col-xs-12 col-md-12 col-12">
+                                <div class="noo-sidebar noo-sidebar-right col-lg-5 col-xs-12 col-md-12 col-12">
 
                                     <!-- <div class="noo-sidebar-inner pr-0">
                                         <div class="block-sidebar recent-property">
@@ -574,12 +577,13 @@ require 'controllers/detalleInmuebleController.php';
                                                 </div>
                                                 <div class="form-group form-check">
                                                     <input type="checkbox" class="form-check-input" required>
-                                                    He leído y acepto la Política de Datos.
-                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;">Descarga Nuestra Política de Datos.</a>
+                                                    He leído y acepto la
+                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;">Política de Datos.</a>
                                                 </div>
                                                 <select name="codigo" class="invisible display:none">
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
+                                                <div class="g-recaptcha mb-2" data-sitekey="6Ld0usMZAAAAAHjr9srwYKDBbix8S2Fay08T2Qr4"></div>
                                                 <div class="col-12 text-center border-0">
                                                     <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;"><span>Enviar</span></button>
                                                 </div>
@@ -592,12 +596,12 @@ require 'controllers/detalleInmuebleController.php';
                                     <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
-                                            <form class="p-0">
+                                            <form class="p-0" action="email/correoDetalle.php" method="POST" autocomplete="off">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="numero" aria-describedby="emailHelp" placeholder="Numero de Contacto" required>
+                                                    <input type="text" class="form-control" name="telefono" aria-describedby="emailHelp" placeholder="Numero de Contacto" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Correo" required>
@@ -608,11 +612,18 @@ require 'controllers/detalleInmuebleController.php';
                                                 </div>
                                                 <div class="form-group form-check">
                                                     <input type="checkbox" class="form-check-input" required>
-                                                    He leído y acepto la Política de Datos.
-                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;">Descarga Nuestra Política de Datos.</a>
+                                                    He leído y acepto la
+                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;">Política de Datos.</a>
                                                 </div>
+                                                <div class="g-recaptcha mb-1" data-sitekey="<?php echo $WebK ?>"></div>
                                                 <select name="codigo" class="invisible display:none">
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
+                                                </select>
+                                                <select name="corrasesor" class="invisible display:none">
+                                                    <option value=" <?php echo $asesor['correo'] ?>"> <?php echo $asesor['correo'] ?></option>
+                                                </select>
+                                                <select name="nom_asesor" style="display:none">
+                                                    <option value=" <?php echo $asesor['ntercero']; ?>"> <?php echo $asesor['ntercero']; ?></option>
                                                 </select>
                                                 <div class="col-12 text-center">
                                                     <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;"><span style="font-size: 16px;">Enviar</span></button>
@@ -711,5 +722,6 @@ require 'controllers/detalleInmuebleController.php';
 <script src="conexion_api/buscador.js"></script>
 <!-- barra de rangos -->
 <script src="js/rangos.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </html>

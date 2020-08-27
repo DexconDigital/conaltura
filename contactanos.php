@@ -1,3 +1,7 @@
+<?php 
+ require_once 'variables/captcha.php';
+ $WebK = Web_Key;
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -95,41 +99,43 @@
                                                     <p class="sub_formulario">Formulario de Contacto </p>
                                                 </div>
                                                 <hr class="noo-gap">
-                                                <form name="contact-form" method="post" id="contact-form" class="validate-form">
-                                                    <p>
-                                                        <span class="form-group form-control-wrap your-name">
-                                                            <input type="text" name="your-name" id="nombre" class="form-control" size="40" placeholder="Nombre" required>
-                                                        </span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="form-group form-control-wrap your-name">
-                                                            <input type="text" name="your-name" class="form-control" id="telefono" size="40" placeholder="Celular y/o teléfono" required>
-                                                        </span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="form-group form-control-wrap your-email">
-                                                            <input type="email" name="your-email" class="form-control" id="email" size="40" placeholder="Email" required>
-                                                        </span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="form-group form-control-wrap your-subject">
-                                                            <input type="text" name="your-subject" class="form-control" id="codigo" size="40" placeholder="Código del inmueble (opcional)">
-                                                        </span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="form-group form-control-wrap your-message">
-                                                            <textarea name="your-message" cols="40" class="form-control" id="mensaje" placeholder="Comentario" required></textarea>
-                                                        </span>
-                                                    </p>
-                                                    <p style="width: 48%;display: inline-block;">
-                                                        <input type="checkbox" id="check" required> He leído y
-                                                        acepto la Política de Datos<br></p>
-                                                    <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;display: inline-block; 
-                                                text-align: right;">Descarga
-                                                        Nuestra Política de Datos</a>
-                                                    <p>
-                                                        <input type="submit" class="submit" value="Enviar" id="">
-                                                    </p>
+                                                <form name="contact-form" method="POST" action="email/enviarCorreo.php" autocomplete="off">
+                                                    <div class="col-12">
+                                                        <p>
+                                                            <span class="form-group form-control-wrap your-name">
+                                                                <input type="text" name="nombre" class="form-control" size="40" placeholder="Nombre" required>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="form-group form-control-wrap your-name">
+                                                                <input type="text" name="telefono" class="form-control"  size="40" placeholder="Celular y/o teléfono">
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="form-group form-control-wrap your-email">
+                                                                <input type="email" name="correo" class="form-control"  size="40" placeholder="Email" required>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="form-group form-control-wrap your-subject">
+                                                                <input type="text" name="codigo" class="form-control"  size="40" placeholder="Código del inmueble (opcional)">
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="form-group form-control-wrap your-message">
+                                                                <textarea name="mensaje" cols="40" class="form-control"  placeholder="Comentario" required></textarea>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <input class="form-group" type="checkbox" id="" required> He leído y
+                                                            acepto la
+                                                            <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;display: inline-block; ">Política de Datos</a>
+                                                        </p>
+                                                        <div class="g-recaptcha" data-sitekey="<?php echo $WebK ?>"></div>
+                                                        <div class="col-12 mb-4"><small id="tituloHepl" class="form-text text-muted">Este campo es obligatorio</small></div>
+                                                        <input type="submit" class="submit">
+                                                    </div>
+
                                                 </form>
 
                                             </div>
@@ -158,5 +164,6 @@
 <script src="conexion_api/buscador.js"></script>
 <!-- barra de rangos -->
 <script src="js/rangos.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </html>

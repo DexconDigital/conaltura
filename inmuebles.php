@@ -156,7 +156,7 @@ require 'controllers/inmueblesController.php';
             },
             'dataType': "json",
             success: function(data) {
-                console.log(data);
+                // console.log(data);
                 var res = "";
                 var cities = L.layerGroup();
 
@@ -166,9 +166,6 @@ require 'controllers/inmueblesController.php';
                     mbUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
                 for (i = 0; i < parseInt(data.Inmuebles.length); i++) {
-                    //    Consulta del api a los datos que necesito
-                    // console.log(data.Inmuebles[i].latitud, data.Inmuebles[i].longitud, data.Inmuebles[i].Codigo_Inmueble);
-
 
                     L.marker([data.Inmuebles[i].latitud, data.Inmuebles[i].longitud]).bindPopup('<img src="' + data.Inmuebles[i].foto1 + '" alt="" style=""><p class="text-center" >Código: ' + data.Inmuebles[i].Codigo_Inmueble + '</p><p class="text-center">' + data.Inmuebles[i].Tipo_Inmueble + ' en ' + data.Inmuebles[i].Gestion + '</p><p class="text-center"><a href="detalle_inmueble.php?co=' + data.Inmuebles[i].Codigo_Inmueble + '">Ver más</a></p>').addTo(cities)
 

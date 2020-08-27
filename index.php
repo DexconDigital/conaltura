@@ -1,6 +1,5 @@
 <?php
 $pagina = 'inicio';
-$v = 'XD';
 ?>
 
 
@@ -21,7 +20,7 @@ $v = 'XD';
 
 <body>
     <!-- Menu  Inicial-->
-    <!-- .collapse:not(.show) , menu.js agg in http://html.nootheme.com/citilights/-->
+    <!-- .collapse:not(.show) , in http://html.nootheme.com/citilights/-->
     <?php include 'layout/menu.php'; ?>
     <!-- slider  -->
     <section id="parallax4" style="position: relative;">
@@ -102,60 +101,6 @@ $v = 'XD';
                                 echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
                             }
                             ?>
-                            <!-- <div class="container">
-                                <article class="hentry arriendo">
-                                    <div class="property-featured">
-                                        <a class="content-thumb" href="detalle_inmueble.php">
-                                            <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                            <span class="property-label"> Código: 1</span>
-                                            <span class="property-category-2"> Apartamento</span>
-                                    </div>
-                                    <div class="property-wrap">
-                                        <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
-                                        <div class=" property-summary">
-                                            <div class="property-detail">
-                                                <div class="size"><span>66 m<sup>2 </span>
-                                                </div>
-                                                <div class="bathrooms"><span> 2</span>
-                                                </div>
-                                                <div class="bedrooms"><span> 2 </span>
-                                                </div>
-                                            </div>
-                                            <div class="property-info">
-                                                <div class="property-price">
-                                                    <span><span class="amount"> $ 1.000.000</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </article>
-                            </div>
-                            <div class="container">
-                                <article class="hentry arriendo">
-                                    <div class="property-featured">
-                                        <a class="content-thumb" href="detalle_inmueble.php">
-                                            <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                            <span class="property-label"> Código: 2</span>
-                                            <span class="property-category-2"> Apartamento</span>
-                                    </div>
-                                    <div class="property-wrap">
-                                        <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
-                                        <div class=" property-summary">
-                                            <div class="property-detail">
-                                                <div class="size"><span>66 m<sup>2 </span>
-                                                </div>
-                                                <div class="bathrooms"><span> 2</span>
-                                                </div>
-                                                <div class="bedrooms"><span> 2 </span>
-                                                </div>
-                                            </div>
-                                            <div class="property-info">
-                                                <div class="property-price">
-                                                    <span><span class="amount"> $ 1.000.000</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </article>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -179,60 +124,6 @@ $v = 'XD';
                             echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
                         }
                         ?>
-                        <!-- <div class="container">
-                            <article class="hentry arriendo">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="detalle_inmueble.php">
-                                        <img src="images/no_image.png" class="cont_img" alt="">
-                                        <span class="property-label"> Código: 1</span>
-                                        <span class="property-category-2"> Apartamento</span>
-                                </div>
-                                <div class="property-wrap">
-                                    <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
-                                    <div class=" property-summary">
-                                        <div class="property-detail">
-                                            <div class="size"><span>66 m<sup>2 </span>
-                                            </div>
-                                            <div class="bathrooms"><span> 2</span>
-                                            </div>
-                                            <div class="bedrooms"><span> 2 </span>
-                                            </div>
-                                        </div>
-                                        <div class="property-info">
-                                            <div class="property-price">
-                                                <span><span class="amount"> $ 1.000.000</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </article>
-                        </div>
-                        <div class="container">
-                            <article class="hentry arriendo">
-                                <div class="property-featured">
-                                    <a class="content-thumb" href="detalle_inmueble.php">
-                                        <img src="images/no_image.png" class="cont_img" alt="">
-                                        <span class="property-label"> Código: 2</span>
-                                        <span class="property-category-2"> Apartamento</span>
-                                </div>
-                                <div class="property-wrap">
-                                    <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
-                                    <div class=" property-summary">
-                                        <div class="property-detail">
-                                            <div class="size"><span>66 m<sup>2 </span>
-                                            </div>
-                                            <div class="bathrooms"><span> 2</span>
-                                            </div>
-                                            <div class="bedrooms"><span> 2 </span>
-                                            </div>
-                                        </div>
-                                        <div class="property-info">
-                                            <div class="property-price">
-                                                <span><span class="amount"> $ 1.000.000</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </article> 
-                        </div>-->
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/bootstrap.css">
     <?php include 'layout/archivosheader_quienes_somos.php' ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -67,6 +68,100 @@
         #redes_conaltura i:hover {
             color: white !important;
         }
+
+        .accordion {
+            font-size: 1rem;
+            /* width: 30vw; */
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        .accordion-header,
+        .accordion-body {
+            background: white;
+        }
+
+        .accordion-header {
+            padding: 0.7em 0.7em;
+            background: #F5F5F5;
+            color: #095C70;
+            cursor: pointer;
+            font-size: 20px;
+            /* letter-spacing: .1em; */
+            transition: all .3s;
+            /* text-transform: uppercase; */
+        }
+
+        .accordion__item {
+            /* border-bottom: 1px solid #3a4ba4; */
+
+        }
+
+        .accordion__item .accordion__item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            margin-top: 2px;
+        }
+
+        .accordion-header:hover {
+            background: #80BC00;
+            color: white;
+            position: relative;
+            z-index: 5;
+        }
+
+        .accordion-body {
+            background: #fcfcfc;
+            color: #7B7B7B;
+            margin-top: 22px;
+            padding: 0% 3%;
+            display: none;
+        }
+
+        .accordion-body__contents {
+            padding: 0.7em 0.7em;
+            font-size: 16px;
+        }
+
+        .accordion__item.active:last-child .accordion-header {
+            border-radius: none;
+        }
+
+        .accordion:first-child>.accordion__item>.accordion-header {
+            border-bottom: 1px solid transparent;
+        }
+
+        .accordion__item>.accordion-header:after {
+            content: "\f3d0";
+            font-family: IonIcons;
+            /* font-size: 1.2em; */
+            float: right;
+            position: relative;
+            top: -2px;
+            transition: .3s all;
+            transform: rotate(0deg);
+        }
+
+        .accordion__item.active>.accordion-header:after {
+            transform: rotate(-180deg);
+        }
+
+        .accordion__item.active .accordion-header {
+            background: #80BC00;
+            color: white;
+            ;
+        }
+
+        .accordion__item .accordion__item .accordion-header {
+            background: #80BC00;
+            color: white;
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .accordion {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -118,65 +213,39 @@
 
                                 </div>
                                 <!-- Fin de Texto de descripcion quienes somos -->
-                                <div id="noo-accordion-1" data-active-tab="0" class="noo-vc-accordion panel-group  icon-dark_circle">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading active">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" class="accordion-toggle" href="shortcodes.html#noo-accordion-tab-2" data-parent="#noo-accordion-1">
-                                                    <span>Misión</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="noo-accordion-tab-2" class="noo-accordion-tab panel-collapse collapse in">
-                                            <div class="panel-body">
-                                                <div class="noo-text-block">
-                                                    <p>Brindamos soluciones de arrendamiento inmobiliario mediante un servicio
-                                                        cercano y confiable a la altura de las expectativas de nuestros clientes.</p>
-                                                </div>
-
-                                                <p></p>
+                                <div class="accordion js-accordion">
+                                    <div class="accordion__item js-accordion-item active">
+                                        <div class="accordion-header js-accordion-header">Misión</div>
+                                        <div class="accordion-body js-accordion-body">
+                                            <div class="accordion-body__contents">
+                                                Brindamos soluciones de arrendamiento inmobiliario mediante un servicio cercano y confiable a la altura de las expectativas de nuestros clientes.
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" class="accordion-toggle" href="shortcodes.html#noo-accordion-tab-3" data-parent="#noo-accordion-1">
-                                                    <span>Visión</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="noo-accordion-tab-3" class="noo-accordion-tab panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <div class="noo-text-block">
-                                                    <p>En el año 2020 seremos una empresa consolidada y rentable, reconocida
-                                                        por la calidad de su servicio de arrendamiento inmobiliario.</p>
-                                                </div>
+                                        </div> <!-- end of accordion body -->
 
-                                                <p></p>
+                                    </div><!-- end of accordion item -->
+                                    <div class="accordion__item js-accordion-item">
+                                        <div class="accordion-header js-accordion-header">Visión</div>
+                                        <div class="accordion-body js-accordion-body">
+                                            <div class="accordion-body__contents">
+                                                En el año 2020 seremos una empresa consolidada y rentable, reconocida por la calidad de su servicio de arrendamiento inmobiliario.
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" class="accordion-toggle" href="shortcodes.html#noo-accordion-tab-4" data-parent="#noo-accordion-1">
-                                                    <span>Valores</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="noo-accordion-tab-4" class="noo-accordion-tab panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <div class="noo-text-block">
-                                                    <div class="contenedor-acordeon">
+                                        </div><!-- end of accordion body -->
 
-                                                        <div class="individual">
-                                                            <div class="titulo js-tab one">
-                                                                <p class="nombre">Actitud de Servicio</p>
-                                                            </div>
-                                                            <div class="contenido">
+                                    </div><!-- end of accordion item -->
+                                    <div class="accordion__item js-accordion-item">
+                                        <div class="accordion-header js-accordion-header">Valores</div>
+                                        <div class="accordion-body js-accordion-body">
+                                            <!-- <div class="accordion-body__contents">
+                                               
+                                            </div> -->
+                                            <div class="accordion js-accordion">
+                                                <div class="accordion__item js-accordion-item">
+                                                    <div class="accordion-header js-accordion-header">Actitud de Servicio</div>
+                                                    <div class="accordion-body js-accordion-body">
+                                                        <div class="accordion-body__contents">
+                                                            <div class="col-12 d-flex flex-wrap">
                                                                 <div class="col-lg-6 col-md-12 col-12">
-                                                                    <p>Satisfacemos las expectativas de nuestros clientes
+                                                                    <p class="text_justify_somos">Satisfacemos las expectativas de nuestros clientes
                                                                         internos y externos, dando respuesta a sus necesidades
                                                                         con un acompañamiento cercano, oportuno, amable y
                                                                         efectivo.
@@ -186,67 +255,69 @@
                                                                     <img src="images/servicios/ACTITUD_DE_SERVICIO.png" alt="" class="noo-image" style="height: 150px;" />
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                        </div><!-- end of sub accordion item body contents -->
+                                                    </div><!-- end of sub accordion item body -->
+                                                </div><!-- end of sub accordion item -->
+                                                <div class="accordion__item js-accordion-item">
+                                                    <div class="accordion-header js-accordion-header">Compromiso</div>
+                                                    <div class="accordion-body js-accordion-body">
+                                                        <div class="accordion-body__contents">
+                                                            <div class="col-12 d-flex flex-wrap">
+                                                                <div class="col-lg-6 col-md-12 col-12">
+                                                                    <p class="text_justify_somos">Es el valor que nos permite lograr los objetivos, incluye
+                                                                        el interés por tener metas retadoras, entregando lo mejor
+                                                                        de sí cada día.</p>
+                                                                </div>
 
-                                                    <div class="individual">
-                                                        <div class="titulo js-tab">
-                                                            <p class="nombre">Compromiso</p>
-                                                        </div>
-                                                        <div class="contenido">
-                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                <p>Es el valor que nos permite lograr los objetivos, incluye
-                                                                    el interés por tener metas retadoras, entregando lo mejor
-                                                                    de sí cada día.</p>
+                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
+                                                                    <img src="images/servicios/COMPROMISO.png" alt="" class="noo-image" style="height: 150px;" />
+                                                                </div>
                                                             </div>
+                                                        </div><!-- end of sub accordion item body contents -->
+                                                    </div><!-- end of sub accordion item body -->
+                                                </div><!-- end of sub accordion item -->
+                                                <div class="accordion__item js-accordion-item">
+                                                    <div class="accordion-header js-accordion-header">Calidad</div>
+                                                    <div class="accordion-body js-accordion-body">
+                                                        <div class="accordion-body__contents">
+                                                            <div class="col-12 d-flex flex-wrap">
+                                                                <div class="col-lg-6 col-md-12 col-12">
+                                                                    <p class="text_justify_somos">Hacemos el trabajo bien desde la primera vez, a su debido
+                                                                        tiempo y mejorando continuamente, para entregarle a nuestros
+                                                                        clientes, productos y servicios excelentes.</p>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
+                                                                    <img src="images/servicios/CALIDAD.png" alt="" class="noo-image" style="height: 150px;" />
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end of sub accordion item body contents -->
+                                                    </div><!-- end of sub accordion item body -->
+                                                </div><!-- end of sub accordion item -->
+                                                <div class="accordion__item js-accordion-item">
+                                                    <div class="accordion-header js-accordion-header">Pasión</div>
+                                                    <div class="accordion-body js-accordion-body">
+                                                        <div class="accordion-body__contents">
+                                                            <div class="col-12 d-flex flex-wrap">
+                                                                <div class="col-lg-6 col-md-12 col-12">
+                                                                    <p class="text_justify_somos">Es nuestra fuerza que moviliza la gestión del día a día
+                                                                        hacia la excelencia. De ella surge una intensidad extraordinaria,
+                                                                        la creatividad, la habilidad recursiva, y la tenacidad
+                                                                        para afrontar cualquier circunstancia en procura de alcanzar
+                                                                        los mejores resultados. La pasión es lo que une y distingue
+                                                                        a Conaltura.</p>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
+                                                                    <img src="images/servicios/PASION.png" alt="" class="noo-image" style="height: 150px;" />
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end of sub accordion item body contents -->
+                                                    </div><!-- end of sub accordion item body -->
+                                                </div><!-- end of sub accordion item -->
+                                            </div><!-- end of sub accordion -->
+                                        </div><!-- end of accordion body -->
+                                    </div><!-- end of accordion item -->
+                                </div><!-- end of accordion -->
 
-                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                <img src="images/servicios/COMPROMISO.png" alt="" class="noo-image" style="height: 150px;" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="individual">
-                                                        <div class="titulo js-tab">
-                                                            <p class="nombre">Calidad</p>
-                                                        </div>
-                                                        <div class="contenido">
-                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                <p>Hacemos el trabajo bien desde la primera vez, a su debido
-                                                                    tiempo y mejorando continuamente, para entregarle a nuestros
-                                                                    clientes, productos y servicios excelentes.</p>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                <img src="images/servicios/CALIDAD.png" alt="" class="noo-image" style="height: 150px;" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="individual">
-                                                        <div class="titulo js-tab">
-                                                            <p class="nombre">Pasión</p>
-                                                        </div>
-                                                        <div class="contenido">
-                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                <p>Es nuestra fuerza que moviliza la gestión del día a día
-                                                                    hacia la excelencia. De ella surge una intensidad extraordinaria,
-                                                                    la creatividad, la habilidad recursiva, y la tenacidad
-                                                                    para afrontar cualquier circunstancia en procura de alcanzar
-                                                                    los mejores resultados. La pasión es lo que une y distingue
-                                                                    a Conaltura.</p>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                <img src="images/servicios/PASION.png" alt="" class="noo-image" style="height: 150px;" />
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
 
@@ -353,5 +424,75 @@
 
 </body>
 <?php include 'layout/archivosfooter_quienes_somos.php' ?>
+<script>
+    $(document).ready(function() {
+        var altura = $('.menu').offset().top;
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > altura) {
+                $('.menu').addClass('menu-fixed');
+            } else {
+                $('.menu').removeClass('menu-fixed');
+            }
+        });
+
+    });
+</script>
+<script>
+    var accordion = (function() {
+
+        var $accordion = $('.js-accordion');
+        var $accordion_header = $accordion.find('.js-accordion-header');
+        var $accordion_item = $('.js-accordion-item');
+
+        // default settings 
+        var settings = {
+            // animation speed
+            speed: 400,
+
+            // close all other accordion items if true
+            oneOpen: false
+        };
+
+        return {
+            // pass configurable object literal
+            init: function($settings) {
+                $accordion_header.on('click', function() {
+                    accordion.toggle($(this));
+                });
+
+                $.extend(settings, $settings);
+
+                // ensure only one accordion is active if oneOpen is true
+                if (settings.oneOpen && $('.js-accordion-item.active').length > 1) {
+                    $('.js-accordion-item.active:not(:first)').removeClass('active');
+                }
+
+                // reveal the active accordion bodies
+                $('.js-accordion-item.active').find('> .js-accordion-body').show();
+            },
+            toggle: function($this) {
+
+                if (settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
+                    $this.closest('.js-accordion')
+                        .find('> .js-accordion-item')
+                        .removeClass('active')
+                        .find('.js-accordion-body')
+                        .slideUp()
+                }
+
+                // show/hide the clicked accordion item
+                $this.closest('.js-accordion-item').toggleClass('active');
+                $this.next().stop().slideToggle(settings.speed);
+            }
+        }
+    })();
+
+    $(document).ready(function() {
+        accordion.init({
+            speed: 300,
+            oneOpen: true
+        });
+    });
+</script>
 
 </html>
