@@ -600,51 +600,65 @@ text-align: justify;
     color: white;
     @media (max-width: 2560px){
         font-size:22px;
+        margin: 0px 0 0px;
     }
     @media (max-width: 1440px){
         font-size:22px;
+        margin: 0px 0 0px;
     }
     @media (max-width: 1024px){
         font-size:22px;
+        margin: 0px 0 0px;
     }
     @media (max-width: 768px){
         font-size:22px;
+        margin: inherit;
     }
     @media (max-width: 425px){
         font-size:10px;
+        margin: inherit;
     }
     @media (max-width: 375px){
         font-size:10px;
+        margin: inherit;
     }
     @media (max-width: 230px){
         font-size:10px;
+        margin: inherit;
     }
 }
 .texto2_slider{
-    font-weight: 500; 
+    font-weight: 600; 
     line-height: 1; 
     box-sizing: border-box;
     color: white;
     @media (max-width: 2560px){
-        font-size: 50px;
+        font-size: 30px;
+        margin-top: 0px !important;
     }
     @media (max-width: 1440px){
-        font-size: 50px;
+        font-size: 30px;
+        margin-top: 0px !important;
     }
     @media (max-width: 1024px){
-        font-size: 44px;
+        font-size: 30px;
+        margin-top: 0px !important;
     }
     @media (max-width: 768px){
         font-size: 33px;
+        margin-top: inherit !important;
     }
     @media (max-width: 425px){
         font-size: 16px;
+        margin-top: inherit !important;
     }
     @media (max-width: 375px){
         font-size: 16px;
+        margin-top: inherit !important;
     }
     @media (max-width: 230px){
         font-size: 16px;
+        margin-bottom: inherit !important;
     }
 }
 
@@ -816,11 +830,11 @@ text-align: justify;
 // fin contacto
 
 .menu-fixed {
-	position:fixed;
-	z-index:1000;
-	top:0;
+	// position:fixed;
+	// z-index:1000;
+	// top:0;
 	// max-width:1000px;
-	width:100% !important;
+	// width:100% !important;
 	
 }
 
@@ -999,4 +1013,52 @@ input[type=checkbox]:focus{
     outline-offset:0 !important;
     background-color: #80BC00;
     color: white;
+}
+
+.color_blanco{
+    background-color: white;
+}
+.posicion_div{
+    @media (max-width: 2560px){
+        background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
+     @media (max-width: 1440px){
+    background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
+     @media (max-width: 1024px){
+        background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 0%;    
+     }
+     @media (max-width: 768px){
+        background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
+     @media (max-width: 425px){
+        background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
+     @media (max-width: 375px){
+        background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
+     @media (max-width: 230px){
+        background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%;
+     }
 }

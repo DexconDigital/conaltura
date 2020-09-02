@@ -46,11 +46,11 @@
         });
     </script>
     <!-- Fin de codigo preloader -->
-    <header class="noo-header superposicion menu">
+    <header class="noo-header superposicion menu sticky-top">
 
         <div class="top-header header-ppal">
         </div>
-        <div class="main-nav-wrap container menu-ppal">
+        <div class="main-nav-wrap container menu-ppal color_blanco">
         </div>
 
     </header>

@@ -2103,53 +2103,67 @@ div#preloader {
   color: white; }
   @media (max-width: 2560px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 22px;
+      margin: 0px 0 0px; } }
   @media (max-width: 1440px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 22px;
+      margin: 0px 0 0px; } }
   @media (max-width: 1024px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 22px;
+      margin: 0px 0 0px; } }
   @media (max-width: 768px) {
     .texto1_slider {
-      font-size: 22px; } }
+      font-size: 22px;
+      margin: inherit; } }
   @media (max-width: 425px) {
     .texto1_slider {
-      font-size: 10px; } }
+      font-size: 10px;
+      margin: inherit; } }
   @media (max-width: 375px) {
     .texto1_slider {
-      font-size: 10px; } }
+      font-size: 10px;
+      margin: inherit; } }
   @media (max-width: 230px) {
     .texto1_slider {
-      font-size: 10px; } }
+      font-size: 10px;
+      margin: inherit; } }
 
 .texto2_slider {
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: white; }
   @media (max-width: 2560px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 30px;
+      margin-top: 0px !important; } }
   @media (max-width: 1440px) {
     .texto2_slider {
-      font-size: 50px; } }
+      font-size: 30px;
+      margin-top: 0px !important; } }
   @media (max-width: 1024px) {
     .texto2_slider {
-      font-size: 44px; } }
+      font-size: 30px;
+      margin-top: 0px !important; } }
   @media (max-width: 768px) {
     .texto2_slider {
-      font-size: 33px; } }
+      font-size: 33px;
+      margin-top: inherit !important; } }
   @media (max-width: 425px) {
     .texto2_slider {
-      font-size: 16px; } }
+      font-size: 16px;
+      margin-top: inherit !important; } }
   @media (max-width: 375px) {
     .texto2_slider {
-      font-size: 16px; } }
+      font-size: 16px;
+      margin-top: inherit !important; } }
   @media (max-width: 230px) {
     .texto2_slider {
-      font-size: 16px; } }
+      font-size: 16px;
+      margin-bottom: inherit !important; } }
 
 #texto_descrip_seccion .cont_texto {
   margin-top: 4rem;
@@ -2293,12 +2307,6 @@ div#preloader {
   font-size: 20px;
   font-weight: 700;
   color: #095C70; }
-
-.menu-fixed {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100% !important; }
 
 .show {
   visibility: visible; }
@@ -2496,6 +2504,58 @@ input[type=checkbox]:focus {
   outline-offset: 0 !important;
   background-color: #80BC00;
   color: white; }
+
+.color_blanco {
+  background-color: white; }
+
+@media (max-width: 2560px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
+
+@media (max-width: 1440px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
+
+@media (max-width: 1024px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: -14%;
+    z-index: 1000;
+    margin-bottom: 0%; } }
+
+@media (max-width: 768px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
+
+@media (max-width: 425px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
+
+@media (max-width: 375px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
+
+@media (max-width: 230px) {
+  .posicion_div {
+    background: transparent !important;
+    margin-top: 0%;
+    z-index: 1000;
+    margin-bottom: 4%; } }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

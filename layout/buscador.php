@@ -1,6 +1,6 @@
 
 <section id="search-box" class="wrap search-box">
-    <div class="gsearch" style="background: #F6F6F6;">
+    <div class="gsearch posicion_div">
         <div class="container tamaño_buscador">
             <div class="gsearch-wrap">
                 <div class="gsearch-content">

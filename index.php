@@ -23,7 +23,7 @@ $pagina = 'inicio';
     <!-- .collapse:not(.show) , in http://html.nootheme.com/citilights/-->
     <?php include 'layout/menu.php'; ?>
     <!-- slider  -->
-    <section id="parallax4" style="position: relative;">
+    <section id="parallax4" style="position: relative;z-index:-1;">
         <div class="overlay"></div>
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

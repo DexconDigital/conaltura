@@ -245,8 +245,9 @@ $WebK = Web_Key;
         }
     }
 
-    .sticky-top {
-        z-index: 100 !important;
+    div.sticky {
+        position: -webkit-sticky;
+        position: sticky;   
         top: 20%;
     }
 </style>
@@ -593,7 +594,7 @@ $WebK = Web_Key;
 
                                     </div>
 
-                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky-top">
+                                    <div class="col-12 mb-5 mt-4 form_detalle pr-0 formulariob sticky">
                                         <div class="container form_detalle">
                                             <h3 class="title-block-sidebar">Formulario de contacto</h3>
                                             <form class="p-0" action="email/correoDetalle.php" method="POST" autocomplete="off">
