@@ -40,7 +40,7 @@
                                         <h4>Contáctanos</h4>
                                     </div>
                                     <div class="noo-gmaps">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4364452551467!2d-75.57325188568394!3d6.20601842849546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468281ca3fffff%3A0x4449cdf2dea0d01d!2sCONALTURA%20INMOBILIARIA!5e0!3m2!1ses-419!2sco!4v1594662022362!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4378770317294!2d-75.57348008568385!3d6.205828228497534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8e913821a517366!2sConaltura!5e0!3m2!1ses-419!2sco!4v1599056940800!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                     </div>
                                 </div>
                                 <div class="col-12  d-flex justify-content-center flex-wrap">
@@ -129,7 +129,7 @@
                                                         <p>
                                                             <input class="form-group" type="checkbox" id="" required> He leído y
                                                             acepto la
-                                                            <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" style="width: 48%;display: inline-block; ">Política de Datos</a>
+                                                            <a href="Formularios Aseguradoras/POLITICA_DE_TRATAMIENTO_DE_DATOS.pdf" target="_blank" class="mano_chek">Política de Datos</a>
                                                         </p>
                                                         <div class="g-recaptcha" data-sitekey="<?php echo $WebK ?>"></div>
                                                         <div class="col-12 mb-4"><small id="tituloHepl" class="form-text text-muted">Este campo es obligatorio</small></div>

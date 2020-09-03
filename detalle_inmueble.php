@@ -276,15 +276,15 @@ $WebK = Web_Key;
                                         <h1 class="property-title"> Detalle del Inmueble <span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
                                         </h1>
                                         <ul class="social-list property-share clearfix">
-                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.conalturainmobiliaria.com%2Fsupropiedad%2FdetalleInmueble%2Fcodigo%2F&amp;src=sdkpreparse/' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.conalturainmobiliaria.com%2Fdetalle_Inmueble%2Fco%2F&amp/' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
                                             <!-- <li><a href="httpss://twitter.com/?status=Me encanta este Inmueble de https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li> -->
-                                            <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=http://www.conalturainmobiliaria.com/detalle_inmueble/co/' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
                                             <!-- <li><a href="httpss://plus.google.com/share?url=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-google-plus-g social-top2"></i></a></li> -->
                                             <li>
                                                 <a data-action="share/whatsapp/share" href="<?php echo 'whatsapp://send?text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] . '%20Descripción:%20' . $r['descrip'] . '%20 http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co ?>" target="_blank">
                                                     <i class="fab fa-whatsapp social-top2"></i></a></li>
                                             <!-- <li><a href="#" target="_blank"><i class="fa fa-envelope social-top2"></i></a></li> -->
-                                            <li><a href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=472-<?php echo $co; ?>" target="_blank" title="Imprimir"><i class="fas fa-print social-top2"></i></a></li>
+                                            <li><a href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=<?php echo $co; ?>" target="_blank" title="Imprimir"><i class="fas fa-print social-top2"></i></a></li>
                                             <!-- <li><a href="detalle-inmueble.php?dt=<?php echo $co; ?>" title="Imprimir" onClick="window.print()" target="_blank"><i class="fas fa-print social-top2"></i></a></li> -->
                                         </ul>
                                         <div class="clearfix"></div>
@@ -298,7 +298,7 @@ $WebK = Web_Key;
                                                     <h4 class="property-detail-title">Foto 360</h4>
                                                 </div>
                                                 <div class="col-12 mt-2 p-0">
-                                                    <iframe width="100%" height="315" src="' . $video360 . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="100%" height="430" src="' . $video360 . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 </div>
                                             </div>
                                          </section>
@@ -584,7 +584,7 @@ $WebK = Web_Key;
                                                 <select name="codigo" class="invisible display:none">
                                                     <option value=" <?php echo $co ?>"> <?php echo $co ?></option>
                                                 </select>
-                                                <div class="g-recaptcha mb-2" data-sitekey="6Ld0usMZAAAAAHjr9srwYKDBbix8S2Fay08T2Qr4"></div>
+                                                <div class="g-recaptcha mb-2" data-sitekey="<?php echo $WebK ?>"></div>
                                                 <div class="col-12 text-center border-0">
                                                     <button type="submit" class="btn btn-primary col-6" style="border-radius: 0;"><span>Enviar</span></button>
                                                 </div>

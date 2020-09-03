@@ -1000,8 +1000,8 @@ ul.social-top > li a i {
 
 .social-list a {
   display: block;
-  background: #eee;
-  color: #a5a5a5;
+  background: transparent;
+  color: #80bc00;
   width: 25px;
   height: 25px;
   line-height: 25px;
@@ -1010,7 +1010,12 @@ ul.social-top > li a i {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  border-color: #80bc00 !important;
+  border-width: 1px 1px 1px 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  margin: 1%; }
 
 .social-list a:hover {
   color: #fff; }
@@ -2556,6 +2561,64 @@ input[type=checkbox]:focus {
     margin-top: 0%;
     z-index: 1000;
     margin-bottom: 4%; } }
+
+.div_asesor_color {
+  background: #fff;
+  margin: 0 15px; }
+
+.div_asesor_secundario {
+  overflow: hidden; }
+
+.div_text_asesor {
+  text-align: center; }
+
+.titulo_style_asesor {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 5px;
+  color: #095C70; }
+
+.style_sub_asesor {
+  vertical-align: inherit; }
+
+.color_asesor_sub {
+  color: #7b7b7b; }
+
+.redes_div_asesor {
+  text-align: center;
+  border-top: 1px solid #ececec;
+  padding: 10px 20px;
+  display: block; }
+
+.redes_seg_div_asesor {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; }
+
+.mano_chek {
+  display: inline-block; }
+  @media (max-width: 2560px) {
+    .mano_chek {
+      width: 48%; } }
+  @media (max-width: 1440px) {
+    .mano_chek {
+      width: 48%; } }
+  @media (max-width: 1024px) {
+    .mano_chek {
+      width: 48%; } }
+  @media (max-width: 768px) {
+    .mano_chek {
+      width: 48%; } }
+  @media (max-width: 425px) {
+    .mano_chek {
+      width: 60%; } }
+  @media (max-width: 365px) {
+    .mano_chek {
+      width: 60%; } }
+  @media (max-width: 230px) {
+    .mano_chek {
+      width: 60%; } }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

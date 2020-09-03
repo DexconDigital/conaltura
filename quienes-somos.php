@@ -177,7 +177,7 @@
         <div class="noo-wrapper">
             <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
                 <div class="property-slider">
-                    <div id="noo-slider-1" class="noo-slider noo-property-slide-wrap">
+                    <div id="noo-slider-1" class="noo-slider noo-property-slide-wrap text-center">
 
                         <img src="images/reduccida_prueba.jpg" class="attachment-property-slider" alt="" />
                         <div class="clearfix"></div>
