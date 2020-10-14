@@ -478,7 +478,7 @@ text-align: justify;
 }
 
 .image {
-    object-fit: cover !important;
+    object-fit: unset !important;
     width: 100% !important;
     height: 100% !important;
 }
@@ -698,7 +698,7 @@ text-align: justify;
 
 #banner_home{
 
-    background-image: url('../images/banner-home2.png');
+    
     padding: 90px 0 100px 0;
     position:relative;
 

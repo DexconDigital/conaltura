@@ -3,6 +3,7 @@ require 'controllers/detalleInmuebleController.php';
 require_once 'variables/captcha.php';
 $WebK = Web_Key;
 ?>
+<?php require 'controllers/wappController.php'?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,14 +12,14 @@ $WebK = Web_Key;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle Inmueble | Conaltura Inmobiliaria</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <!-- facebook -->
-    <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
+     <!-- facebook -->
+     <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
     <meta property="og:site_name" content="Conaltura" />
-    <meta property="og:url" content="https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" />
-    <meta property="og:type" content="place" />
-    <meta property="og:title" content="Inmueble <?php echo $co; ?> de Conaltura" />
-    <meta property="og:description" id="metap" content="Inmueble de Conaltura" />
-    <meta property="og:image" content="<?php echo $r["fotos"][0]["foto"]; ?>" id="metai" />
+    <meta property="og:url" content="http://www.dexcon.co/conaltura/detalle_inmueble.php?co=<?php echo $co; ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?>" />
+    <meta property="og:description" id="metap" content="Inmueble ubicado en: <?php echo $r['barrio'] . ', ' . $r['ciudad'] . ', ' . $r['depto']; ?>" />
+    <meta property="og:image" content="<?php echo $r["fotos"][0]["foto"]; ?>" />
     <!-- fin facebook -->
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -250,6 +251,14 @@ $WebK = Web_Key;
         position: sticky;   
         top: 20%;
     }
+    .ubication{
+    color: #095C70;
+    font-size: 27px;
+    font-weight: 700 !important;
+    line-height: 1.5;
+    margin: 0 0 5px;
+    padding: 0%;
+    }
 </style>
 
 <body>
@@ -276,7 +285,7 @@ $WebK = Web_Key;
                                         <h1 class="property-title"> Detalle del Inmueble <span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
                                         </h1>
                                         <ul class="social-list property-share clearfix">
-                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.conalturainmobiliaria.com%2Fdetalle_Inmueble%2Fco%2F&amp/' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdexcon.co%2Fconaltura%2Fdetalle_inmueble.php%3Fco%3D' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
                                             <!-- <li><a href="httpss://twitter.com/?status=Me encanta este Inmueble de https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li> -->
                                             <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=http://www.conalturainmobiliaria.com/detalle_inmueble/co/' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
                                             <!-- <li><a href="httpss://plus.google.com/share?url=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-google-plus-g social-top2"></i></a></li> -->
@@ -319,7 +328,7 @@ $WebK = Web_Key;
                                         </div>
                                         <!-- imagenes -->
                                         <div class="">
-                                            <h4 class="property-detail-title">Imagenes</h4>
+                                            <h4 class="property-detail-title">Imágenes</h4>
                                             <!-- main slider carousel items -->
                                             <section class="mt-3" id="slide-detalle">
                                                 <?php
@@ -375,7 +384,7 @@ $WebK = Web_Key;
                                                                                                         } else {
                                                                                                             echo '<span class="precio">$ ' . $r['ValorCanon'] . ' /$' . $r['ValorVenta'] . '</span>';
                                                                                                         } ?></span></span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-compress"></i> Area </span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-compress"></i> Área </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value" id="area"> <?php echo $area_construida; ?> mts<sup>2<sup> </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label" style="font-size: 13px;"><i class="fa fa-bed"></i> Alcobas </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"> 2</span>
@@ -468,21 +477,21 @@ $WebK = Web_Key;
                                                             <p class="p1"><a href="tel:0343229898"><i class="fa fa-phone"></i> 3229898</p></a>
                                                             <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
                                                         </p>
-                                                        <p class="p1"><a href="https://wa.me/573214780051"><i class="fab fa-whatsapp"></i> Contactanos por WhatsApp</p></a>
+                                                        <p class="p1"><?php wappDetalle() ?></a> 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-12">
-                                            <div class="property-map mapa_detalle">
-                                                <div class="container">
-                                                    <h4 class="property-map-title titulo_ubicacion">Ubicación</h4>
+                                            <div class="property-map ">
+                                                <div class="container p-0">
+                                                    <h3 class="ubication property-map-title titulo_ubicacion">Ubicación</h3>
                                                 </div>
                                                 <div class="property-map-content p-0 ">
-                                                    <div class="map-position card mapa_tamaño">
+                                                    <div class="">
 
                                                         <div class="">
-                                                            <div id="map" class="w-100"></div>
+                                                            <iframe src="https://190.248.139.138/temp/georeferenciacion_v2.htm?lat=<?php echo $r['latitud']; ?>&lng=<?php echo $r['longitud'] ?>" scrolling="no" frameborder="0" height="480" width="100%"></iframe>
                                                         </div>
 
                                                     </div>
@@ -567,7 +576,7 @@ $WebK = Web_Key;
                                                     <input type="text" class="form-control" name="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="numero" aria-describedby="emailHelp" placeholder="Numero de Contacto" required>
+                                                    <input type="text" class="form-control" name="numero" aria-describedby="emailHelp" placeholder="Número de Contacto" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Correo" required>
@@ -602,7 +611,7 @@ $WebK = Web_Key;
                                                     <input type="text" class="form-control" name="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="telefono" aria-describedby="emailHelp" placeholder="Numero de Contacto" required>
+                                                    <input type="text" class="form-control" name="telefono" aria-describedby="emailHelp" placeholder="Número de Contacto" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Correo" required>
@@ -706,7 +715,7 @@ $WebK = Web_Key;
     });
 </script>
 <!-- mapa del inmueble -->
-<script src="mapas/leaflet.js" crossorigin=""></script>
+<!-- <script src="mapas/leaflet.js" crossorigin=""></script>
 <script>
     var map = L.map('map').setView([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>], 17);
 
@@ -717,7 +726,7 @@ $WebK = Web_Key;
     L.marker([<?php echo $r['latitud']; ?>, <?php echo $r['longitud'] ?>]).addTo(map)
         .bindPopup('<img src="<?php echo $r['fotos'][0]['foto'] ?>"])" alt="" width="55px" height="auto"><br>Ubicación')
         .openPopup();
-</script>
+</script> -->
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>

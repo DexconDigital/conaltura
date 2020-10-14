@@ -1,6 +1,6 @@
-<?php 
- require_once 'variables/captcha.php';
- $WebK = Web_Key;
+<?php
+require_once 'variables/captcha.php';
+$WebK = Web_Key;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -40,7 +40,7 @@
                                         <h4>Contáctanos</h4>
                                     </div>
                                     <div class="noo-gmaps">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4378770317294!2d-75.57348008568385!3d6.205828228497534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8e913821a517366!2sConaltura!5e0!3m2!1ses-419!2sco!4v1599056940800!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        <?php mapa() ?>
                                     </div>
                                 </div>
                                 <div class="col-12  d-flex justify-content-center flex-wrap">
@@ -51,21 +51,19 @@
                                     <div class="col-lg-4 col-md-4 col-12 ">
                                         <i class="fa fa-envelope tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">Escríbenos</p>
-                                        <p class="correo_cont"><a class="color_gris" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</a></p>
+                                        <?php correoC() ?>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-12 ">
                                         <i class="fa fa-phone tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">Llámanos</p>
-                                        <p class="cont_tel"><a class="color_gris" href="tel:0343229898" target="_blank">(034)2662277 Extensión 4</a></p>
-                                        <p class="cont_tel"><a class="color_gris" href="tel:0343229898" target="_blank">(034)2662277 Extensión 209</a></p>
-                                        <p class="cont_tel"><a class="color_gris" href="tel:0342662277" target="_blank">(034)3229898</a></p>
-
-
+                                        <?php telefono1C() ?>
+                                        <?php telefono2C() ?>
+                                        <?php telefono3C() ?>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-12">
                                         <i class="fab fa-whatsapp tamaño_icon"></i>
                                         <p class="mt-4 sub_titulos">WhatsApp</p>
-                                        <p class="cont_tel"><a class="color_gris" href="https://wa.me/573214780051" target="_blank">321 478 0051</a></p>
+                                      <?php wappC() ?>
                                     </div>
                                 </div>
                                 <div class="contact-form">
@@ -108,22 +106,22 @@
                                                         </p>
                                                         <p>
                                                             <span class="form-group form-control-wrap your-name">
-                                                                <input type="text" name="telefono" class="form-control"  size="40" placeholder="Celular y/o teléfono">
+                                                                <input type="text" name="telefono" class="form-control" size="40" placeholder="Celular y/o teléfono">
                                                             </span>
                                                         </p>
                                                         <p>
                                                             <span class="form-group form-control-wrap your-email">
-                                                                <input type="email" name="correo" class="form-control"  size="40" placeholder="Email" required>
+                                                                <input type="email" name="correo" class="form-control" size="40" placeholder="Email" required>
                                                             </span>
                                                         </p>
                                                         <p>
                                                             <span class="form-group form-control-wrap your-subject">
-                                                                <input type="text" name="codigo" class="form-control"  size="40" placeholder="Código del inmueble (opcional)">
+                                                                <input type="text" name="codigo" class="form-control" size="40" placeholder="Código del inmueble (opcional)">
                                                             </span>
                                                         </p>
                                                         <p>
                                                             <span class="form-group form-control-wrap your-message">
-                                                                <textarea name="mensaje" cols="40" class="form-control"  placeholder="Comentario" required></textarea>
+                                                                <textarea name="mensaje" cols="40" class="form-control" placeholder="Comentario" required></textarea>
                                                             </span>
                                                         </p>
                                                         <p>

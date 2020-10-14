@@ -47,8 +47,26 @@
     </script>
     <!-- Fin de codigo preloader -->
     <header class="noo-header superposicion menu sticky-top">
+    <?php include './controllers/linkController.php'; ?>    
+        <div class="top-header header-ppalL">
+            <div class="container">
+                <div class="top-header-inner">
 
-        <div class="top-header header-ppal">
+                    <div class="top-header-content">
+                        <ul class="social-top">
+                            <!-- // <li><a href="https://www.facebook.com/Conalturainmobiliaria" title="Facebook" target="_blank"><i class="fab fa-facebook-f "></i></a></li> -->
+                        </ul>
+                        <!-- // <div class="emailto content-item"> -->
+                        <!-- // <a href="mailto:inmobiliaria@conaltura.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;Email: -->
+                        <!-- // <span>inmobiliaria@conaltura.com</span></a> -->
+                        <!-- // </div> -->
+                        <div class="register content-item">
+                            <a class=" btn_pagos" style="text-transform:capitalize;" href="clientes.php">iniciar sesión </a>
+                            <?php PSE(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main-nav-wrap container menu-ppal color_blanco">
         </div>

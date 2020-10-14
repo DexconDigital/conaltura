@@ -169,24 +169,7 @@
     $(".footer-ppal").html(footer);
 
     //Menu pequeño
-    var header = '<div class="container">' +
-        '<div class="top-header-inner">' +
-
-        '<div class="top-header-content">' +
-        '<ul class="social-top">' +
-        // '<li><a href="https://www.facebook.com/Conalturainmobiliaria" title="Facebook" target="_blank"><i class="fab fa-facebook-f "></i></a></li>' +
-        '</ul>' +
-        // '<div class="emailto content-item">' +
-        // '<a href="mailto:inmobiliaria@conaltura.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;Email:' +
-        // '<span>inmobiliaria@conaltura.com</span></a>' +
-        // '</div>' +
-        '<div class="register content-item">' +
-        '<a class=" btn_pagos" style = "text-transform:capitalize;" href="clientes.php">iniciar sesión </a>' +
-        '<a class=" btn_pagos" style = "text-transform:capitalize;" href="https://gateway2.tucompra.com.co/sites/conaltura" target="_blank">pagos en línea</a>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+    var header = '';
 
     $(".header-ppal").html(header);
 

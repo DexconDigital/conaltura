@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <?php include 'layout/archivosheader_clientes.php' ?>
+    <?php require 'controllers/bannerController.php'; ?>
 </head>
 <!-- <style>
     #redes_conaltura {
@@ -66,8 +67,9 @@
         <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
             <div class="property-slider">
                 <div id="noo-slider-1" class="noo-slider noo-property-slide-wrap">
-
-                    <img src="images/banners/Jd_JPG.png" class="attachment-property-slider img-banner" alt="" />
+                    <?php
+                    bannercliente()
+                    ?>
                     <div class="clearfix"></div>
 
                 </div>
@@ -105,14 +107,12 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-4 our-sevices-col">
                                     <span class="service-icon">
-                                        <a href="https://gateway2.tucompra.com.co/sites/conaltura/facturacion.xhtml?idTerminal=1057" target="blank"><i class="fa fa-file-invoice-dollar" style=" color:  #4d4d4d"></i></a>
+                                        <?php PSEClinetes2(); ?>
 
                                     </span>
                                     <hr class="noo-gap">
                                     <div class="text-block">
-                                        <a href="https://gateway2.tucompra.com.co/sites/conaltura/facturacion.xhtml?idTerminal=1057" target="blank">
-                                            <h5 style=" margin: 0 0 12px;font-weight: 700;font-size: 27px;color: #095C70;">PSE</h5>
-                                        </a>
+                                        <?php PSEClinetes(); ?>
 
                                     </div>
                                 </div>

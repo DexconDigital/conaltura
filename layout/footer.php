@@ -1,4 +1,5 @@
-
+<?php require 'controllers/aseguradorasController.php'; ?>
+<?php require 'controllers/textofooterController.php'; ?>
 <!-- <div id="back-to-top" class="back-to-top"> -->
 <i class="fa fa-angle-up subir"></i>
 <!-- </div>   -->
@@ -7,14 +8,7 @@
         <div class="container contenedor_footer">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 footer-nav-col">
-                    <div class="ft-about-us">
-                        <h4 class="ft-col-title">Conaltura Inmobiliaria</h4>
-                        <div class="text-block">
-                            <p>CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el propósito de ofrecer los servicios de administración, arrendamientos y venta de
-                                propiedad raíz destinada ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.
-                            </p>
-                        </div>
-                    </div>
+                   <?php textofooter(); ?>
                     <h4 class="ft-col-title">Número de Visitas</h4>
                     <!-- <a href="https://www.contadorvisitasgratis.com" title="contadores para web"> -->
                     <a href="" title="contadores para web">
@@ -41,13 +35,14 @@
                         <h4 class="ft-col-title">Formularios Aseguradoras</h4>
                         <nav class="useful-links-menu" role="navigation">
                             <ul>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/Formulario FGI persona juridica.pdf" target="_blank">Formulario FGI Persona Juridica</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/Formulario FGI persona natural.pdf" target="_blank">Formulario FGI Persona Natural</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/Formulario-Persona Natural-El Libertador.pdf" target="_blank">Formulario Persona Natural El Libertador</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/Formulario-Persona-Juridica-El Libertador.pdf" target="_blank">Formulario Persona Juridica El Libertador</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/SOLICITUD CODEUDOR (gnal).pdf" target="_blank">Solicitud Codeudor Grupo Sura</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/INQUILINO PERSONA NATURAL.PDF" target="_blank">Solicitud Persona Natural Grupo Sura</a></li>
-                                <li class="menu-item"><a href="Formularios Aseguradoras/INQUILINO PERSONA JURIDICA.PDF" target="_blank">Solicitud Persona Juridica Grupo Sura</a></li>
+                                <?php if (isset($aseguradoras_array)) {
+                                    Aseguradoras($aseguradoras_array);
+                                    
+                                } else {
+                                    echo
+                                        '<li class="menu-item"><a href="" target="_blank">No hay Aseguradoras</a></li>';
+                                }
+                                ?>
                             </ul>
                         </nav>
                     </div>
@@ -56,23 +51,14 @@
                     <div class="ft-contact-info">
                         <h4 class="ft-col-title">Contáctanos</h4>
                         <ul class="detail-contact-info">
-                            <li><i class="fa fa-map-marker-alt"></i>&nbsp;<label>Calle 5ª No 39-194 Local 104,</label>
-                                <br>
-                                <label style="margin-left: 47px;">Edificio Dinners, Medellín.</label>
-                            </li>
-                            <li><a href="tel:0342662277" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)2662277, ext 4</a></li>
-                            <li><a href="tel:0342662277" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)2662277, ext 209</a></li>
-                            <li><a href="tel:0343229898" target="_blank"><i class="fa fa-phone"></i>&nbsp;(034)3229898</a></li>
-                            <li><a href="https://wa.me/573214780051" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp; 321 478 0051 </a></li>
-                            <li><i class="fa fa-envelope"></i>&nbsp;<a class="text-break" href="mailto:inmobiliaria@conaltura.com" target=":_blank">inmobiliaria@conaltura.com</span></a></li>
-                            <li><i class="fa fa-calendar-alt"></i>&nbsp;<label>Horario de Atención: </label>
-                                <br>
-                                <label style="margin-left: 47px;">Lunes a Viernes: </label>
-                                <br>
-                                <label style="margin-left: 47px;">7:30 am - 12:45 pm</label>
-                                <br>
-                                <label style="margin-left: 47px;">2:00 pm - 6:00 pm</label>
-                            </li>
+                            <?php direccion(); ?>
+                            <?php telefono1(); ?>
+                            <?php telefono2(); ?>
+                            <?php telefono3(); ?>
+                            <?php WappF(); ?>
+                            <?php correoF(); ?>
+                            <?php horario(); ?>
+
                         </ul>
                     </div>
                 </div>
@@ -84,11 +70,11 @@
             <div class="row">
                 <div class="col-lg-2 col-md-3 col-12 text-block">
                     <div class="logo-image">
-                        <a href="index.html"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>
+                        <a href="index.php"><img src="images/other/conaltura.png" alt="CitiLights" style="height: 70px;width: 163px;"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-9 col-12 logo-block copy d-flex align-items-center d-flex justify-content-center">
-                    <p class="text-center espacio">Diseñado y Desarrollado por&nbsp<a href="https://www.dexcondigital.com/" style="font-weight: bold;color: #4d4d4d;" target="_blank"> Dexcon Digital.</a>
+                    <p class="text-center espacio">Diseñado y Desarrollado por&nbsp<a href="https://www.dexcondigital.com/" target="_blanck" style="font-weight: bold;color: #4d4d4d;" target="_blank"> Dexcon Digital.</a>
                         &copy; Copyright 2020 para <a href="index.php" style="font-weight: bold;color: #4d4d4d;" target="_blank">Conaltura Inmobiliaria.</a><br> Todos los derechos reservados. </p>
                     <br />
 

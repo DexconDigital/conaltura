@@ -1,0 +1,334 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    *:before, *:after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+  
+  html, body {
+    height: 100%; }
+
+
+  @font-face {
+    font-family: 'font1';
+    src: url("../font/font1.otf"); }
+  
+  @font-face {
+    font-family: 'font2';
+    src: url("../font/font2.otf"); }
+  
+  @font-face {
+    font-family: 'font3';
+    src: url("../font/font3.otf"); }
+  
+  body {
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Lato', sans-serif; }
+  
+  .wrap_bg {
+    position: relative;
+    height: 100%;
+    /* background-image: url('https://s-media-cache-ak0.pinimg.com/originals/55/57/d7/5557d7261d6a3acf7605f074f0308705.png'); */
+    background-size: cover;
+    background-position: 50%; }
+  
+  .btn {
+    display: inline-block;
+    min-width: 140px;
+    padding: 0 20px;
+    border-radius: 5px;
+    line-height: 31px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    outline: 0;
+    border: 0; }
+    .btn_rounded {
+      border: 1px solid #C3C3C3;
+      color: #C3C3C3;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      /* color de boton entrar */
+    .btn_red {
+      background-color: #80BC00;
+      color: white;
+      line-height: 33px; }
+     .btn_red:hover{
+      background-color: #095C70;
+      color: white;
+      line-height: 33px; 
+     }
+  .label_name, .label_mail, .label_pass {
+    font-family: 'font1', 'font2', 'font3';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    .label_name:before, .label_mail:before, .label_pass:before {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      -webkit-transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+      -o-transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+      transition: color 0.4s cubic-bezier(1, 0, 0, 1); }
+  
+  .label_name:before {
+    content: "\f007"; }
+  
+  .label_pass:before {
+    content: "\f06e"; }
+  
+  .forgotPass {
+    text-decoration: none;
+    color: #C3C3C3; }
+  
+  .login_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 830px;
+    height: 350px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #c1c4d6;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  
+  .login_action_wrap {
+    position: absolute;
+    top: -40px;
+    left: 50px;
+    height: 430px;
+    width: 430px;
+    background-color: #f7f7f6;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px 3px rgba(39, 37, 37, 0.45);
+    box-shadow: 0 0 10px 3px rgba(39, 37, 37, 0.45); }
+  
+  .question_singUp, .question_login {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 270px; }
+    .question_singUp .title, .question_login .title {
+      margin: 0;
+      line-height: 32px;
+      font-size: 28px; }
+    .question_singUp p, .question_login p {
+      padding: 15px 0 20px 0;
+      font-size: 14px; }
+  
+  .question_singUp {
+    left: 50px; }
+  
+  .question_login {
+    right: 50px; }
+  
+  .action_singUp, .action_login {
+    position: absolute;
+    top: -32px;
+    width: 330px;
+    z-index: 3; }
+    .action_singUp .btn, .action_login .btn {
+      float: right; }
+    .action_singUp .title, .action_login .title {
+      color: #8EC85B;
+      text-transform: uppercase;
+      font-size: 22px; 
+      margin-top: 60px;
+    }
+    .action_singUp .input, .action_login .input {
+      width: 100%;
+      padding-bottom: 6px;
+      margin-bottom: -13px;
+      border: 0;
+      border-bottom: 2px solid #c1c4d6;
+      background-color: transparent;
+      line-height: 32px;
+      font-size: 13px; }
+      .action_singUp .input:hover, .action_singUp .input:focus, .action_singUp .input:active, .action_login .input:hover, .action_login .input:focus, .action_login .input:active {
+        outline: 0; }
+      .action_singUp .input_block, .action_login .input_block {
+        margin: 35px 0; }
+  
+  .action_singUp {
+    left: 100px; }
+  
+  .action_login {
+    right: 100px; }
+  
+  .input_wrap {
+    position: relative; }
+  
+  .loginActive .login_action_wrap {
+    -webkit-animation: .6s loginActive forwards;
+    animation: .6s loginActive forwards; }
+  
+  .loginActive .action_singUp, .loginActive .question_login {
+    visibility: hidden; }
+  
+  .singUpActive .login_action_wrap {
+    -webkit-animation: .6s singUpActive forwards;
+    animation: .6s singUpActive forwards; }
+  
+  .singUpActive .action_login, .singUpActive .question_singUp {
+    visibility: hidden; }
+
+    /* hover de los campos de usuario y contraseña */
+  .input + label:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #095C70;
+    -webkit-transition: width 0.4s cubic-bezier(1, 0, 0, 1);
+    -o-transition: width 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: width 0.4s cubic-bezier(1, 0, 0, 1); }
+  
+  .input:focus + label:after {
+    width: 100%; }
+  
+  .input:focus + label:before {
+    color: #095C70; }
+  
+  @-webkit-keyframes loginActive {
+    40% {
+      -webkit-transform: translateX(320px);
+      transform: translateX(320px); }
+    65% {
+      -webkit-transform: translateX(280px);
+      transform: translateX(280px); }
+    100% {
+      -webkit-transform: translateX(300px);
+      transform: translateX(300px); } }
+  
+  @keyframes loginActive {
+    40% {
+      -webkit-transform: translateX(320px);
+      transform: translateX(320px); }
+    65% {
+      -webkit-transform: translateX(280px);
+      transform: translateX(280px); }
+    100% {
+      -webkit-transform: translateX(300px);
+      transform: translateX(300px); } }
+  
+  @-webkit-keyframes singUpActive {
+    0% {
+      -webkit-transform: translateX(300px);
+      transform: translateX(300px); }
+    40% {
+      -webkit-transform: translateX(-20px);
+      transform: translateX(-20px); }
+    65% {
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px); }
+    100% {
+      -webkit-transform: none;
+      transform: none; } }
+  
+  @keyframes singUpActive {
+    0% {
+      -webkit-transform: translateX(300px);
+      transform: translateX(300px); }
+    40% {
+      -webkit-transform: translateX(-20px);
+      transform: translateX(-20px); }
+    65% {
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px); }
+    100% {
+      -webkit-transform: none;
+      transform: none; } }
+  
+      /* focus al boton de entrar */
+  .btn.focus, .btn:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: 0 0 0 0.2rem white !important;
+    box-shadow: 0 0 0 0.2rem white !important; }
+  
+  .btn:hover {
+    color: white !important;
+    text-decoration: none !important; }
+  
+  body {
+    -webkit-animation: theme 21s linear infinite;
+    animation: theme 21s linear infinite; }
+    body:after, body:before {
+      content: '';
+      display: block;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      width: 100vmax;
+      height: 100vmax;
+      background: rgba(0, 0, 0, 0.05);
+      -webkit-animation: background 90s linear infinite;
+      animation: background 90s linear infinite; }
+    body:after {
+      left: 15vw; }
+    body:before {
+      right: 15vw;
+      -webkit-animation-delay: -30s;
+      animation-delay: -30s;
+      animation-direction: reverse; }
+  
+  @-webkit-keyframes theme {
+    0% {
+      background: #095C70; }
+    16% {
+      background: #80BC00; }
+    33% {
+      background: #7B7B7B; }
+    50% {
+      background: #FFFFFF; }
+    66% {
+      background: #095C70; }
+    83% {
+      background: #80BC00; }
+    100% {
+      background: #7B7B7B; } }
+  
+  @keyframes theme {
+    0% {
+        background: #095C70; }
+      16% {
+        background: #80BC00; }
+      33% {
+        background: #7B7B7B; }
+      50% {
+        background: #FFFFFF; }
+      66% {
+        background: #095C70; }
+      83% {
+        background: #80BC00; }
+      100% {
+        background: #7B7B7B; } }
+
+  @-webkit-keyframes background {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); } }
+  
+  @keyframes background {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); } }
+  

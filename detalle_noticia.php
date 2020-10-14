@@ -1,3 +1,4 @@
+<?php require 'controllers/detalle_noticiasController.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,6 +23,8 @@
     .blog-title {
         text-align: center;
         color: white;
+        font-weight: 700 !important;
+        font-size: 32px !important;
     }
 
     .fondo_negro {
@@ -37,17 +40,18 @@
     .color_fecha {
         color: #095c70;
     }
+
     .contenido img {
         width: 100% !important;
         height: 100% !important;
     }
-    .contenedor_contenido{
+
+    .contenedor_contenido {
         margin-top: -6%;
         background-color: white;
         z-index: 200;
         padding: 3.5rem;
     }
-
 </style>
 
 <body>
@@ -56,12 +60,13 @@
     <!-- redes sociales -->
     <?php include 'layout/redes.php'; ?>
     <!-- fin redes sociales -->
-    <?php $imagen = 'images/images_noticias/1.jpg);' ?>
+
+
     <section>
-        <div class="col-12 tamaño" style="background-image:url(<?php echo $imagen ?>">
+        <div class="col-12 tamaño" style="background-image:url(<?php echo $ruta_imagen ?>">
             <div class="fondo_negro position-absolute w-100 h-100"></div>
             <div class="container position-relative text-center">
-                <h2 class="blog-title"><span>Descubre los beneficios de vivir en el sur del Valle de Aburrá</span></h2>
+                <h2 class="blog-title"><span><?php echo $nombre ?></span></h2>
             </div>
         </div>
     </section>
@@ -70,16 +75,18 @@
             <div class="col-12 d-flex justify-content-center">
                 <div class="col-12 col-md-10 col-lg-10 mb-5 contenedor_contenido">
                     <div class="color_fecha mb-4">
-                        18 jun 20
+                        <?php echo $fecha_complete ?>
                     </div>
                     <div class="contenido">
-                        <p>A la hora de elegir tu nueva vivienda, la ubicación es una de las características más importantes a tener en cuenta. En Conaltura te contamos por qué el sur del Valle de Aburrá es el lugar ideal para vivir y crecer junto a tus seres queridos.</p>
-                        <p>Municipios como Envigado, Sabaneta, Itagui, La Estrella y Caldas han sido reconocidos a nivel nacional por su constante crecimiento, tanto en su economía como en la calidad de vida; factores que en los últimos años han fortalecido la oferta inmobiliaria. ¡Sigue leyendo para conocer algunos beneficios generales de estos municipios!</p>
-                        <h3>Alta valorización</h3>
-                        <p><img src="images/images_noticias/1.jpg" alt=""></p>
-                        <p>Tu vivienda se valorizará con el tiempo gracias a su excelente ubicación. La valorización en los municipios del sur viene aumentando cada año gracias a su atractivo para vivienda, pues vivir aquí tiene grandes beneficios, tales como una amplia oferta de entretenimiento, transporte, educación, cercanía a algunas de las empresas más importantes del departamento y muchos más servicios.</p>
+                        <?php echo $noticia ?>
                     </div>
                 </div>
+            </div>
+            <div class="text-center col-12 mt-3 mb-5">
+                <?php if ($ruta_archivo != $comparador . "") {
+                    echo '<a style="color:#7B7B7B;" href="' . $ruta_archivo . '" download="Noticias.pdf"><i style="color:red;" class="fas fa-file-pdf mr-3"></i>Descargar Archivo Adjunto</a>';
+                } ?>
+
             </div>
 
 

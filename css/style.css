@@ -1968,8 +1968,8 @@ div#preloader {
   color: #095c70; }
 
 .image {
-  -o-object-fit: cover !important;
-  object-fit: cover !important;
+  -o-object-fit: unset !important;
+  object-fit: unset !important;
   width: 100% !important;
   height: 100% !important; }
 
@@ -2186,7 +2186,6 @@ div#preloader {
   color: #7b7b7b; }
 
 #banner_home {
-  background-image: url("../images/banner-home2.png");
   padding: 90px 0 100px 0;
   position: relative; }
   #banner_home .overlay2 {

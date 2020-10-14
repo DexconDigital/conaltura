@@ -9,6 +9,10 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/bootstrap.css">
     <?php include 'layout/archivosheader_quienes_somos.php' ?>
+    <?php require 'controllers/bannerController.php'; ?>
+    <?php require 'controllers/textoController.php'; ?>
+    <?php require 'controllers/valoresController.php'; ?>
+    <?php require 'controllers/serviciosController.php'; ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -163,6 +167,7 @@
             }
         }
     </style>
+
 </head>
 
 <body class="page-right-sidebar">
@@ -178,10 +183,10 @@
             <section id="slideshow-home" class="wrap noo-slideshow slideshow-home">
                 <div class="property-slider">
                     <div id="noo-slider-1" class="noo-slider noo-property-slide-wrap text-center">
-
-                        <img src="images/reduccida_prueba.jpg" class="attachment-property-slider" alt="" />
+                        <?php
+                        bannerquienes();
+                        ?>
                         <div class="clearfix"></div>
-
                     </div>
                 </div>
             </section>
@@ -194,44 +199,14 @@
                             <div class="page-content">
                                 <!-- Texto de descripcion quienes somos -->
                                 <div class="contact-map">
-                                    <div class="text-block">
-                                        <h4>Quienes Somos</h4>
-                                        <p class="texto_justify">CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el propósito de ofrecer
-                                            los servicios de administración, arrendamientos y venta de propiedad raíz destinada
-                                            ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.</p>
-
-                                        <p class="texto_justify">Nuestro objetivo es ofrecer a nuestros clientes un servicio cercano y confiable,
-                                            proporcionándoles el inmueble deseado, al mejor precio, de forma transparente
-                                            y segura, enfocados en construir relaciones a largo plazo que se fundamenten
-                                            en una mutua confianza.</p>
-
-                                        <p class="texto_justify">Nuestro servicio se apoya en herramientas tecnológicas que permiten el manejo
-                                            eficiente de la información y en el desarrollo constante del talento humano,
-                                            con el propósito de estar a la vanguardia en el mercado inmobiliario.
-                                        </p>
-                                    </div>
-
+                                    <?php textoquienessomos() ?>
                                 </div>
                                 <!-- Fin de Texto de descripcion quienes somos -->
                                 <div class="accordion js-accordion">
-                                    <div class="accordion__item js-accordion-item active">
-                                        <div class="accordion-header js-accordion-header">Misión</div>
-                                        <div class="accordion-body js-accordion-body">
-                                            <div class="accordion-body__contents">
-                                                Brindamos soluciones de arrendamiento inmobiliario mediante un servicio cercano y confiable a la altura de las expectativas de nuestros clientes.
-                                            </div>
-                                        </div> <!-- end of accordion body -->
+                                    <?php textomision() ?>
 
-                                    </div><!-- end of accordion item -->
-                                    <div class="accordion__item js-accordion-item">
-                                        <div class="accordion-header js-accordion-header">Visión</div>
-                                        <div class="accordion-body js-accordion-body">
-                                            <div class="accordion-body__contents">
-                                                En el año 2020 seremos una empresa consolidada y rentable, reconocida por la calidad de su servicio de arrendamiento inmobiliario.
-                                            </div>
-                                        </div><!-- end of accordion body -->
+                                    <?php textovision() ?>
 
-                                    </div><!-- end of accordion item -->
                                     <div class="accordion__item js-accordion-item">
                                         <div class="accordion-header js-accordion-header">Valores</div>
                                         <div class="accordion-body js-accordion-body">
@@ -239,80 +214,10 @@
                                                
                                             </div> -->
                                             <div class="accordion js-accordion">
-                                                <div class="accordion__item js-accordion-item">
-                                                    <div class="accordion-header js-accordion-header">Actitud de Servicio</div>
-                                                    <div class="accordion-body js-accordion-body">
-                                                        <div class="accordion-body__contents">
-                                                            <div class="col-12 d-flex flex-wrap">
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <p class="text_justify_somos">Satisfacemos las expectativas de nuestros clientes
-                                                                        internos y externos, dando respuesta a sus necesidades
-                                                                        con un acompañamiento cercano, oportuno, amable y
-                                                                        efectivo.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                    <img src="images/servicios/ACTITUD_DE_SERVICIO.png" alt="" class="noo-image" style="height: 150px;" />
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- end of sub accordion item body contents -->
-                                                    </div><!-- end of sub accordion item body -->
-                                                </div><!-- end of sub accordion item -->
-                                                <div class="accordion__item js-accordion-item">
-                                                    <div class="accordion-header js-accordion-header">Compromiso</div>
-                                                    <div class="accordion-body js-accordion-body">
-                                                        <div class="accordion-body__contents">
-                                                            <div class="col-12 d-flex flex-wrap">
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <p class="text_justify_somos">Es el valor que nos permite lograr los objetivos, incluye
-                                                                        el interés por tener metas retadoras, entregando lo mejor
-                                                                        de sí cada día.</p>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                    <img src="images/servicios/COMPROMISO.png" alt="" class="noo-image" style="height: 150px;" />
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- end of sub accordion item body contents -->
-                                                    </div><!-- end of sub accordion item body -->
-                                                </div><!-- end of sub accordion item -->
-                                                <div class="accordion__item js-accordion-item">
-                                                    <div class="accordion-header js-accordion-header">Calidad</div>
-                                                    <div class="accordion-body js-accordion-body">
-                                                        <div class="accordion-body__contents">
-                                                            <div class="col-12 d-flex flex-wrap">
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <p class="text_justify_somos">Hacemos el trabajo bien desde la primera vez, a su debido
-                                                                        tiempo y mejorando continuamente, para entregarle a nuestros
-                                                                        clientes, productos y servicios excelentes.</p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                    <img src="images/servicios/CALIDAD.png" alt="" class="noo-image" style="height: 150px;" />
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- end of sub accordion item body contents -->
-                                                    </div><!-- end of sub accordion item body -->
-                                                </div><!-- end of sub accordion item -->
-                                                <div class="accordion__item js-accordion-item">
-                                                    <div class="accordion-header js-accordion-header">Pasión</div>
-                                                    <div class="accordion-body js-accordion-body">
-                                                        <div class="accordion-body__contents">
-                                                            <div class="col-12 d-flex flex-wrap">
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <p class="text_justify_somos">Es nuestra fuerza que moviliza la gestión del día a día
-                                                                        hacia la excelencia. De ella surge una intensidad extraordinaria,
-                                                                        la creatividad, la habilidad recursiva, y la tenacidad
-                                                                        para afrontar cualquier circunstancia en procura de alcanzar
-                                                                        los mejores resultados. La pasión es lo que une y distingue
-                                                                        a Conaltura.</p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12 text-center">
-                                                                    <img src="images/servicios/PASION.png" alt="" class="noo-image" style="height: 150px;" />
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- end of sub accordion item body contents -->
-                                                    </div><!-- end of sub accordion item body -->
-                                                </div><!-- end of sub accordion item -->
+                                                <?php valoruno(); ?>
+                                                <?php valordos(); ?>
+                                                <?php valortres(); ?>
+                                                <?php valorcuatro(); ?>
                                             </div><!-- end of sub accordion -->
                                         </div><!-- end of accordion body -->
                                     </div><!-- end of accordion item -->
@@ -340,11 +245,15 @@
         <section id="our-sevices" class="wrap our-sevices">
             <div class="container">
                 <div class="parallax">
-                    <div class="bg parallax-bg" style="background: url('images/background/_ACF3238.png') 50% 0 repeat-y fixed"></div>
+                    <?php
+                    bannervalores();
+                    ?>
+
                     <div class="overlay"></div>
                     <div class="our-sevices-content">
                         <div class="col-12 d-flex justify-content-center flex-wrap clearfix">
-                            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
+                            <!-- 
+                                <div class="col-xs-12 col-lg-4 col-md-4 col-sm-4 our-sevices-col">
                                 <span class="service-icon">
                                     <a href="inmuebles.php" style="color: #fff; ">
                                         <i class="fa fa-key"></i></a>
@@ -410,7 +319,14 @@
                                     <h5 class="text-light" style="color: #fff; ">Administración de Inmuebles</h5>
 
                                 </div>
-                            </div>
+                            </div> -->
+                            <?php
+                            if (is_array($Servicio_array)) {
+                                Servicios($Servicio_array);
+                            } else {
+                                echo '<h2 class="text-center" style="color:white;" >No hay servicios disponibles</h2>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

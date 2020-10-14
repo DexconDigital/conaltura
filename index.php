@@ -1,8 +1,6 @@
 <?php
 $pagina = 'inicio';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,51 +11,36 @@ $pagina = 'inicio';
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/hint.css">
-    <?php require 'variables/metaEtiquetas.php'; ?>
-    <?php require 'controllers/indexController.php'; ?>
+    <!-- Datos para compartir por facebook -->
+    <meta property="og:image" itemprop="image" content="http://dexcon.co/conaltura/images/icon/faviconR.png">
+    <meta property="og:title" content="Conaltura Inmobiliaria">
+    <meta property="og:url" content="http://www.dexcon.co/conaltura/">
+    <meta property="og:description" content="CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el proposito de ofrecer los servicios de administracion, arrendamientos y venta de propiedad raiz destinada ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Conaltura Inmobiliaria">
+    <meta name="twitter:image" content="http://dexcon.co/conaltura/images/icon/faviconR.png">
+    <meta name="twitter:description" content="CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el proposito de ofrecer los servicios de administracion, arrendamientos y venta de propiedad raiz destinada ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.">
+    <!-- fin de datos para compartir por twitter -->
+    <!-- Para whatsapp -->
+    <meta property="og:image" content="http://dexcon.co/conaltura/images/icon/faviconR.png" />
+    <meta property="og:image:secure_url" content="http://www.dexcon.co/conaltura/" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:description" content="CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el proposito de ofrecer los servicios de administracion, arrendamientos y venta de propiedad raiz destinada ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.">
+    <!-- Para whatsapp -->
+    <?php require 'controllers/indexController.php';
+    require 'controllers/noticiasController.php';
+    require 'controllers/asesor_detalle.php';
+    require 'controllers/aliados_slider.php';
+    require 'controllers/textoController.php';
+    require 'controllers/sliderController.php';
+    require 'controllers/bannertextController.php';
+    ?>
 
 
 </head>
-<!-- <style>
-    .tooltip_dom {
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black;
-    }
-
-    .tooltip_dom .tooltip_dom_text {
-        visibility: hidden;
-        width: 200px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -8rem;
-        opacity: 0;
-        transition: opacity 0.3s;
-        padding: 1rem;
-    }
-
-    .tooltip_dom .tooltip_dom_text::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    .tooltip_dom:hover .tooltip_dom_text {
-        visibility: visible;
-        opacity: 1;
-    }
-</style> -->
 
 <body style="text-align:center;">
     </style>
@@ -69,32 +52,27 @@ $pagina = 'inicio';
         <!-- slider  -->
         <section id="parallax4" style="position: relative;z-index:-1;">
             <div class="overlay"></div>
-            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-interval="10000">
-                        <img src="images/banner-home.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-interval="2000">
-                        <img src="images/banner-home.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/banner-home.png" class="d-block w-100" alt="...">
-                    </div>
+                    <?php slider_index(); ?>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleInterval" style="z-index: 600;" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
             </div>
         </section>
         <div id="texslider" class="container col-12  text-center d-flex justify-content-center">
             <div class="col-9  p-0">
-                <p class="texto1_slider">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
-                <h1 class="texto2_slider">Apartamentos nuevos en venta desde 100 millones de pesos.</h1>
+                <!-- <p class="texto1_slider text-break">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
+                <h1 class="texto2_slider text-break">Apartamentos nuevos en venta desde 100 millones de pesos.</h1> -->
+                <?php textouno_slider() ?>
+                <?php textodos_slider() ?>
             </div>
         </div>
         <!-- slider -->
@@ -104,25 +82,18 @@ $pagina = 'inicio';
 
         <!-- texto descriptivo -->
         <section id="texto_descrip_seccion" class="">
-            <div class="col-12  d-flex justify-content-center flex-wrap">
-                <div class=" col-lg-5 col-md-7 col-10 text-center cont_texto">
-                    <h3 class="texto_style1">Encuentra tu proyecto de vivienda en Medellín.</h3>
-                </div>
-                <div class=" col-lg-8 col-md-10 col-11 text-center cont_texto2">
-                    <p class="texto_style2">Encuentra inmuebles en venta en diferentes partes de Medellín o elige apartamentos de 2 y 3 habitaciones con zonas comunes, gimnasios, parqueadero, cercanos a centros comerciales y mucho más.</p>
-                </div>
-            </div>
+            <?php textoindex(); ?>
         </section>
         <!-- fin texto descriptivo -->
         <!-- redes sociales -->
         <?php include 'layout/redes.php'; ?>
         <!-- fin redes sociales -->
         <!-- banner -->
-        <section id="banner_home">
+        <section id="banner_home" <?php bannertxt(); ?>>
             <div class="overlay2"></div>
             <div id="" class="container col-12  text-center d-flex justify-content-center d-flex align-items-center">
                 <div class="col-lg-9 col-md-9 col-10  p-0">
-                    <h1 class="">Hay una vivienda para cada necesidad</h1>
+                    <?php bannertexindex(); ?>
                     <a class="btn mt-3" href="inmuebles.php">Haz clic y consigue lo que necesitas</a>
                 </div>
             </div>
@@ -151,7 +122,7 @@ $pagina = 'inicio';
                 </div>
             </div>
         </section>
-        
+
         <!-- Inmuebles en venta -->
         <section class="pt-0">
             <div class="container">
@@ -185,108 +156,17 @@ $pagina = 'inicio';
                     <div class="container">
                         <div class="col-12"></div>
                         <div class="d-flex flex-wrap align-items-center justify-content-center ">
+                            <?php if (isset($noticias_array)) {
+                                modelo_ultimas_noticia($noticias_array);
+                            } else {
+                                echo '<div class="col 12">
+                        <h3 class="text-center">Muy pronto publicaremos contenido para ti<h3>
+                        </div>';
+                            }
+                            ?>
+
                             <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
-                                <div class="post-item">
-                                    <div class="item-post">
-                                        <div class="imagen-destacada">
-                                            <a href="detalle_noticia.php" title="" class="">
-                                                <img class="image" src="images/images_noticias/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cuerpo">
-                                            <div class="post-header">
-                                                <div class="date mb-4">24 jun 20</div>
-                                                <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
-                                            </div>
-                                            <a class="more-link" href="detalle_noticia.php">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin cards -->
-                            <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
-                                <div class="post-item">
-                                    <div class="item-post">
-                                        <div class="imagen-destacada">
-                                            <a href="detalle_noticia.php" title="" class="">
-                                                <img class="image" src="images/images_noticias/2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cuerpo">
-                                            <div class="post-header">
-                                                <div class="date mb-4">24 jun 20</div>
-                                                <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
-                                            </div>
-                                            <a class="more-link" href="detalle_noticia.php">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin cards -->
-                            <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
-                                <div class="post-item">
-                                    <div class="item-post">
-                                        <div class="imagen-destacada">
-                                            <a href="detalle_noticia.php" title="" class="">
-                                                <img class="image" src="images/images_noticias/3.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cuerpo">
-                                            <div class="post-header">
-                                                <div class="date mb-4">24 jun 20</div>
-                                                <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
-                                            </div>
-                                            <a class="more-link" href="detalle_noticia.php">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin cards -->
-                            <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
-                                <div class="post-item">
-                                    <div class="item-post">
-                                        <div class="imagen-destacada">
-                                            <a href="" title="" class="">
-                                                <img class="image" src="images/images_noticias/4.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cuerpo">
-                                            <div class="post-header">
-                                                <div class="date mb-4">24 jun 20</div>
-                                                <p><a class="texto" href="">Texto de la Noticia a publicar</a></p>
-                                            </div>
-                                            <a class="more-link" href="">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin cards -->
-                            <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
-                                <div class="post-item">
-                                    <div class="item-post">
-                                        <div class="imagen-destacada">
-                                            <a href="detalle_noticia.php" title="" class="">
-                                                <img class="image" src="images/images_noticias/5.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cuerpo">
-                                            <div class="post-header">
-                                                <div class="date mb-4">24 jun 20</div>
-                                                <p><a class="texto" href="detalle_noticia.php">Texto de la Noticia a publicar</a></p>
-                                            </div>
-                                            <a class="more-link" href="detalle_noticia.php">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin cards -->
-                            <!-- cards -->
-                            <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                            <!-- <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
                                 <div class="post-item">
                                     <div class="item-post">
                                         <div class="imagen-destacada">
@@ -303,7 +183,7 @@ $pagina = 'inicio';
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- fin cards -->
                         </div>
                     </div>
@@ -322,8 +202,58 @@ $pagina = 'inicio';
                     </div>
                     <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
 
+                        <?php if (isset($asesor_array)) {
+                            modelo_asesor($asesor_array);
+                        } else {
+                            echo '<div class="col 12">
+                        <h3 class="text-center">No hay asesores para mostrar<h3>
+                        </div>';
+                        }
+                        ?>
+                        <!-- datos inser asesores -->
+                        <!-- 
+                        asesor 1
 
-                        <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
+                        nombre:Diego Mauricio Piedrahita
+                        correo: dmpiedrahita@conaltura.com
+                        telefono1:3017235158
+                        telefono2:3229898
+
+                        cargo: Asesor Comercial 
+                        asesor 2
+
+                        nombre: Veronica Tabares
+                        correo: vtabares@conaltura.com
+                        telefono1: 3229898
+                        telefono2: 3229898 Extension 217
+
+                        cargo: Secretaria
+                        asesor 3
+
+                        nombre: Fauto Arias
+                        correo: farias@conaltura.com
+                        telefono1: 3229898
+                        telefono2: 
+
+                        cargo: Director
+                        asesor 4
+
+                        nombre: Fabio Leon Jimenez
+                        correo: fjimenez@conaltura.com
+                        telefono1: 3128945407
+                        telefono2: 322 9898 ext 216
+
+                        cargo: Asesor Comercial
+                        asesor 5
+
+                        nombre: Adriana Molina Tamayo
+                        correo: amolina@conaltura.com
+                        telefono1: 3214777488
+                        telefono2: 322 9898 ext 216
+
+                        cargo: Asesor Comercial
+                      -->
+                        <!-- <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                             <article class="hentry has-featured div_asesor_color">
                                 <div class="agent-featured div_asesor_secundario">
                                     <img src="images/Asesores-02.png" alt="">
@@ -350,124 +280,7 @@ $pagina = 'inicio';
                                     </div>
                                 </div>
                             </article>
-                        </div>
-
-                        <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
-
-                            <article class="hentry has-featured div_asesor_color">
-                                <div class="agent-featured div_asesor_secundario">
-                                    <img src="images/VeronicaTabares.png" alt="">
-                                </div>
-                                <div class="agent-wrap div_text_asesor">
-                                    <h2 class="agent-title titulo_style_asesor">
-                                        <font class="style_sub_asesor">
-                                            <font class="style_sub_asesor">Veronica Tabares</font>
-                                        </font>
-                                    </h2>
-                                    <div class="agent-excerpt" style="padding:15px 20px;">
-                                        <p>
-                                            <font class="style_sub_asesor">
-                                                <font class="style_sub_asesor color_asesor_sub">Secretaria </font>
-                                            </font>
-                                        </p>
-                                    </div>
-                                    <div class="agent-social-wrap redes_div_asesor">
-                                        <div class="social-list agent-social d-flex justify-content-center redes_seg_div_asesor">
-                                            <a class="hint--top" data-hint="vtabares@conaltura.com" href="mailto:vtabares@conaltura.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                                            <a class="hint--top" data-hint="3229898" href="tel:3229898" target="_blank"><i class="fa fa-phone"></i></a>
-                                            <a class="hint--top" data-hint="322 9898 Extension 217" href="tel:3229898" target="_blank"><i class="fa fa-phone"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
-                            <article class="hentry has-featured div_asesor_color">
-                                <div class="agent-featured div_asesor_secundario">
-                                    <img src="images/Sr_Fausto.png" alt="">
-                                </div>
-                                <div class="agent-wrap div_text_asesor">
-                                    <h2 class="agent-title titulo_style_asesor">
-                                        <font class="style_sub_asesor">
-                                            <font class="style_sub_asesor">Fauto Arias</font>
-                                        </font>
-                                    </h2>
-                                    <div class="agent-excerpt" style="padding:15px 20px;">
-                                        <p>
-                                            <font class="style_sub_asesor">
-                                                <font class="style_sub_asesor color_asesor_sub">Director </font>
-                                            </font>
-                                        </p>
-                                    </div>
-                                    <div class="agent-social-wrap redes_div_asesor">
-                                        <div class="social-list agent-social d-flex justify-content-center redes_seg_div_asesor">
-                                            <a class="hint--top" data-hint="farias@conaltura.com" href="mailto:farias@conaltura.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                                            <a class="hint--top" data-hint="3229898" href="tel:3229898" target="_blank"><i class="fa fa-phone"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                        </div>
-
-                        <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
-                            <article class="hentry has-featured div_asesor_color">
-                                <div class="agent-featured div_asesor_secundario">
-                                    <img src="images/Asesores-03.png" alt="">
-                                </div>
-                                <div class="agent-wrap div_text_asesor">
-                                    <h2 class="agent-title titulo_style_asesor">
-                                        <font class="style_sub_asesor">
-                                            <font class="style_sub_asesor">Fabio Leon Jimenez</font>
-                                        </font>
-                                    </h2>
-                                    <div class="agent-excerpt" style="padding:15px 20px;">
-                                        <p>
-                                            <font class="style_sub_asesor">
-                                                <font class="style_sub_asesor color_asesor_sub">Asesor Comercial </font>
-                                            </font>
-                                        </p>
-                                    </div>
-                                    <div class="agent-social-wrap redes_div_asesor">
-                                        <div class="social-list agent-social d-flex justify-content-center redes_seg_div_asesor">
-                                            <a class="hint--top" data-hint="fjimenez@conaltura.com" href="mailto:fjimenez@conaltura.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                                            <a class="hint--top" data-hint="3128945407" href="tel:3128945407" target="_blank"><i class="fa fa-phone"></i></a>
-                                            <a class="hint--top" data-hint="322 9898 ext 216" href="tel:3229898" target="_blank"><i class="fa fa-phone"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
-                            <article class="hentry has-featured div_asesor_color">
-                                <div class="agent-featured div_asesor_secundario">
-                                    <img src="images/Adriana_Molina.png" alt="">
-                                </div>
-                                <div class="agent-wrap div_text_asesor">
-                                    <h2 class="agent-title titulo_style_asesor">
-                                        <font class="style_sub_asesor">
-                                            <font class="style_sub_asesor">Adriana Molina Tamayo</font>
-                                        </font>
-                                    </h2>
-                                    <div class="agent-excerpt" style="padding:15px 20px;">
-                                        <p>
-                                            <font class="style_sub_asesor">
-                                                <font class="style_sub_asesor color_asesor_sub">Asesor Comercial </font>
-                                            </font>
-                                        </p>
-                                    </div>
-                                    <div class="agent-social-wrap redes_div_asesor">
-                                        <div class="social-list agent-social d-flex justify-content-center redes_seg_div_asesor">
-                                            <a class="hint--top" data-hint="amolina@conaltura.com" href="mailto:amolina@conaltura.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                                            <a class="hint--top" data-hint="3214777488" href="tel:3214777488" target="_blank"><i class="fa fa-phone"></i></a>
-                                            <a class="hint--top" data-hint="322 9898 ext 216" href="tel:3229898" target="_blank"><i class="fa fa-phone"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -484,34 +297,19 @@ $pagina = 'inicio';
                     </div>
                     <div class="owl-carousel owl-carousel1 owl-theme" id="aliados_slide">
 
-                        <div class="item">
+                        <?php if (isset($aliados_array)) {
+                            aliados_slider($aliados_array);
+                        } else {
+                            echo
+                                '<div class="item">
+                                    <p>No hay Aliados para mostrar</p>
+                                </div>';
+                        }
+                        ?>
+                        <!-- <div class="item">
                             <img class="item-image" src="images/aliados/Logo_Lonja-Afiliado.png" alt="">
 
-                        </div>
-
-                        <div class="item">
-                            <img class="item-image" src="images/aliados/camara_comercio_afiliado.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="item-image" src="images/aliados/el_libertador.png" alt="" style="margin-top: 20px;">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-image" src="images/aliados/fgi.png" style="margin-top: 10px;" alt="">
-
-                        </div>
-
-                        <div class="item">
-                            <img class="item-image" src="images/aliados/Grupo_Sura_logo.png" alt="">
-
-                        </div>
-
-                        <div class="item">
-                            <img class="item-image" src="images/aliados/SIMI.png" alt="">
-
-                        </div>
-
-
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -524,7 +322,9 @@ $pagina = 'inicio';
     <script src="conexion_api/token_api.js"></script>
     <script src="conexion_api/validadores.js"></script>
     <script src="conexion_api/buscador.js"></script>
-
+    <script>
+        $('.carousel-inner div:first-child').addClass('active');
+    </script>
 
 
 

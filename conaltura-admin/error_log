@@ -1,0 +1,16 @@
+[26-Feb-2020 13:13:40 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'dexcondigitaltes'@'localhost' (using password: YES) in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/admin/conexion.php on line 5
+[26-Feb-2020 13:13:40 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 13
+[26-Feb-2020 13:13:40 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 15
+[26-Feb-2020 13:13:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 17
+[26-Feb-2020 13:13:49 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'dexcondigitaltes'@'localhost' (using password: YES) in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/admin/conexion.php on line 5
+[26-Feb-2020 13:13:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 13
+[26-Feb-2020 13:13:49 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 15
+[26-Feb-2020 13:13:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 17
+[26-Feb-2020 14:13:40 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'dexcondigital'@'localhost' to database 'test_pruebas' in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/admin/conexion.php on line 5
+[26-Feb-2020 14:13:40 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 13
+[26-Feb-2020 14:13:40 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 15
+[26-Feb-2020 14:13:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 17
+[26-Feb-2020 14:13:48 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'dexcondigital'@'localhost' to database 'test_pruebas' in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/admin/conexion.php on line 5
+[26-Feb-2020 14:13:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 13
+[26-Feb-2020 14:13:48 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 15
+[26-Feb-2020 14:13:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/jmera4511ypz/public_html/dominguezparra/dominguez-admin/validar.php on line 17
