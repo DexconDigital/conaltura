@@ -179,6 +179,7 @@
 
 
 
+/*
 setTimeout(function () {
     $.ajax({
         url: 'https://www.simi-api.com/ApiSimiweb/response/v21/inmueblesDestacados/total/50/limit/50',
@@ -293,6 +294,7 @@ setTimeout(function () {
 
     });
 });
+*/
 
 
 jQuery(document).ready(function ($) { $(window).load(function () { $('#preloader').fadeOut('slow', function () { $(this).remove(); }); }); });
