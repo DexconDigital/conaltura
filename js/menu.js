@@ -63,7 +63,7 @@
 
     $(".menu-ppal").html(menu);
 
-   
+
 
     var footerinicio = '';
 
@@ -175,9 +175,53 @@
 
 })
 
-    (jQuery);
+(jQuery);
 
+var config = {
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    responsive: {
+        300: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+}
+//Arriendos
+$.ajax({
+    url: 'controllers/indexController.php',
+    type: 'post',
+    data: {
+        "arriendo": "true"
+    },
+    success: function (data) {
+        $("#arriendo_data").html('<div class="owl-carousel owl-theme primero carouselA" id="carouselA"></div>');
+        $(".carouselA").append(data);
+        $("#carouselA").owlCarousel(config);
+    }
+});
 
+//Ventas
+$.ajax({
+    url: 'controllers/indexController.php',
+    type: 'post',
+    data: {
+        "ventas": "true"
+    },
+    success: function (data) {
+        $("#venta_data").html('<div class="owl-carousel owl-theme primero carouselV" id="carouselV"></div>');
+        $(".carouselV").append(data);
+        $("#carouselV").owlCarousel(config);
+    }
+});
 
 /*
 setTimeout(function () {
@@ -297,7 +341,13 @@ setTimeout(function () {
 */
 
 
-jQuery(document).ready(function ($) { $(window).load(function () { $('#preloader').fadeOut('slow', function () { $(this).remove(); }); }); });
+jQuery(document).ready(function ($) {
+    $(window).load(function () {
+        $('#preloader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
+});
 
 $(document).ready(function () {
     $('body').on('click', '#items_en_uso li', function () {
@@ -309,10 +359,3 @@ $(document).ready(function () {
 
     })
 });
-
-
-
-
-
-
-
