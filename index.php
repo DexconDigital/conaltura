@@ -30,7 +30,7 @@ $pagina = 'inicio';
     <meta property="og:image:height" content="300" />
     <meta property="og:description" content="CONALTURA INMOBILIARIA fue fundada en junio de 2016 con el proposito de ofrecer los servicios de administracion, arrendamientos y venta de propiedad raiz destinada ya sea para vivienda o para locales comerciales, oficinas, bodegas u otros.">
     <!-- Para whatsapp -->
-    <?php require 'controllers/indexController.php';
+    <?php //require 'controllers/indexController.php';
     require 'controllers/noticiasController.php';
     require 'controllers/asesor_detalle.php';
     require 'controllers/aliados_slider.php';
@@ -43,120 +43,98 @@ $pagina = 'inicio';
 </head>
 
 <body style="text-align:center;">
-    </style>
-
-    <body>
-        <!-- Menu  Inicial-->
-        <!-- .collapse:not(.show) , in http://html.nootheme.com/citilights/-->
-        <?php include 'layout/menu.php'; ?>
-        <!-- slider  -->
-        <section id="parallax4" style="position: relative;z-index:-1;">
-            <div class="overlay"></div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <?php slider_index(); ?>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </div>
-        </section>
-        <div id="texslider" class="container col-12  text-center d-flex justify-content-center">
-            <div class="col-9  p-0">
-                <!-- <p class="texto1_slider text-break">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
-                <h1 class="texto2_slider text-break">Apartamentos nuevos en venta desde 100 millones de pesos.</h1> -->
-                <?php textouno_slider() ?>
-                <?php textodos_slider() ?>
+    <!-- Menu  Inicial-->
+    <!-- .collapse:not(.show) , in http://html.nootheme.com/citilights/-->
+    <?php include 'layout/menu.php'; ?>
+    <!-- slider  -->
+    <section id="parallax4" style="position: relative;z-index:-1;">
+        <div class="overlay"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <?php slider_index(); ?>
             </div>
         </div>
-        <!-- slider -->
-        <!-- Buscador -->
-        <?php include 'layout/buscador.php'; ?>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" style="z-index: 600;" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+    <div id="texslider" class="container col-12  text-center d-flex justify-content-center">
+        <div class="col-9  p-0">
+            <!-- <p class="texto1_slider text-break">Conaltura, empresa de construcción y proyectos inmobiliarios en Colombia</p>
+                <h1 class="texto2_slider text-break">Apartamentos nuevos en venta desde 100 millones de pesos.</h1> -->
+            <?php textouno_slider() ?>
+            <?php textodos_slider() ?>
+        </div>
+    </div>
+    <!-- slider -->
+    <!-- Buscador -->
+    <?php include 'layout/buscador.php'; ?>
 
 
-        <!-- texto descriptivo -->
-        <section id="texto_descrip_seccion" class="">
-            <?php textoindex(); ?>
-        </section>
-        <!-- fin texto descriptivo -->
-        <!-- redes sociales -->
-        <?php include 'layout/redes.php'; ?>
-        <!-- fin redes sociales -->
-        <!-- banner -->
-        <section id="banner_home" <?php bannertxt(); ?>>
-            <div class="overlay2"></div>
-            <div id="" class="container col-12  text-center d-flex justify-content-center d-flex align-items-center">
-                <div class="col-lg-9 col-md-9 col-10  p-0">
-                    <?php bannertexindex(); ?>
-                    <a class="btn mt-3" href="inmuebles.php">Haz clic y consigue lo que necesitas</a>
+    <!-- texto descriptivo -->
+    <section id="texto_descrip_seccion" class="">
+        <?php textoindex(); ?>
+    </section>
+    <!-- fin texto descriptivo -->
+    <!-- redes sociales -->
+    <?php include 'layout/redes.php'; ?>
+    <!-- fin redes sociales -->
+    <!-- banner -->
+    <section id="banner_home" <?php bannertxt(); ?>>
+        <div class="overlay2"></div>
+        <div id="" class="container col-12  text-center d-flex justify-content-center d-flex align-items-center">
+            <div class="col-lg-9 col-md-9 col-10  p-0">
+                <?php bannertexindex(); ?>
+                <a class="btn mt-3" href="inmuebles.php">Haz clic y consigue lo que necesitas</a>
+            </div>
+        </div>
+    </section>
+    <!-- fin banner -->
+    <!-- inmuebles en arreindo -->
+    <section class="recent-properties pt-0">
+        <div class="container">
+            <div class="recent-properties-inner">
+                <div class="section-title">
+                    <h3 class="titulos">Propiedades destacadas en arriendo</h3>
+                </div>
+                <div class="recent-properties-content">
+                    <div style="position:relative;" id="arriendo_data">Cargando inmuebles...</div>
                 </div>
             </div>
-        </section>
-        <!-- fin banner -->
-        <!-- inmuebles en arreindo -->
-        <section class="recent-properties pt-0">
-            <div class="container">
-                <div class="recent-properties-inner">
-                    <div class="section-title">
-                        <h3 class="titulos">Propiedades destacadas en arriendo</h3>
-                    </div>
-                    <div class="recent-properties-content">
-                        <div style="position:relative;">
-                            <div class="owl-carousel owl-theme primero" id="carouselA">
-                                <?php
-                                if (is_array($api)) {
-                                    inmuebles_destacados($api);
-                                } else {
-                                    echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Inmuebles en venta -->
+    <section class="pt-0">
+        <div class="container">
+            <div class="recent-properties-inner">
+                <div class="section-title">
+                    <h3 class="espacio_destacadas titulos">Propiedades destacadas en venta</h3>
+                </div>
+                <div class="recent-properties-content">
+                    <div style="position:relative;" id="venta_data">Cargando inmuebles...</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Inmuebles en venta -->
-        <section class="pt-0">
-            <div class="container">
-                <div class="recent-properties-inner">
-                    <div class="section-title">
-                        <h3 class="espacio_destacadas titulos">Propiedades destacadas en venta</h3>
-                    </div>
-                    <div class="recent-properties-content">
-                        <div class="owl-carousel owl-theme" id="owl-propiedades-venta">
-                            <?php
-                            if (is_array($api)) {
-                                inmuebles_destacados2($api);
-                            } else {
-                                echo '<h2 class="text-center" >No tiene Inmuebles Destacados</h2>';
-                            }
-                            ?>
-                        </div>
-                    </div>
+
+    <!-- noticias -->
+    <section id="noticias" class="espacio_destacadas">
+        <div class="container">
+            <div class="">
+                <div class="section-title">
+                    <h3 class="text-center">Noticias</h3>
                 </div>
-            </div>
-        </section>
-
-
-        <!-- noticias -->
-        <section id="noticias" class="espacio_destacadas">
-            <div class="container">
-                <div class="">
-                    <div class="section-title">
-                        <h3 class="text-center">Noticias</h3>
-                    </div>
-                    <div class="container">
-                        <div class="col-12"></div>
-                        <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                            <?php if (isset($noticias_array)) {
+                <div class="container">
+                    <div class="col-12"></div>
+                    <div class="d-flex flex-wrap align-items-center justify-content-center ">
+                        <?php if (isset($noticias_array)) {
                                 modelo_ultimas_noticia($noticias_array);
                             } else {
                                 echo '<div class="col 12">
@@ -165,8 +143,8 @@ $pagina = 'inicio';
                             }
                             ?>
 
-                            <!-- cards -->
-                            <!-- <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
+                        <!-- cards -->
+                        <!-- <div class="col-lg-4 col-xs-12 col-sm-4 col-md-6 mb-5">
                                 <div class="post-item">
                                     <div class="item-post">
                                         <div class="imagen-destacada">
@@ -184,25 +162,25 @@ $pagina = 'inicio';
                                     </div>
                                 </div>
                             </div> -->
-                            <!-- fin cards -->
-                        </div>
+                        <!-- fin cards -->
                     </div>
-
                 </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-- Acesores -->
-        <section id="recent-agents-slider" class="fondo_asesores espacio_destacadas">
-            <div class="container">
-                <div class="recent-agents-inner">
-                    <div class="section-title">
-                        <h3>Nuestros asesores</h3>
-                    </div>
-                    <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
+    <!-- Acesores -->
+    <section id="recent-agents-slider" class="fondo_asesores espacio_destacadas">
+        <div class="container">
+            <div class="recent-agents-inner">
+                <div class="section-title">
+                    <h3>Nuestros asesores</h3>
+                </div>
+                <div class="owl-carousel owl-carousel1  owl-theme" id="asesores">
 
-                        <?php if (isset($asesor_array)) {
+                    <?php if (isset($asesor_array)) {
                             modelo_asesor($asesor_array);
                         } else {
                             echo '<div class="col 12">
@@ -210,8 +188,8 @@ $pagina = 'inicio';
                         </div>';
                         }
                         ?>
-                        <!-- datos inser asesores -->
-                        <!-- 
+                    <!-- datos inser asesores -->
+                    <!-- 
                         asesor 1
 
                         nombre:Diego Mauricio Piedrahita
@@ -253,7 +231,7 @@ $pagina = 'inicio';
 
                         cargo: Asesor Comercial
                       -->
-                        <!-- <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
+                    <!-- <div class="item col-12 col-lg-12 col-md-12 d-flex justify-content-center p-0">
                             <article class="hentry has-featured div_asesor_color">
                                 <div class="agent-featured div_asesor_secundario">
                                     <img src="images/Asesores-02.png" alt="">
@@ -283,21 +261,21 @@ $pagina = 'inicio';
                         </div> -->
 
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Aliados -->
-        <section id="testimonial" class="wrap testimonial espacio_destacadas">
-            <div class="container">
-                <div class="our-partners-inner">
-                    <div class="section-title">
-                        <h3 class="text-center">Nuestras alianzas y afiliaciones</h3>
-                    </div>
-                    <div class="owl-carousel owl-carousel1 owl-theme" id="aliados_slide">
+    <!-- Aliados -->
+    <section id="testimonial" class="wrap testimonial espacio_destacadas">
+        <div class="container">
+            <div class="our-partners-inner">
+                <div class="section-title">
+                    <h3 class="text-center">Nuestras alianzas y afiliaciones</h3>
+                </div>
+                <div class="owl-carousel owl-carousel1 owl-theme" id="aliados_slide">
 
-                        <?php if (isset($aliados_array)) {
+                    <?php if (isset($aliados_array)) {
                             aliados_slider($aliados_array);
                         } else {
                             echo
@@ -306,27 +284,25 @@ $pagina = 'inicio';
                                 </div>';
                         }
                         ?>
-                        <!-- <div class="item">
+                    <!-- <div class="item">
                             <img class="item-image" src="images/aliados/Logo_Lonja-Afiliado.png" alt="">
 
                         </div> -->
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- footer -->
-        <?php include 'layout/footer.php'; ?>
-    </body>
+    <!-- footer -->
+    <?php include 'layout/footer.php'; ?>
     <?php include 'layout/archivosfooter.php'; ?>
     <script src="conexion_api/token_api.js"></script>
     <script src="conexion_api/validadores.js"></script>
     <script src="conexion_api/buscador.js"></script>
     <script>
         $('.carousel-inner div:first-child').addClass('active');
+
     </script>
-
-
-
+</body>
 
 </html>
