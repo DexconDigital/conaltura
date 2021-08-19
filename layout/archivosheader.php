@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/font-awesome.min.css">
 
 <!-- <link rel="stylesheet" href="css/style-selector.css"> -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=1">
 <link rel="stylesheet" href="css/style2.css">
 <!-- <link rel="stylesheet" href="css/shortcode.css"> -->
 <!-- <link rel="stylesheet" href="css/home.css"> -->

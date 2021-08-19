@@ -36,9 +36,9 @@
             height: 20%;
         }
     </style>
-    <div id="wrap-preload">
+    <!--<div id="wrap-preload">
         <img src="images/Preloader.gif" alt="gif" class="gif" id="gif">
-    </div>
+    </div>-->
     <script>
         var loader = document.getElementById("wrap-preload");
         window.addEventListener("load", function() {
