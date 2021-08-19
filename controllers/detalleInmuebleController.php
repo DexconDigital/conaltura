@@ -9,7 +9,7 @@ if (isset($_GET['co'])) {
 
 $ch = curl_init();
 $headers =  'Authorization:' . TOKEN . '';
-curl_setopt($ch, CURLOPT_URL, 'http://www.simi-api.com/ApiSimiweb/response/v2/inmueble/codInmueble/' . $co . '');
+curl_setopt($ch, CURLOPT_URL, 'https://www.simi-api.com/ApiSimiweb/response/v2/inmueble/codInmueble/' . $co . '');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
@@ -21,7 +21,7 @@ $r = json_decode($result, true);
 
 if (isset($r['msn'])) {
     echo "<script>alert('No se Encontraron Inmuebles');
-    window.location.href='inmuebles.php'
+    window.location.href='inmuebles-a.php'
     </script>";
 }
 
@@ -55,7 +55,7 @@ function similares($ciudad, $inmueble)
 {
     $ch = curl_init();
     $headers =  'Authorization:' . TOKEN . '';
-    curl_setopt($ch, CURLOPT_URL, 'http://www.simi-api.com/ApiSimiweb/response/v2.1.3/filtroInmueble/limite/1/total/6/departamento/0/ciudad/' . $ciudad . '/zona/0/barrio/0/tipoInm/' . $inmueble . '/tipOper/0/areamin/0/areamax/0/valmin/0/valmax/0/campo/0/order/desc/banios/0/alcobas/0/garajes/0/sede/0/usuario/0');
+    curl_setopt($ch, CURLOPT_URL, 'https://www.simi-api.com/ApiSimiweb/response/v2.1.3/filtroInmueble/limite/1/total/6/departamento/0/ciudad/' . $ciudad . '/zona/0/barrio/0/tipoInm/' . $inmueble . '/tipOper/0/areamin/0/areamax/0/valmin/0/valmax/0/campo/0/order/desc/banios/0/alcobas/0/garajes/0/sede/0/usuario/0');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
@@ -67,7 +67,7 @@ function similares($ciudad, $inmueble)
     if (!is_array($respuesta)) {
         $ch = curl_init();
         $headers =  'Authorization:' . TOKEN . '';
-        curl_setopt($ch, CURLOPT_URL, 'http://www.simi-api.com/ApiSimiweb/response/v2.1.3/filtroInmueble/limite/1/total/6/departamento/0/ciudad/' . $ciudad . '/zona/0/barrio/0/tipoInm/0/tipOper/0/areamin/0/areamax/0/valmin/0/valmax/0/campo/0/order/desc/banios/0/alcobas/0/garajes/0/sede/0/usuario/0');
+        curl_setopt($ch, CURLOPT_URL, 'https://www.simi-api.com/ApiSimiweb/response/v2.1.3/filtroInmueble/limite/1/total/6/departamento/0/ciudad/' . $ciudad . '/zona/0/barrio/0/tipoInm/0/tipOper/0/areamin/0/areamax/0/valmin/0/valmax/0/campo/0/order/desc/banios/0/alcobas/0/garajes/0/sede/0/usuario/0');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
