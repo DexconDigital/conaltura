@@ -20,7 +20,7 @@
 #slide-detalle img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     margin: auto !important;
 }
 .carousel-item img{
@@ -30,7 +30,7 @@
     height: 70px;
 }
 #miniaturas .contenedor-img, #miniaturas .contenedor-img img{
-    height: inherit !important;
+    height: -webkit-fill-available !important;
 }
 #miniaturas img{
     margin-left: 5px;
