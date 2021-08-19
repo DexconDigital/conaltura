@@ -1,6 +1,3 @@
-<?php
-require 'controllers/inmueblesController.php';
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,11 +8,9 @@ require 'controllers/inmueblesController.php';
     <meta name="description" content="">
     <?php include 'layout/archivosheader.php'; ?>
     <link rel="stylesheet" href="css/responsive.css">
-    
-    
-    
-    
+
 </head>
+
 <body>
     <!-- Menu  Inicial-->
     <?php include 'layout/menu.php'; ?>
@@ -27,84 +22,19 @@ require 'controllers/inmueblesController.php';
     <?php include 'layout/redes.php'; ?>
     <!-- fin redes sociales -->
     <section id="" class="espacio_destacadas">
+    <!-- datos -->
+    <?php //require_once '../controllers/inmueblesController.php'; 
+    //echo "<pre>";print_r($_SERVER);echo "</pre>";?>
+
         <div class="container p-0">
             <div class="col-12 p-0">
                 <div class="col-12">
-                    <?php $totalinmuebles = 0;
-                    if (is_array($api)) {
-                        $totalinmuebles = $api['datosGrales']['totalInmuebles'];
-                    } ?>
-                    <h4 class="titulo_inmuebles_inicio">Se han encontrado <span><?php echo $totalinmuebles ?></span> inmuebles</h4>
+                    <h4 class="titulo_inmuebles_inicio"></h4>
                 </div>
-                <div class="d-flex flex-wrap align-items-center justify-content-center ">
-                    <!-- <div class="col-4">
-                        <article class="hentry arriendo">
-                            <div class="property-featured">
-                                <a class="content-thumb" href="detalle_inmueble.php">
-                                    <img src="images/no_image.png" style="object-fit: cover;" alt="">
-                                    <span class="property-label"> Código</span>
-                                    <span class="property-label-2" >Incluye fotos 360</span>
-                                    <span class="property-category-2"> Apartamento</span>
-                                </a>
-                            </div>
-                            <div class="property-wrap">
-                                <h2 class="property-title"><a href="detalle_inmueble.php">Poblado</a></h2>
-                                <div class=" property-summary">
-                                    <div class="property-detail">
-                                        <div class="size"><span>66 m<sup>2 </span>
-                                        </div>
-                                        <div class="bathrooms"><span> 2</span>
-                                        </div>
-                                        <div class="bedrooms"><span> 2 </span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <div class="property-price">
-                                            <span><span class="amount"> $ 1.000.000</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                        </article>
-                    </div> -->
-                    <!-- Inmuebles -->
-                    <?php
-                    if (is_array($api)) {
-                        listar_inmuebles($api['Inmuebles']);
-                    } else {
-                        echo '<div class="col-12">
-                                     <h2 class="text-center" >No se encontraron inmuebles</h2>
-                                     </div>';
-                    }
-                    ?>
-                </div>
-                <div>
-                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-center listar_inmuebles"><h3>Cargando inmuebles...</h3></div>
             </div>
-            <div class="text-center d-flex flex-wrap">
-            </div>
-            <div class="col-12 text-center">
-                <?php if (is_array($api)) : ?>
-                    <ul class="pagination mt-4 align-items-end justify-content-center">
-                        <?php if ($paginator->getPrevUrl()) : ?>
-                            <li class="page-item"><a href="<?php echo $paginator->getPrevUrl(); ?>" class="page-link">&laquo; Atras</a></li>
-                        <?php endif; ?>
-                        <?php foreach ($paginator->getPages() as $page) : ?>
-                            <?php if ($page['url']) : ?>
-                                <li <?php echo $page['isCurrent'] ? 'class="page-item active"' : ''; ?>>
-                                    <a href="<?php echo $page['url']; ?>" class="page-link"><?php echo $page['num']; ?></a>
-                                </li>
-                            <?php else : ?>
-                                <li class="page-item disabled"><span><?php echo $page['num']; ?></span></li>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-
-                        <?php if ($paginator->getNextUrl()) : ?>
-                            <li class="page-item"><a href="<?php echo $paginator->getNextUrl(); ?>" class="page-link">Siguiente &raquo;</a></li>
-                        <?php endif; ?>
-                    </ul>
-                <?php endif; ?>
-            </div>
-
+            <div class="col-12 text-center paginacion"></div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -115,5 +45,47 @@ require 'controllers/inmueblesController.php';
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
 <script src="conexion_api/buscador.js"></script>
+<script>
+    var url = "<?php echo $_SERVER["REQUEST_URI"]; ?>";
+    var pag = "<?php echo (isset($_GET['pag'])) ? $_GET['pag'] : 1; ?>";
+    var ciudad = "<?php echo (isset($_GET['ci'])) ? $_GET['ci'] : 0; ?>";
+    var barrio = "<?php echo (isset($_GET['bar'])) ? $_GET['bar'] : 0; ?>";
+    var gestion = "<?php echo (isset($_GET['ge'])) ? $_GET['ge'] : 0; ?>";
+    var inmueble = "<?php echo (isset($_GET['in'])) ? $_GET['in'] : 0; ?>";
+    var precio_minimo = "<?php echo (isset($_GET['premin'])) ? $_GET['premin'] : 0; ?>";
+    var precio_maximo = "<?php echo (isset($_GET['premax'])) ? $_GET['premax'] : 0; ?>";
+    var area_minima = "<?php echo (isset($_GET['aremin'])) ? $_GET['aremin'] : 0; ?>";
+    var area_maxima = "<?php echo (isset($_GET['aremax'])) ? $_GET['aremax'] : 0; ?>";
+    var alcobas_buscar = "<?php echo (isset($_GET['alcobas'])) ? $_GET['alcobas'] : 0; ?>";
+    var banio_buscar = "<?php echo (isset($_GET['banios'])) ? $_GET['banios'] : 0; ?>";
+    var garaje_buscar = "<?php echo (isset($_GET['garajes'])) ? $_GET['garajes'] : 0; ?>";
+    //Llamado de datos
+    $.ajax({
+        url: 'controllers/inmueblesController.php',
+        type: 'post',
+        data: {
+            "datos": "true",
+            "REQUEST_URI" : url,
+            "pag" : pag,
+            "ciudad" : ciudad,
+            "barrio" : barrio,
+            "gestion" : gestion,
+            "inmueble" : inmueble,
+            "precio_minimo" : precio_minimo,
+            "precio_maximo" : precio_maximo,
+            "area_minima" : area_minima,
+            "area_maxima" : area_maxima,
+            "alcobas_buscar" : alcobas_buscar,
+            "banio_buscar" : banio_buscar,
+            "garaje_buscar" : garaje_buscar
+        },
+        success: function(data) {
+            console.log(data.paginacion);
+            $(".titulo_inmuebles_inicio").html("Se han encontrado " + data.total_inmuebles + " inmuebles");
+            $(".listar_inmuebles").html(data.inmuebles);
+            $(".paginacion").html(data.paginacion);
+        }
+    });
+</script>
 
 </html>

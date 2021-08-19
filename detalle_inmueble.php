@@ -1,21 +1,21 @@
 <?php
-require 'controllers/detalleInmuebleController.php';
 require_once 'variables/captcha.php';
+require_once 'controllers/detalleInmuebleController.php'; 
 $WebK = Web_Key;
 ?>
-<?php require 'controllers/wappController.php'?>
+<?php require 'controllers/wappController.php' ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Inmueble | Conaltura Inmobiliaria</title>
+    <title><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?> | Conaltura Inmobiliaria</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-     <!-- facebook -->
-     <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
+    <!-- facebook -->
+    <meta property="title" content="Inmueble <?php echo $co; ?> de Conaltura" />
     <meta property="og:site_name" content="Conaltura" />
-    <meta property="og:url" content="http://www.dexcon.co/conaltura/detalle_inmueble.php?co=<?php echo $co; ?>" />
+    <meta property="og:url" content="https://conalturainmobiliaria.com/detalle_inmueble.php?co=<?php echo $co; ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?>" />
     <meta property="og:description" id="metap" content="Inmueble ubicado en: <?php echo $r['barrio'] . ', ' . $r['ciudad'] . ', ' . $r['depto']; ?>" />
@@ -30,10 +30,10 @@ $WebK = Web_Key;
     <link rel="shortcut icon" href="images/icon/favicon.jpg.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <?php include 'layout/archivosheader.php'; ?>
-    <link rel="stylesheet" href="./css/carousel.tamanos.css">
+    <link rel="stylesheet" href="./css/carousel.tamanos.css?v=1">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick-theme.css?v=1">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/rangos.css">
     <link rel="stylesheet" href="mapas/leaflet.css" crossorigin="" />
@@ -248,16 +248,17 @@ $WebK = Web_Key;
 
     div.sticky {
         position: -webkit-sticky;
-        position: sticky;   
+        position: sticky;
         top: 20%;
     }
-    .ubication{
-    color: #095C70;
-    font-size: 27px;
-    font-weight: 700 !important;
-    line-height: 1.5;
-    margin: 0 0 5px;
-    padding: 0%;
+
+    .ubication {
+        color: #095C70;
+        font-size: 27px;
+        font-weight: 700 !important;
+        line-height: 1.5;
+        margin: 0 0 5px;
+        padding: 0%;
     }
 </style>
 
@@ -271,26 +272,24 @@ $WebK = Web_Key;
     <?php include 'layout/redes.php'; ?>
     <!-- fin redes sociales -->
     <section>
-        <div class="container">
+        <div class="pr-0">
             <div class="col-12">
                 <div class="noo-wrapper">
-
                     <div class="container noo-mainbody">
                         <div class="noo-mainbody-inner">
                             <div class="row clearfix">
 
-                                <div class="noo-content col-lg-7 col-md-12 col-12 p-0">
+                                <div class="noo-content col-lg-8 col-md-12 col-12 p-0">
 
                                     <article class="property">
                                         <h1 class="property-title"> Detalle del Inmueble <span><?php echo $co; ?></span><small id=""><?php echo $r['Tipo_Inmueble'] . ' en ' . $r['Gestion']; ?></small><small id=""><?php echo $r['barrio'] . ', ' . $r['ciudad']; ?></small>
                                         </h1>
                                         <ul class="social-list property-share clearfix">
-                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdexcon.co%2Fconaltura%2Fdetalle_inmueble.php%3Fco%3D' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
-                                            <!-- <li><a href="httpss://twitter.com/?status=Me encanta este Inmueble de https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li> -->
-                                            <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=http://www.conalturainmobiliaria.com/detalle_inmueble/co/' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=https://conalturainmobiliaria.com/detalle_inmueble.php?co=' . $co . '' ?>" target="_blank"><i class="fab fa-facebook-f social-top2"></i></a></li>
+                                            <li><a href="<?php echo 'http://twitter.com/intent/tweet?url=https://conalturainmobiliaria.com/detalle_inmueble.php?co=' . $co . '&text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] ?>" target="_blank"><i class="fab fa-twitter social-top2"></i></a></li>
                                             <!-- <li><a href="httpss://plus.google.com/share?url=https://www.conalturainmobiliaria.com/detalle-inmueble.php?dt=<?php echo $co; ?>" target="_blank"><i class="fab fa-google-plus-g social-top2"></i></a></li> -->
                                             <li>
-                                                <a data-action="share/whatsapp/share" href="<?php echo 'whatsapp://send?text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] . '%20Descripción:%20' . $r['descrip'] . '%20 http://www.conalturainmobiliaria.com/detalle_inmueble/codigo/' . $co ?>" target="_blank">
+                                                <a data-action="share/whatsapp/share" href="<?php echo 'whatsapp://send?text=' . $r['Tipo_Inmueble'] . '%20en%20' . $r['Gestion'] . '%20en%20' . $r['ciudad'] . '-' . $r['depto'] . '%20Descripción:%20' . $r['descrip'] . '%20 https://conalturainmobiliaria.com/detalle_inmueble.php?co=' . $co ?>" target="_blank">
                                                     <i class="fab fa-whatsapp social-top2"></i></a></li>
                                             <!-- <li><a href="#" target="_blank"><i class="fa fa-envelope social-top2"></i></a></li> -->
                                             <li><a href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=<?php echo $co; ?>" target="_blank" title="Imprimir"><i class="fas fa-print social-top2"></i></a></li>
@@ -387,7 +386,7 @@ $WebK = Web_Key;
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-compress"></i> Área </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value" id="area"> <?php echo $area_construida; ?> mts<sup>2<sup> </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label" style="font-size: 13px;"><i class="fa fa-bed"></i> Alcobas </span>
-                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"> 2</span>
+                                                                <span class="col-xs-6 col-md-3 detail-field-value" id="alcobas"><?php echo $alcobas; ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bath"></i> Baños </span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-value" id="banios"><?php echo $banios; ?></span>
                                                                 <span class="col-xs-6 col-md-3 detail-field-label"><i class="fa fa-bullseye"></i> Gestión </span>
@@ -477,7 +476,7 @@ $WebK = Web_Key;
                                                             <p class="p1"><a href="tel:0343229898"><i class="fa fa-phone"></i> 3229898</p></a>
                                                             <p class="p1"><a href="tel:<?php echo $asesor['celular']; ?>" target="_blank"><i class="fas fa-mobile-alt mr-2"></i> <?php echo $asesor['celular']; ?></p></a>
                                                         </p>
-                                                        <p class="p1"><?php wappDetalle() ?></a> 
+                                                        <p class="p1"><?php wappDetalle() ?></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -541,7 +540,7 @@ $WebK = Web_Key;
                                 </div>
 
 
-                                <div class="noo-sidebar noo-sidebar-right col-lg-5 col-xs-12 col-md-12 col-12">
+                                <div class="noo-sidebar noo-sidebar-right col-lg-4 col-xs-12 col-md-12 col-12">
 
                                     <!-- <div class="noo-sidebar-inner pr-0">
                                         <div class="block-sidebar recent-property">
@@ -729,7 +728,7 @@ $WebK = Web_Key;
 </script> -->
 <script src="conexion_api/token_api.js"></script>
 <script src="conexion_api/validadores.js"></script>
-<script src="conexion_api/buscador.js"></script>
+<script src="conexion_api/buscador.js?v=1"></script>
 <!-- barra de rangos -->
 <script src="js/rangos.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
