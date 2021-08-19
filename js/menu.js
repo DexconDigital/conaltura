@@ -45,7 +45,7 @@
         '<a href="quienes-somos.php">Conócenos&nbsp;<span class="caret"></span></a>    ' +
         '</li>' +
         '<li class="dropdown linea" id="items3">' +
-        '<a href="inmuebles.php?" class="padd_mnu"> <span class="badge badge-primary text-wrap espacio_menu hover_m">Inmuebles en arriendo</span><span class="caret"></span></a>' +
+        '<a href="inmuebles-a.php?" class="padd_mnu"> <span class="badge badge-primary text-wrap espacio_menu hover_m">Inmuebles en arriendo</span><span class="caret"></span></a>' +
         '</li>' +
         // '<li class="dropdown linea top">' +
         // '<a href="clientes.php">Clientes&nbsp;<span class="caret"></span></a> ' +
@@ -222,6 +222,7 @@ $.ajax({
         $("#carouselV").owlCarousel(config);
     }
 });
+
 
 /*
 setTimeout(function () {
