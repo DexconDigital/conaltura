@@ -170,7 +170,7 @@ $(document).ready(function () {
         var operacion = $(".operacion option:selected").val();
 
 
-        if (window.location.pathname == "/inmuebles.php") {
+        if (window.location.pathname == "/inmuebles-a.php") {
             sessionStorage.setItem("operacionselect", operacion);
 
         }
