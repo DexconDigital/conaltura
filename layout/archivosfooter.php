@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/owlcarousel.js"></script>
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/menu.js?v=4"></script>
+<script type="text/javascript" src="js/menu.js?v=5"></script>
 
 <script>
     $(document).ready(function(){
