@@ -224,7 +224,7 @@ $.ajax({
 });
 
 
-/*
+
 setTimeout(function () {
     $.ajax({
         url: 'https://www.simi-api.com/ApiSimiweb/response/v21/inmueblesDestacados/total/50/limit/50',
@@ -334,12 +334,10 @@ setTimeout(function () {
                 }
             }
             $("#ulti-prop-v").append(res);
-
         }
-
     });
 });
-*/
+
 
 
 jQuery(document).ready(function ($) {
