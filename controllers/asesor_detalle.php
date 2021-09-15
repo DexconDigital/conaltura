@@ -77,10 +77,10 @@ function modelo_asesor($r)
                         <a class="hint--top" data-hint="' . $r[$i]['correo'] . '" href="mailto:' . $r[$i]['correo'] . '" target="_blank"><i class="fa fa-envelope"></i></a>
                         ';
                         if($r[$i]['exten'] != ""){
-                        echo '<a class="hint--top" data-hint="' . $r[$i]['telefono'] . ' ext '.$r[$i]['exten'].'" href="tel:034' . $r[$i]['telefono'] . '" target="_blank"><i class="fa fa-phone"></i></a>';
+                        echo '<a class="hint--top" data-hint="(604) ' . $r[$i]['telefono'] . ' ext '.$r[$i]['exten'].'" href="tel:604' . $r[$i]['telefono'] . '" target="_blank"><i class="fa fa-phone"></i></a>';
                     } echo'
                       '; if($r[$i]['exten'] == ""){
-                        echo '<a class="hint--top" data-hint="' . $r[$i]['telefono'] . ''.$r[$i]['exten'].'" href="tel:034' . $r[$i]['telefono'] . '" target="_blank"><i class="fa fa-phone"></i></a>';
+                        echo '<a class="hint--top" data-hint="(604) ' . $r[$i]['telefono'] . ''.$r[$i]['exten'].'" href="tel:604' . $r[$i]['telefono'] . '" target="_blank"><i class="fa fa-phone"></i></a>';
                       }echo'
                       ';
                         if( $r[$i]['telefonop'] != ""){
